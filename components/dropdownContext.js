@@ -11,5 +11,5 @@ export function DropdownProvider(props) {
 }
 
 export function useDropdownContext() {
-	return useContext(DropdownContext);
+	return useContext(DropdownContext)
 }

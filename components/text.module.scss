@@ -1,7 +1,7 @@
 @import '../styles/utils.module.scss';
-$styles: italic, normal;
-@each $style in $styles {
-    .#{$style} {
+$styles: (italic: italic, normal: normal, bold: oblique);
+@each $stylename, $style in $styles {
+    .#{$stylename} {
         font-style: $style
     }
 }

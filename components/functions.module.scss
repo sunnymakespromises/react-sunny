@@ -1,8 +1,8 @@
 @import './utils.module.scss';
 
-@function color($color, $opacity: 1) {
+@function color($color, $opacity: 100) {
     @if (map-get($colors, $color)) {
-        @return rgba(map-get($colors, $color), $opacity);
+        @return rgba(map-get($colors, $color), ($opacity / 100));
     }
     @else {
         @return rgba($color, $opacity);

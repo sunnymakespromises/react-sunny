@@ -3,9 +3,7 @@ $div-positions: all, top, left, bottom, right;
 $directions: column, row;
 $alignments: (center: center, start: flex-start, end: flex-end, around: space-around, between: space-between, baseline: first baseline, stretch: stretch);
 $positions: relative, absolute, fixed, sticky;
-$fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, height: 100%, flex-grow: 1), screen: (width: 100vw, height: 100vh), auto: (width: auto, height: auto));
-$paddings: (none: 0, small: 0.5rem, medium: 1rem, large: 1rem);
-$margins: (none: 0, small: 0.4rem, medium: 0.8rem, large: 1rem);
+$fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, height: 100%, flex-grow: 1), screen: (width: 100vw, height: 100vh), auto: (width: auto, height: auto), none: (width: initial, height: initial));
 @each $direction in $directions {
     .#{$direction} {
         display: flex;
@@ -17,7 +15,7 @@ $margins: (none: 0, small: 0.4rem, medium: 0.8rem, large: 1rem);
 
 @each $x-name, $x in $alignments {
     @each $y-name, $y in $alignments {
-        .#{$x-name}-#{$y-name} {
+        .alignment-#{$x-name}-#{$y-name} {
             justify-content: $x;
             align-items: $y;
         }
@@ -72,13 +70,8 @@ $margins: (none: 0, small: 0.4rem, medium: 0.8rem, large: 1rem);
 }
 
 @each $color-name, $color in $colors {
-    @for $i from 0 through 10 {
-        $opacity: $i / 10;
-        $opacity-name: $i * 10;
-        .#{$color-name}-#{$opacity-name} {
-            // background-color: $color;
-            background-color: color($color-name, $opacity);
-        }
+    .#{$color-name} {
+        background-color: color($color-name);
     }
 }
 

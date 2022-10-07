@@ -2,12 +2,11 @@ import React, { useState, useEffect, useRef, forwardRef } from 'react'
 import { DropdownProvider, useDropdownContext } from './dropdownContext'
 import Container from './container'
 
-
-const Wrapper = forwardRef(({ children, ...extras }, wrapperRef) => {
-    const { expanding } = useDropdownContext();
-    const [ , , , trigger ] = expanding;
+const Wrapper = forwardRef(({ children, container = false, ...extras }, wrapperRef) => {
+    const { expanding } = useDropdownContext()
+    const [ , , , trigger ] = expanding
     if (trigger == 'header') {
-        if (Object.keys(extras).length != 0) {
+        if (Object.keys(extras).length != 0 || container) {
             return (
                 <Button>
                     <Container {...extras} ref = {wrapperRef}>
@@ -25,7 +24,7 @@ const Wrapper = forwardRef(({ children, ...extras }, wrapperRef) => {
         }
     }
     else {
-        if (Object.keys(extras).length != 0) {
+        if (Object.keys(extras).length != 0 || container) {
             return (
                 <Container {...extras} canClick ref = {wrapperRef}>
                     {children}
@@ -40,8 +39,8 @@ const Wrapper = forwardRef(({ children, ...extras }, wrapperRef) => {
     }
 })
 
-export function Header({ children, ...extras }) {
-    if (Object.keys(extras).length != 0) {
+export function Header({ children, container = false, ...extras }) {
+    if (Object.keys(extras).length != 0 || container) {
         return (
             <Container {...extras}>
                 { children }
@@ -57,8 +56,8 @@ export function Header({ children, ...extras }) {
     }
 }
 
-export function List({ children, ...extras }) {
-    if (Object.keys(extras).length != 0) {
+export function List({ children, container = false, ...extras }) {
+    if (Object.keys(extras).length != 0 || container) {
         return (
             <Container {...extras}>
                 { children }
@@ -74,13 +73,13 @@ export function List({ children, ...extras }) {
     }
 }
 
-export function Option({ children, value, onSelect = null, ...extras }) {
-    const { selecting } = useDropdownContext();
-    const [ selection , select ] = selecting;
+export function Option({ children, value, onSelect = null, container = false,  ...extras }) {
+    const { selecting } = useDropdownContext()
+    const [ selection , select ] = selecting
     if (select != undefined && selection != null) {
         onSelect = select
     }
-    if (Object.keys(extras).length != 0) {
+    if (Object.keys(extras).length != 0 || container) {
         return (
             <Container {...extras} canClick {...{onClick: () => onSelect(value)}}>
                 {children}
@@ -94,11 +93,11 @@ export function Option({ children, value, onSelect = null, ...extras }) {
     }
 }
 
-export function Button({ children, ...extras }) {
-    const { expanding } = useDropdownContext();
-    const [ , toggle, behavior, ] = expanding;
+export function Button({ children, container = false, ...extras }) {
+    const { expanding } = useDropdownContext()
+    const [ , toggle, behavior, ] = expanding
     const event = behavior == 'hover' ? { onMouseEnter: toggle, onMouseLeave: toggle } : { onClick: toggle } 
-    if (Object.keys(extras).length != 0) {
+    if (Object.keys(extras).length != 0 || container) {
         return (
             <Container {...extras} canClick {...event}>
                 {children}
@@ -112,7 +111,7 @@ export function Button({ children, ...extras }) {
     }
 }
 
-export default function Dropdown({ behavior, trigger, onToggle, onSelect = null, children, ...extras }) {
+export default function Dropdown({ behavior, trigger, onToggle, onSelect = null, children, container = false, ...extras }) {
     const wrapperRef = useRef()
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -120,9 +119,9 @@ export default function Dropdown({ behavior, trigger, onToggle, onSelect = null,
                 toggle(false)
             }
         }
-        window.addEventListener('click', handleClickOutside, true);
+        window.addEventListener('click', handleClickOutside, true)
         return () => {
-            window.removeEventListener('click', handleClickOutside, true);
+            window.removeEventListener('click', handleClickOutside, true)
         }
     }, [])
 
@@ -156,7 +155,7 @@ export default function Dropdown({ behavior, trigger, onToggle, onSelect = null,
 
     return (
         <DropdownProvider value = {{ ...expanding, ...selecting  }}>
-            <Wrapper ref = {wrapperRef} {...extras}>
+            <Wrapper ref = {wrapperRef} container {...extras}>
                 {children}
             </Wrapper>
         </DropdownProvider>

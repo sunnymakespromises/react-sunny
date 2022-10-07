@@ -1,24 +1,24 @@
 import { useState, useLayoutEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
-export default function Responsive({mobile = false, desktop = false, children}) {
-    const [isClient, setIsClient] = useState(false);
-    const isMobile = useMediaQuery({ orientation: 'portrait' });
-    const isDesktop = useMediaQuery({ orientation: 'landscape' });
+export default function Responsive({portrait = false, landscape = false, children}) {
+    const [isClient, setIsClient] = useState(false)
+    const isPortrait = useMediaQuery({ orientation: 'portrait' })
+    const isLandscape = useMediaQuery({ orientation: 'landscape' })
     useLayoutEffect(() => {
         if (typeof window !== 'undefined') {
-            setIsClient(true);
+            setIsClient(true)
         } 
     }, []);
     if (isClient) {
-        if (mobile && isMobile) {
+        if (portrait && isPortrait) {
             return (
                 <>
                     {children}
                 </>
             )
         }
-        else if (desktop && isDesktop) {
+        else if (landscape && isLandscape) {
             return (
                 <>
                     {children}
@@ -34,26 +34,26 @@ export default function Responsive({mobile = false, desktop = false, children}) 
     }
 }
 
-export function isMobile({ }) {
-    const [isClient, setIsClient] = useState(false);
-    const isMobile = useMediaQuery({ orientation: 'portrait' });
+export function isPortrait({ }) {
+    const [isClient, setIsClient] = useState(false)
+    const isPortrait = useMediaQuery({ orientation: 'portrait' })
     useLayoutEffect(() => {
         if (typeof window !== 'undefined') { setIsClient(true); } 
-    }, []);
+    }, [])
     if (isClient) {
-        return isMobile;
+        return isPortrait
     }
     else { return false }
 }
 
-export function isDesktop({ }) {
-    const [isClient, setIsClient] = useState(false);
-    const isDesktop = useMediaQuery({ orientation: 'landscape' });
+export function isLandscape({ }) {
+    const [isClient, setIsClient] = useState(false)
+    const isLandscape = useMediaQuery({ orientation: 'landscape' })
     useLayoutEffect(() => {
         if (typeof window !== 'undefined') { setIsClient(true); } 
-    }, []);
+    }, [])
     if (isClient) {
-        return isDesktop;
+        return isLandscape
     }
     else { return false }
 }
