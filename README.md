@@ -25,6 +25,7 @@ The Container component is a div with flex-box built-in so you dont have to worr
 | `canClick`  | boolean | `false`         | `true`, `false`                                                      | If the div is clickable, i.e. if pointer-events are turned on or not. Also changes the cursor to pointer.                                                                                                                                                                                                |
 | `extras`<sup>2</sup>  | any     | none            | none                                                                 | Any other properties to be passed directly to the generated div, i.e. events or anything else I forgot.                                                                                                                                                                                                  |
 | `ref`       | ref     | none            | none                                                                 | A React ref to be passed to the div.                                                                                                                                                                                                                                                                     |
+
 <sup>1</sup> See [User-Defined Variables](#user-defined-variables).
 <sup>2</sup> extras is not a prop exactly, you dont give `extras = { blah }`, but you simply give the extra properties themselves and it gets captured and passed on directly to the div component. For example, putting `extras = {{ onClick: () => click('test') }}` will not work, but putting `onClick = { () => click('text') }` will pass the onClick property to the div. extras just means any other arguments passed. See example for more.
 
@@ -104,6 +105,7 @@ The Text component is just an easier way to work with text and allows you to qui
 | `fontstyle` | string | `normal`     | `normal`, `italic`, `bold`              | The font style of the generated text.                                                                    |
 | `href`      | string | empty string | none                                    | The href attribute of the text, if not empty then the text will be wrapped in an anchor element.         |
 | `extras`<sup>2</sup>   | any    | none         | none                                    | Any other properties to be passed directly to the generated text, i.e. events or anything else I forgot. |
+
 <sup>1</sup> See [User-Defined Variables](#user-defined-variables).
 <sup>2</sup> extras is not a prop exactly, you dont give `extras = { blah }`, but you simply give the extra properties themselves and it gets captured and passed on directly to the generated text. For example, putting `extras = {{ onClick: () => click(value) }}` will not work, but putting `onClick = { () => click(value) }` will pass the onClick property to the generated text. extras just means any other arguments passed. See example for more.
 
@@ -116,7 +118,7 @@ The Text component is just an easier way to work with text and allows you to qui
     <Text size = 'h2'>
         This text is large but not THAT large.
     </Text>
-    <Text size = 'h3' onClick = { () => click(value) }>
+    <Text size = 'h3' href = 'https://google.com'>
         This text is a pretty good size. (and you can click it!)
     </Text>
     <Text size = 'h4' style = 'italic'>
