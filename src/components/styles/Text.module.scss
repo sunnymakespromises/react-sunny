@@ -1,0 +1,12 @@
+@import './utils.scss';
+$styles: (italic: italic, normal: normal, bold: oblique);
+@each $stylename, $style in $styles {
+    .#{$stylename} {
+        font-style: $style
+    }
+}
+@each $colorname, $color in $colors {
+    .#{$colorname} {
+        color: $color;
+    }
+}

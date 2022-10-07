@@ -1,0 +1,81 @@
+@import './utils.scss';
+$div-positions: all, top, left, bottom, right;
+$directions: column, row;
+$alignments: (center: center, start: flex-start, end: flex-end, around: space-around, between: space-between, baseline: first baseline, stretch: stretch);
+$positions: relative, absolute, fixed, sticky;
+$fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, height: 100%, flex-grow: 1), screen: (width: 100vw, height: 100vh), auto: (width: auto, height: auto), none: (width: initial, height: initial));
+@each $direction in $directions {
+    .#{$direction} {
+        display: flex;
+        flex-direction: $direction;
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+@each $x-name, $x in $alignments {
+    @each $y-name, $y in $alignments {
+        .alignment-#{$x-name}-#{$y-name} {
+            justify-content: $x;
+            align-items: $y;
+        }
+    }
+}
+
+@each $position in $positions {
+    .#{$position} {
+        @if $position == sticky {
+            top: 0;
+            position: -webkit-sticky;
+            position: sticky;
+        }
+        @else {
+            position: $position;
+        }
+    }
+}
+
+@each $fill-name, $fill in $fills {
+    .fill-#{$fill-name} {
+        @each $property, $value in $fill {
+            #{$property}: $value;
+        }
+    }
+}
+
+@each $div-position in $div-positions {
+    @each $padding-name, $padding in $paddings {
+        .padding-#{$div-position}-#{$padding-name} {
+            @if ($div-position == all) {
+                padding: $padding;
+            }
+            @else {
+                padding-#{$div-position}: $padding;
+            }
+        }
+    }
+}
+
+@each $div-position in $div-positions {
+    @each $margin-name, $margin in $margins {
+        .margin-#{$div-position}-#{$margin-name} {
+            @if ($div-position == all) {
+                margin: $margin;
+            }
+            @else {
+                margin-#{$div-position}: $margin;
+            }
+        }
+    }
+}
+
+@each $color-name, $color in $colors {
+    .#{$color-name} {
+        background-color: color($color-name);
+    }
+}
+
+.can-click {
+    cursor: pointer;
+    pointer-events: auto;
+}

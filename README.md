@@ -103,7 +103,7 @@ The Text component is just an easier way to work with text and allows you to qui
 | `color`     | string | empty string | user-defined<sup>1</sup>                           | The color property of the generated text.                                                                |
 | `size`      | string | `h1`         | `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p` | The size of the generated text.                                                                          |
 | `fontstyle` | string | `normal`     | `normal`, `italic`, `bold`              | The font style of the generated text.                                                                    |
-| `href`      | string | empty string | none                                    | The href attribute of the text, if not empty then the text will be wrapped in an anchor element.         |
+| `href`      | string | empty string | none                                    | The `href` attribute of the text, if not empty then the text will be wrapped in an anchor element.         |
 | `extras`<sup>2</sup>   | any    | none         | none                                    | Any other properties to be passed directly to the generated text, i.e. events or anything else I forgot. |
 
 <sup>1</sup> See [User-Defined Variables](#user-defined-variables).
