@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Responsive({portrait = false, landscape = false, children}) {
@@ -34,26 +34,43 @@ export default function Responsive({portrait = false, landscape = false, childre
     }
 }
 
-export function isPortrait({ }) {
-    const [isClient, setIsClient] = useState(false)
-    const isPortrait = useMediaQuery({ orientation: 'portrait' })
-    useLayoutEffect(() => {
-        if (typeof window !== 'undefined') { setIsClient(true); } 
-    }, [])
-    if (isClient) {
-        return isPortrait
-    }
-    else { return false }
+function getAspect() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return width/height;
 }
 
-export function isLandscape({ }) {
-    const [isClient, setIsClient] = useState(false)
-    const isLandscape = useMediaQuery({ orientation: 'landscape' })
-    useLayoutEffect(() => {
-        if (typeof window !== 'undefined') { setIsClient(true); } 
-    }, [])
-    if (isClient) {
-        return isLandscape
-    }
-    else { return false }
+export function aspectRatio() {
+    const [aspect, setAspect] = useState(getAspect());
+    useEffect(() => {
+        function handleResize() {
+            setAspect(getAspect());
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return aspect;
+}
+
+export function isLandscape() {
+    const [aspect, setAspect] = useState(getAspect());
+    useEffect(() => {
+        function handleResize() {
+            setAspect(getAspect());
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return (aspect > 1);
+}
+
+export function isPortrait() {
+    const [aspect, setAspect] = useState(getAspect());
+    useEffect(() => {
+        function handleResize() {
+            setAspect(getAspect());
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    return (aspect < 1);
 }

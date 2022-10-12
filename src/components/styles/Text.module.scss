@@ -1,12 +1,48 @@
 @import './utils.scss';
-$styles: (italic: italic, normal: normal, bold: oblique);
-@each $stylename, $style in $styles {
-    .#{$stylename} {
-        font-style: $style
+$div-positions: all, top, left, bottom, right;
+$styles: (italic: italic, normal: normal);
+$weights: (normal: normal, bold: bold, light: lighter, auto: null);
+$alignments: left, right, center, justify;
+.italic {
+    font-style: italic;
+}
+@each $weightname, $weight in $weights {
+    .weight-#{$weightname} {
+        font-weight: $weight;
     }
 }
 @each $colorname, $color in $colors {
-    .#{$colorname} {
+    .color-#{$colorname} {
         color: $color;
+    }
+}
+@each $alignment in $alignments {
+    .alignment-#{$alignment} {
+        text-align: $alignment;
+    }
+}
+@each $div-position in $div-positions {
+    @each $padding-name, $padding in $paddings {
+        .padding-#{$div-position}-#{$padding-name} {
+            @if ($div-position == all) {
+                padding: $padding;
+            }
+            @else {
+                padding-#{$div-position}: $padding;
+            }
+        }
+    }
+}
+
+@each $div-position in $div-positions {
+    @each $margin-name, $margin in $margins {
+        .margin-#{$div-position}-#{$margin-name} {
+            @if ($div-position == all) {
+                margin: $margin;
+            }
+            @else {
+                margin-#{$div-position}: $margin;
+            }
+        }
     }
 }

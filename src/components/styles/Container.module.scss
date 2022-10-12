@@ -3,13 +3,13 @@ $div-positions: all, top, left, bottom, right;
 $directions: column, row;
 $alignments: (center: center, start: flex-start, end: flex-end, around: space-around, between: space-between, baseline: first baseline, stretch: stretch);
 $positions: relative, absolute, fixed, sticky;
-$fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, height: 100%, flex-grow: 1), screen: (width: 100vw, height: 100vh), auto: (width: auto, height: auto), none: (width: initial, height: initial));
+$fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, height: 100%, flex-grow: 1), screen: (width: 100vw, height: 100vh, top: 0, left: 0, box-sizing: border-box), auto: (width: auto, height: auto), none: (width: initial, height: initial));
 @each $direction in $directions {
-    .#{$direction} {
+    .direction-#{$direction} {
         display: flex;
         flex-direction: $direction;
         cursor: default;
-        pointer-events: none;
+        pointer-events: initial;
     }
 }
 
@@ -23,7 +23,7 @@ $fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, hei
 }
 
 @each $position in $positions {
-    .#{$position} {
+    .position-#{$position} {
         @if $position == sticky {
             top: 0;
             position: -webkit-sticky;
@@ -70,7 +70,7 @@ $fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, hei
 }
 
 @each $color-name, $color in $colors {
-    .#{$color-name} {
+    .color-#{$color-name} {
         background-color: color($color-name);
     }
 }

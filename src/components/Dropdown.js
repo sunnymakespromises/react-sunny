@@ -4,36 +4,36 @@ import Container from './Container'
 
 const Wrapper = forwardRef(({ children, container = false, ...extras }, wrapperRef) => {
     const { expanding } = useDropdownContext()
-    const [ , , , trigger ] = expanding
+    const [ , , , , trigger ] = expanding
     if (trigger == 'header') {
         if (Object.keys(extras).length != 0 || container) {
             return (
-                <Button>
-                    <Container {...extras} ref = {wrapperRef}>
+                <Activator>
+                    <Container {...extras} canClick ref = {wrapperRef}>
                             {children}
                     </Container>
-                </Button>
+                </Activator>
             )
         }
         else {
             return (
-                <Button>
-                    {React.cloneElement(children, { ref: wrapperRef })}
-                </Button>
+                <Activator>
+                    {React.cloneElement(children, { canClick: true, ref: wrapperRef })}
+                </Activator>
             )
         }
     }
     else {
         if (Object.keys(extras).length != 0 || container) {
             return (
-                <Container {...extras} canClick ref = {wrapperRef}>
+                <Container {...extras} ref = {wrapperRef}>
                     {children}
                 </Container>
             )
         }
         else {
             return (
-                React.cloneElement(children, { canClick: true, ref: wrapperRef })
+                React.cloneElement(children, { ref: wrapperRef })
             )
         }
     }
@@ -73,50 +73,100 @@ export function List({ children, container = false, ...extras }) {
     }
 }
 
-export function Option({ children, value, onSelect = null, container = false,  ...extras }) {
+export function Option({ children, value, container = false, initial = false, active = true,  ...extras }) {
     const { selecting } = useDropdownContext()
-    const [ selection , select ] = selecting
-    if (select != undefined && selection != null) {
-        onSelect = select
-    }
+    const [ , select, initialize] = selecting
+    useEffect(() => {
+        if (initial) {
+            initialize(value)
+        }
+    }, [])
     if (Object.keys(extras).length != 0 || container) {
-        return (
-            <Container {...extras} canClick {...{onClick: () => onSelect(value)}}>
-                {children}
-            </Container>
-        )
+        if (active) {
+            return (
+                <Container {...extras} canClick {...{onClick: () => select(value)}}>
+                    {children}
+                </Container>
+            )
+        }
+        else {
+            return (
+                <Container {...extras} canClick>
+                    {children}
+                </Container>
+            )
+        }
     }
     else {
-        return (
-            React.cloneElement(children, { canClick: true, onClick: () => onSelect(value) })
-        )
+        if (active) {
+            return (
+                React.cloneElement(children, { canClick: true, onClick: () => select(value) })
+            )
+        }
+        else {
+            return (
+                React.cloneElement(children, { canClick: true })
+            )
+        }
     }
 }
 
 export function Button({ children, container = false, ...extras }) {
     const { expanding } = useDropdownContext()
-    const [ , toggle, behavior, ] = expanding
-    const event = behavior == 'hover' ? { onMouseEnter: toggle, onMouseLeave: toggle } : { onClick: toggle } 
-    if (Object.keys(extras).length != 0 || container) {
-        return (
-            <Container {...extras} canClick {...event}>
-                {children}
-            </Container>
-        )
+    const [ toggle, open, close, behavior, trigger] = expanding
+    if (trigger == 'header') {
+        if (Object.keys(extras).length != 0 || container) {
+            return (
+                <Container {...extras}>
+                    {children}
+                </Container>
+            )
+        }
+        else {
+            return (
+                <>
+                    {children}
+                </>
+            )
+        }
     }
     else {
-        return (
-            React.cloneElement(children, { canClick: true, ...event })
-        )
+        if (Object.keys(extras).length != 0 || container) {
+            return (
+                <Activator>
+                    <Container {...extras}>
+                        {children}
+                    </Container>
+                </Activator>
+            )
+        }
+        else {
+            return (
+                <Activator>
+                    {children}
+                </Activator>
+            )
+        }
     }
 }
 
-export default function Dropdown({ behavior, trigger, onToggle, onSelect = null, children, container = false, ...extras }) {
+function Activator({ children }) {
+    const { expanding } = useDropdownContext()
+    const [ toggle, open, close, behavior, ] = expanding
+    const event = behavior == 'hover' ? { onMouseEnter: open, onMouseLeave: close } : { onClick: toggle }
+    return (
+        React.cloneElement(children, { canClick: true, ...event })
+    )
+}
+
+export default function Dropdown({ behavior, trigger, onToggle, onSelect, children, container = false, ...extras }) {
     const wrapperRef = useRef()
+    const [selection, setSelection] = useState(null)
+    const [isExpanded, setIsExpanded] = useState(false)
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-                toggle(false)
+                close()
             }
         }
         window.addEventListener('click', handleClickOutside, true)
@@ -124,34 +174,37 @@ export default function Dropdown({ behavior, trigger, onToggle, onSelect = null,
             window.removeEventListener('click', handleClickOutside, true)
         }
     }, [])
-
-    const [isExpanded, setIsExpanded] = useState(false)
+    
     const toggle = ( value ) => {
-        if (value != true && value != false) {
-            setIsExpanded(!isExpanded)
-            if (onToggle != null) {
-                onToggle(!isExpanded)
-            }
+        if (typeof(value) != 'boolean') {
+            if (isExpanded) { close() }
+            else { open() }
         }
         else {
-            setIsExpanded(value)
-            if (onToggle != null) {
-                onToggle(value)
-            }
+            if (value) { open() }
+            else { close() }
         }
     }
-
-    const expanding = { expanding: [isExpanded, toggle, behavior, trigger] }
-
-    var selecting = { selecting }
-    if (onSelect != null) {
-        const [selection, setSelection] = useState(null)
-        const select = (value) => {
-            setSelection(value)
-            onSelect(value)
-        }
-        selecting = { selecting: [selection, select] }
+    const open = () => {
+        setIsExpanded(true)
+        onToggle(true)
     }
+    const close = () => {
+        setIsExpanded(false)
+        onToggle(false)
+    }
+    const select = ( value ) => {
+        setSelection(value)
+        onSelect(value)
+    }
+
+    const initialize = ( value ) => {
+        if (selection == null) {
+            select(value)
+        }
+    }
+    const expanding = { expanding: [toggle, open, close, behavior, trigger] }
+    const selecting = { selecting: [selection, select, initialize] }
 
     return (
         <DropdownProvider value = {{ ...expanding, ...selecting  }}>
