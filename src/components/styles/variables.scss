@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 $primary-font: 'Poppins', sans-serif !default;
 $secondary-font: 'Montserrat', sans-serif !default;
-$colors: (base-1: #FFFFFF, base-2: #F2F2F7, base-3: #D1D1D6, accent-1: #007AFF, accent-2: #55BEF0, accent-3: #59ADC4, neutral-1: #000000, neutral-2: #1C1C1E, neutral-3: #48484A) !default;
+$colors: (base-1: (light: #FFFFFF, dark: #000000), base-2: (light: #F2F2F7, dark: #1C1C1E), base-3: (light: #D1D1D6, dark: #48484A), accent-1: (light: #007AFF, dark: #007AFF), accent-2: (light: #55BEF0, dark: #55BEF0), accent-3: (light: #59ADC4, dark: #59ADC4), neutral-1: (light: #000000, dark: #FFFFFF), neutral-2: (light: #1C1C1E, dark: #F2F2F7), neutral-3: (light: #48484A, dark: #D1D1D6)) !default;
 $paddings: (none: 0, small: 0.5rem, medium: 1rem, large: 1.5rem) !default;
 $margins: (none: 0, small: 0.4rem, medium: 0.8rem, large: 1rem) !default;

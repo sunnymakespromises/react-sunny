@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import React, { useState, useEffect, useLayoutEffect } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 export default function Responsive({portrait = false, landscape = false, children}) {
     const [isClient, setIsClient] = useState(false)
@@ -9,7 +9,7 @@ export default function Responsive({portrait = false, landscape = false, childre
         if (typeof window !== 'undefined') {
             setIsClient(true)
         } 
-    }, []);
+    }, [])
     if (isClient) {
         if (portrait && isPortrait) {
             return (
@@ -35,42 +35,42 @@ export default function Responsive({portrait = false, landscape = false, childre
 }
 
 function getAspect() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return width/height;
+    const { innerWidth: width, innerHeight: height } = window
+    return width/height
 }
 
 export function aspectRatio() {
-    const [aspect, setAspect] = useState(getAspect());
+    const [aspect, setAspect] = useState(getAspect())
     useEffect(() => {
         function handleResize() {
-            setAspect(getAspect());
+            setAspect(getAspect())
         }
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-    return aspect;
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+    return aspect
 }
 
 export function isLandscape() {
-    const [aspect, setAspect] = useState(getAspect());
+    const [aspect, setAspect] = useState(getAspect())
     useEffect(() => {
         function handleResize() {
-            setAspect(getAspect());
+            setAspect(getAspect())
         }
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-    return (aspect > 1);
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+    return (aspect > 1)
 }
 
 export function isPortrait() {
-    const [aspect, setAspect] = useState(getAspect());
+    const [aspect, setAspect] = useState(getAspect())
     useEffect(() => {
         function handleResize() {
-            setAspect(getAspect());
+            setAspect(getAspect())
         }
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-    return (aspect < 1);
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, [])
+    return (aspect < 1)
 }

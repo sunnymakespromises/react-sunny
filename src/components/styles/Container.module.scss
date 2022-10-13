@@ -71,7 +71,14 @@ $fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, hei
 
 @each $color-name, $color in $colors {
     .color-#{$color-name} {
-        background-color: color($color-name);
+        @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+            background-color: color($color-name, dark);
+        }
+        @media (prefers-color-scheme: light) {
+            color-scheme: light;
+            background-color: color($color-name, light);
+        }
     }
 }
 

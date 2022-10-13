@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './styles/Text.module.scss';
+import styles from './styles/Text.module.scss'
 
 const getClassesFromString = ( property, string ) => {
 	var classes = ''
