@@ -15,7 +15,7 @@ const getClassesFromString = ( property, string ) => {
 	return classes
 }
 
-export default function Text({ id, classes = '', style = {}, alignment = 'center', color = '', size = 'h1', margin = 'all none', padding = 'all none', weight = 'auto', italic = false, href = '', children, ...extras }) {
+export default function Text({ id, classes = '', style = {}, alignment = 'center', color = 'neutral-1', size = 'h1', margin = 'all none', padding = 'all none', weight = 'auto', italic = false, href = '', children, ...extras }) {
     const getClasses = () => {
         var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)

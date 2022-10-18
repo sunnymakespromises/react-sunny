@@ -26,7 +26,12 @@ export default [
         		presets: ["@babel/env", "@babel/preset-react"],
         		babelHelpers: 'bundled'
       		}),
-      		postcss(),
+      		postcss({
+				modules: {
+					generateScopedName: "[hash:base64:6]"
+				},
+				autoModules: true
+			}),
       		external(),
     	],
   	},

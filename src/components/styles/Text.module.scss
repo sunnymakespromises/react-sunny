@@ -6,14 +6,21 @@ $alignments: left, right, center, justify;
 .italic {
     font-style: italic;
 }
-@each $weightname, $weight in $weights {
-    .weight-#{$weightname} {
+@each $weight-name, $weight in $weights {
+    .weight-#{$weight-name} {
         font-weight: $weight;
     }
 }
-@each $colorname, $color in $colors {
-    .color-#{$colorname} {
-        color: $color;
+@each $color-name, $color in $colors {
+    .color-#{$color-name} {
+        @media (prefers-color-scheme: dark) {
+            color-scheme: dark;
+            color: color($color-name, dark);
+        }
+        @media (prefers-color-scheme: light) {
+            color-scheme: light;
+            color: color($color-name, light);
+        }
     }
 }
 @each $alignment in $alignments {
