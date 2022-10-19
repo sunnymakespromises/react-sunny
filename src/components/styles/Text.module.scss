@@ -53,3 +53,8 @@ $alignments: left, right, center, justify;
         }
     }
 }
+
+.can-click {
+    cursor: pointer;
+    pointer-events: auto;
+}
