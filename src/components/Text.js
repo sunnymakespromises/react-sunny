@@ -15,11 +15,11 @@ const getClassesFromString = ( property, string ) => {
 	return classes
 }
 
-export default function Text({ id, classes = '', style = {}, alignment = 'center', color = 'neutral-1', size = 'h1', margin = 'all none', padding = 'all none', weight = 'auto', italic = false, href = '', canClick = false, children, ...extras }) {
+export default function Text({ id, classes = '', style = {}, alignment = 'center', color = 'neutral-1', size = 'p', margin = 'all none', padding = 'all none', weight = 'auto', italic = false, href = '', canClick = false, children, ...extras }) {
     const getClasses = () => {
         var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)
-        return (italic ? styles['italic'] + ' ' : '') + styles['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + styles['weight-' + weight] + ' ' + (color !== '' ? ' ' + styles['color-' + color] : '') + (canClick ? ' ' + styles['canClick'] : '')
+        return (italic ? styles['italic'] + ' ' : '') + styles['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + styles['weight-' + weight] + ' ' + (color !== '' ? ' ' + styles['color-' + color] : '') + (canClick ? ' ' + styles['can-click'] : '')
     }
     const getChildren = () => {
         if (href != '') {

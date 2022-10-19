@@ -279,7 +279,7 @@ var _excluded$1 = ["children", "container"],
     _excluded3 = ["children", "container"],
     _excluded4 = ["children", "value", "container", "initial", "active"],
     _excluded5 = ["children", "container"],
-    _excluded6 = ["behavior", "trigger", "onToggle", "onSelect", "children", "container"];
+    _excluded6 = ["behavior", "trigger", "onToggle", "onSelect", "closeOnSelect", "closeOnOutsideClick", "children", "container"];
 var Wrapper = /*#__PURE__*/React.forwardRef(function (_ref, wrapperRef) {
   var children = _ref.children,
       _ref$container = _ref.container,
@@ -289,31 +289,29 @@ var Wrapper = /*#__PURE__*/React.forwardRef(function (_ref, wrapperRef) {
   var _useDropdownContext = useDropdownContext(),
       expanding = _useDropdownContext.expanding;
 
-  var _expanding = _slicedToArray(expanding, 5),
-      trigger = _expanding[4];
+  var _expanding = _slicedToArray(expanding, 4),
+      behavior = _expanding[3];
 
-  if (trigger == 'header') {
+  if (behavior == 'hover') {
     if (Object.keys(extras).length != 0 || container) {
       return /*#__PURE__*/React__default["default"].createElement(Activator, null, /*#__PURE__*/React__default["default"].createElement(Container, _extends({}, extras, {
-        canClick: true,
         ref: wrapperRef
       }), children));
     } else {
       return /*#__PURE__*/React__default["default"].createElement(Activator, null, /*#__PURE__*/React__default["default"].cloneElement(children, {
-        canClick: true,
         ref: wrapperRef
       }));
     }
+  }
+
+  if (Object.keys(extras).length != 0 || container) {
+    return /*#__PURE__*/React__default["default"].createElement(Container, _extends({}, extras, {
+      ref: wrapperRef
+    }), children);
   } else {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React__default["default"].createElement(Container, _extends({}, extras, {
-        ref: wrapperRef
-      }), children);
-    } else {
-      return /*#__PURE__*/React__default["default"].cloneElement(children, {
-        ref: wrapperRef
-      });
-    }
+    return /*#__PURE__*/React__default["default"].cloneElement(children, {
+      ref: wrapperRef
+    });
   }
 });
 function Header(_ref2) {
@@ -322,10 +320,25 @@ function Header(_ref2) {
       container = _ref2$container === void 0 ? false : _ref2$container,
       extras = _objectWithoutProperties(_ref2, _excluded2);
 
-  if (Object.keys(extras).length != 0 || container) {
-    return /*#__PURE__*/React__default["default"].createElement(Container, extras, children);
+  var _useDropdownContext2 = useDropdownContext(),
+      expanding = _useDropdownContext2.expanding;
+
+  var _expanding2 = _slicedToArray(expanding, 5),
+      behavior = _expanding2[3],
+      trigger = _expanding2[4];
+
+  if (trigger == 'header' && behavior != 'hover') {
+    if (Object.keys(extras).length != 0 || container) {
+      return /*#__PURE__*/React__default["default"].createElement(Activator, null, /*#__PURE__*/React__default["default"].createElement(Container, extras, children));
+    } else {
+      return /*#__PURE__*/React__default["default"].createElement(Activator, null, children);
+    }
   } else {
-    return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, children);
+    if (Object.keys(extras).length != 0 || container) {
+      return /*#__PURE__*/React__default["default"].createElement(Container, extras, children);
+    } else {
+      return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, children);
+    }
   }
 }
 function List(_ref3) {
@@ -351,8 +364,8 @@ function Option(_ref4) {
       active = _ref4$active === void 0 ? true : _ref4$active,
       extras = _objectWithoutProperties(_ref4, _excluded4);
 
-  var _useDropdownContext2 = useDropdownContext(),
-      selecting = _useDropdownContext2.selecting;
+  var _useDropdownContext3 = useDropdownContext(),
+      selecting = _useDropdownContext3.selecting;
 
   var _selecting = _slicedToArray(selecting, 3),
       select = _selecting[1],
@@ -398,17 +411,14 @@ function Button(_ref5) {
       container = _ref5$container === void 0 ? false : _ref5$container,
       extras = _objectWithoutProperties(_ref5, _excluded5);
 
-  var _useDropdownContext3 = useDropdownContext(),
-      expanding = _useDropdownContext3.expanding;
+  var _useDropdownContext4 = useDropdownContext(),
+      expanding = _useDropdownContext4.expanding;
 
-  var _expanding2 = _slicedToArray(expanding, 5);
-      _expanding2[0];
-      _expanding2[1];
-      _expanding2[2];
-      _expanding2[3];
-      var trigger = _expanding2[4];
+  var _expanding3 = _slicedToArray(expanding, 5),
+      behavior = _expanding3[3],
+      trigger = _expanding3[4];
 
-  if (trigger == 'header') {
+  if (trigger == 'header' && behavior != 'hover') {
     if (Object.keys(extras).length != 0 || container) {
       return /*#__PURE__*/React__default["default"].createElement(Container, extras, children);
     } else {
@@ -426,14 +436,14 @@ function Button(_ref5) {
 function Activator(_ref6) {
   var children = _ref6.children;
 
-  var _useDropdownContext4 = useDropdownContext(),
-      expanding = _useDropdownContext4.expanding;
+  var _useDropdownContext5 = useDropdownContext(),
+      expanding = _useDropdownContext5.expanding;
 
-  var _expanding3 = _slicedToArray(expanding, 4),
-      toggle = _expanding3[0],
-      open = _expanding3[1],
-      close = _expanding3[2],
-      behavior = _expanding3[3];
+  var _expanding4 = _slicedToArray(expanding, 4),
+      toggle = _expanding4[0],
+      open = _expanding4[1],
+      close = _expanding4[2],
+      behavior = _expanding4[3];
 
   var event = behavior == 'hover' ? {
     onMouseEnter: open,
@@ -451,9 +461,14 @@ function Dropdown(_ref7) {
       trigger = _ref7.trigger,
       onToggle = _ref7.onToggle,
       onSelect = _ref7.onSelect,
-      children = _ref7.children;
-      _ref7.container;
-      var extras = _objectWithoutProperties(_ref7, _excluded6);
+      _ref7$closeOnSelect = _ref7.closeOnSelect,
+      closeOnSelect = _ref7$closeOnSelect === void 0 ? true : _ref7$closeOnSelect,
+      _ref7$closeOnOutsideC = _ref7.closeOnOutsideClick,
+      closeOnOutsideClick = _ref7$closeOnOutsideC === void 0 ? true : _ref7$closeOnOutsideC,
+      children = _ref7.children,
+      _ref7$container = _ref7.container,
+      container = _ref7$container === void 0 ? false : _ref7$container,
+      extras = _objectWithoutProperties(_ref7, _excluded6);
 
   var wrapperRef = React.useRef();
 
@@ -468,17 +483,19 @@ function Dropdown(_ref7) {
       setIsExpanded = _useState4[1];
 
   React.useEffect(function () {
-    var handleClickOutside = function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-        close();
-      }
-    };
+    if (closeOnOutsideClick) {
+      var handleClickOutside = function handleClickOutside(event) {
+        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+          close();
+        }
+      };
 
-    window.addEventListener('click', handleClickOutside, true);
-    return function () {
-      window.removeEventListener('click', handleClickOutside, true);
-    };
-  }, []);
+      window.addEventListener('click', handleClickOutside, true);
+      return function () {
+        window.removeEventListener('click', handleClickOutside, true);
+      };
+    }
+  }, [closeOnOutsideClick]);
 
   var toggle = function toggle(value) {
     if (typeof value != 'boolean') {
@@ -509,6 +526,10 @@ function Dropdown(_ref7) {
   var select = function select(value) {
     setSelection(value);
     onSelect(value);
+
+    if (closeOnSelect) {
+      close();
+    }
   };
 
   var initialize = function initialize(value) {
@@ -527,7 +548,7 @@ function Dropdown(_ref7) {
     value: _objectSpread2(_objectSpread2({}, expanding), selecting)
   }, /*#__PURE__*/React__default["default"].createElement(Wrapper, _extends({
     ref: wrapperRef,
-    container: true
+    container: container
   }, extras), children));
 }
 
@@ -2491,7 +2512,7 @@ function Text(_ref) {
       _ref$color = _ref.color,
       color = _ref$color === void 0 ? 'neutral-1' : _ref$color,
       _ref$size = _ref.size,
-      size = _ref$size === void 0 ? 'h1' : _ref$size,
+      size = _ref$size === void 0 ? 'p' : _ref$size,
       _ref$margin = _ref.margin,
       margin = _ref$margin === void 0 ? 'all none' : _ref$margin,
       _ref$padding = _ref.padding,
@@ -2510,7 +2531,7 @@ function Text(_ref) {
   var getClasses = function getClasses() {
     var paddingClasses = getClassesFromString('padding', padding);
     var marginClasses = getClassesFromString('margin', margin);
-    return (italic ? styles['italic'] + ' ' : '') + styles['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + styles['weight-' + weight] + ' ' + (color !== '' ? ' ' + styles['color-' + color] : '') + (canClick ? ' ' + styles['canClick'] : '');
+    return (italic ? styles['italic'] + ' ' : '') + styles['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + styles['weight-' + weight] + ' ' + (color !== '' ? ' ' + styles['color-' + color] : '') + (canClick ? ' ' + styles['can-click'] : '');
   };
 
   var getChildren = function getChildren() {

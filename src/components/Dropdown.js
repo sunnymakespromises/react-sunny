@@ -4,12 +4,47 @@ import Container from './Container'
 
 const Wrapper = forwardRef(({ children, container = false, ...extras }, wrapperRef) => {
     const { expanding } = useDropdownContext()
-    const [ , , , , trigger ] = expanding
-    if (trigger == 'header') {
+    const [ , , , behavior, ] = expanding
+    if (behavior == 'hover') {
         if (Object.keys(extras).length != 0 || container) {
             return (
                 <Activator>
-                    <Container {...extras} canClick ref = {wrapperRef}>
+                    <Container {...extras} ref = {wrapperRef}>
+                        {children}
+                    </Container>
+                </Activator>
+            )
+        }
+        else {
+            return (
+                <Activator>
+                    {React.cloneElement(children, { ref: wrapperRef })}
+                </Activator>
+            )
+        }
+    }
+    if (Object.keys(extras).length != 0 || container) {
+        return (
+            <Container {...extras} ref = {wrapperRef}>
+                {children}
+            </Container>
+        )
+    }
+    else {
+        return (
+            React.cloneElement(children, { ref: wrapperRef })
+        )
+    }
+})
+
+export function Header({ children, container = false, ...extras }) {
+    const { expanding } = useDropdownContext()
+    const [ , , , behavior, trigger ] = expanding
+    if (trigger == 'header' && behavior != 'hover') {
+        if (Object.keys(extras).length != 0 || container) {
+            return (
+                <Activator>
+                    <Container {...extras}>
                             {children}
                     </Container>
                 </Activator>
@@ -18,7 +53,7 @@ const Wrapper = forwardRef(({ children, container = false, ...extras }, wrapperR
         else {
             return (
                 <Activator>
-                    {React.cloneElement(children, { canClick: true, ref: wrapperRef })}
+                    {children}
                 </Activator>
             )
         }
@@ -26,33 +61,18 @@ const Wrapper = forwardRef(({ children, container = false, ...extras }, wrapperR
     else {
         if (Object.keys(extras).length != 0 || container) {
             return (
-                <Container {...extras} ref = {wrapperRef}>
-                    {children}
+                <Container {...extras}>
+                    { children }
                 </Container>
             )
         }
         else {
             return (
-                React.cloneElement(children, { ref: wrapperRef })
+                <>
+                    {children}
+                </>
             )
         }
-    }
-})
-
-export function Header({ children, container = false, ...extras }) {
-    if (Object.keys(extras).length != 0 || container) {
-        return (
-            <Container {...extras}>
-                { children }
-            </Container>
-        )
-    }
-    else {
-        return (
-            <>
-                {children}
-            </>
-        )
     }
 }
 
@@ -113,8 +133,8 @@ export function Option({ children, value, container = false, initial = false, ac
 
 export function Button({ children, container = false, ...extras }) {
     const { expanding } = useDropdownContext()
-    const [ toggle, open, close, behavior, trigger] = expanding
-    if (trigger == 'header') {
+    const [ , , , behavior, trigger] = expanding
+    if (trigger == 'header' && behavior != 'hover') {
         if (Object.keys(extras).length != 0 || container) {
             return (
                 <Container {...extras}>
@@ -159,21 +179,23 @@ function Activator({ children }) {
     )
 }
 
-export default function Dropdown({ behavior, trigger, onToggle, onSelect, children, container = false, ...extras }) {
+export default function Dropdown({ behavior, trigger, onToggle, onSelect, closeOnSelect = true, closeOnOutsideClick = true, children, container = false, ...extras }) {
     const wrapperRef = useRef()
     const [selection, setSelection] = useState(null)
     const [isExpanded, setIsExpanded] = useState(false)
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-                close()
+        if (closeOnOutsideClick) {
+            const handleClickOutside = (event) => {
+                if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+                    close()
+                }
+            }
+            window.addEventListener('click', handleClickOutside, true)
+            return () => {
+                window.removeEventListener('click', handleClickOutside, true)
             }
         }
-        window.addEventListener('click', handleClickOutside, true)
-        return () => {
-            window.removeEventListener('click', handleClickOutside, true)
-        }
-    }, [])
+    }, [closeOnOutsideClick])
     
     const toggle = ( value ) => {
         if (typeof(value) != 'boolean') {
@@ -196,6 +218,9 @@ export default function Dropdown({ behavior, trigger, onToggle, onSelect, childr
     const select = ( value ) => {
         setSelection(value)
         onSelect(value)
+        if (closeOnSelect) {
+            close()
+        }
     }
 
     const initialize = ( value ) => {
@@ -208,7 +233,7 @@ export default function Dropdown({ behavior, trigger, onToggle, onSelect, childr
 
     return (
         <DropdownProvider value = {{ ...expanding, ...selecting  }}>
-            <Wrapper ref = {wrapperRef} container {...extras}>
+            <Wrapper ref = {wrapperRef} container = {container} {...extras}>
                 {children}
             </Wrapper>
         </DropdownProvider>
