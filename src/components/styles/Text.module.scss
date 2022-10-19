@@ -14,11 +14,9 @@ $alignments: left, right, center, justify;
 @each $color-name, $color in $colors {
     .color-#{$color-name} {
         @media (prefers-color-scheme: dark) {
-            color-scheme: dark;
             color: color($color-name, dark);
         }
         @media (prefers-color-scheme: light) {
-            color-scheme: light;
             color: color($color-name, light);
         }
     }
