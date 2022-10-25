@@ -152,19 +152,24 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 
 #### Example
 ```javascript
-<>
+<Container fill = 'parent'>
     <Responsive portrait>
-        <Text italic>
+        <Text size = 'h2' underline color = 'accent-1'>
             This gets shown when the device is in portrait.
         </Text>
     </Responsive>
 
     <Responsive landscape>
-        <Text italic>
-            This gets shown when the device is in landscape.
-        </Text>
+        <Container alignment = 'start start' fill = 'parent'>
+            <Text size = 'h2' italic color = 'neutral-1'>
+                This gets shown when the device is in landscape.
+            </Text>
+            <Text size = 'h3' weight = 'normal'>
+                This too!
+            </Text>
+        </Container>
     </Responsive>
-</>
+</Container>
 ```
 
 ## User-Defined Variables
