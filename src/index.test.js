@@ -27,9 +27,9 @@ describe("Dropdown Component", () => {
             setSelection(value)
         }
         render(
-            <Dropdown onToggle = { (v) => onToggle(v) } onSelect = { (v) => onSelect(v) } behavior = 'click' trigger = 'button' style = {{ width: '200px', height: '100px' }}>
+            <Dropdown onToggle = { (v) => onToggle(v) } onSelect = { (v) => onSelect(v) } behavior = 'click' trigger = 'button' styles = {{ width: '200px', height: '100px' }}>
                 <Header direction = 'row' alignment = 'start center' fill = 'parent'>
-                    <Button style = {{ left: 0 }} position = 'absolute' fill = 'height'/>
+                    <Button styles = {{ left: 0 }} position = 'absolute' fill = 'height'/>
                 </Header>
                 <List direction = 'column' alignment = 'start center' fill = 'width'>
                     <Option value = 'Apple' container initial/>

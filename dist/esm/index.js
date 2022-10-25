@@ -180,11 +180,11 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z$1 = "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap\");\n.wK23-E {\n  display: flex;\n  flex-direction: column;\n  cursor: default;\n  pointer-events: initial;\n}\n\n._-9-Yj5 {\n  display: flex;\n  flex-direction: row;\n  cursor: default;\n  pointer-events: initial;\n}\n\n.JVOsVu {\n  justify-content: center;\n  align-items: center;\n}\n\n.kkCXFx {\n  justify-content: center;\n  align-items: flex-start;\n}\n\n.rigoW1 {\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.Yaoxq- {\n  justify-content: center;\n  align-items: space-around;\n}\n\n.Kb8687 {\n  justify-content: center;\n  align-items: space-between;\n}\n\n.ytCb4n {\n  justify-content: center;\n  align-items: first baseline;\n}\n\n.yGb7zY {\n  justify-content: center;\n  align-items: stretch;\n}\n\n.oBjMip {\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.guBJdP {\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.qi8CXu {\n  justify-content: flex-start;\n  align-items: flex-end;\n}\n\n.B-yI6c {\n  justify-content: flex-start;\n  align-items: space-around;\n}\n\n.-xpbIv {\n  justify-content: flex-start;\n  align-items: space-between;\n}\n\n.OS1D-l {\n  justify-content: flex-start;\n  align-items: first baseline;\n}\n\n.JMroyX {\n  justify-content: flex-start;\n  align-items: stretch;\n}\n\n.Ji8EX1 {\n  justify-content: flex-end;\n  align-items: center;\n}\n\n.sKIrDk {\n  justify-content: flex-end;\n  align-items: flex-start;\n}\n\n.ZOBXjo {\n  justify-content: flex-end;\n  align-items: flex-end;\n}\n\n.F6zDWW {\n  justify-content: flex-end;\n  align-items: space-around;\n}\n\n._8qZado {\n  justify-content: flex-end;\n  align-items: space-between;\n}\n\n.CFzx5p {\n  justify-content: flex-end;\n  align-items: first baseline;\n}\n\n._2ohi32 {\n  justify-content: flex-end;\n  align-items: stretch;\n}\n\n.Q3FJls {\n  justify-content: space-around;\n  align-items: center;\n}\n\n.U9MCmJ {\n  justify-content: space-around;\n  align-items: flex-start;\n}\n\n.GG82Kd {\n  justify-content: space-around;\n  align-items: flex-end;\n}\n\n.Ynr8YU {\n  justify-content: space-around;\n  align-items: space-around;\n}\n\n._68NreT {\n  justify-content: space-around;\n  align-items: space-between;\n}\n\n._0RPEd- {\n  justify-content: space-around;\n  align-items: first baseline;\n}\n\n.q4hAAt {\n  justify-content: space-around;\n  align-items: stretch;\n}\n\n.RDeHJ- {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.wZZvye {\n  justify-content: space-between;\n  align-items: flex-start;\n}\n\n.K3MwWx {\n  justify-content: space-between;\n  align-items: flex-end;\n}\n\n.SmYm-D {\n  justify-content: space-between;\n  align-items: space-around;\n}\n\n.D-nyMy {\n  justify-content: space-between;\n  align-items: space-between;\n}\n\n.hA7dup {\n  justify-content: space-between;\n  align-items: first baseline;\n}\n\n.N9ywZE {\n  justify-content: space-between;\n  align-items: stretch;\n}\n\n.QZgDeR {\n  justify-content: first baseline;\n  align-items: center;\n}\n\n.oEIXLT {\n  justify-content: first baseline;\n  align-items: flex-start;\n}\n\n.ydozdO {\n  justify-content: first baseline;\n  align-items: flex-end;\n}\n\n.To70Vr {\n  justify-content: first baseline;\n  align-items: space-around;\n}\n\n.HjWX1- {\n  justify-content: first baseline;\n  align-items: space-between;\n}\n\n.RLY3-R {\n  justify-content: first baseline;\n  align-items: first baseline;\n}\n\n.nmX41U {\n  justify-content: first baseline;\n  align-items: stretch;\n}\n\n.NKxOaN {\n  justify-content: stretch;\n  align-items: center;\n}\n\n._0R3Tdt {\n  justify-content: stretch;\n  align-items: flex-start;\n}\n\n.QyimLf {\n  justify-content: stretch;\n  align-items: flex-end;\n}\n\n.EDBb-Z {\n  justify-content: stretch;\n  align-items: space-around;\n}\n\n.VUQdTB {\n  justify-content: stretch;\n  align-items: space-between;\n}\n\n._4WytG- {\n  justify-content: stretch;\n  align-items: first baseline;\n}\n\n.zIcBpV {\n  justify-content: stretch;\n  align-items: stretch;\n}\n\n.b92nbg {\n  position: relative;\n}\n\n.dUe7jL {\n  position: absolute;\n}\n\n.a6jqJu {\n  position: fixed;\n}\n\n.oLUgQu {\n  top: 0;\n  position: -webkit-sticky;\n  position: sticky;\n}\n\n._0WX3w6 {\n  width: 100%;\n}\n\n.BkRz-N {\n  height: 100%;\n}\n\n.p-B4GE {\n  width: 100%;\n  height: 100%;\n  flex-grow: 1;\n}\n\n.f-OnHJ {\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  box-sizing: border-box;\n}\n\n.cI5SF9 {\n  width: auto;\n  height: auto;\n}\n\n.frXUzP {\n  width: initial;\n  height: initial;\n}\n\n.j35VJM {\n  padding: 0;\n}\n\n.pjngfO {\n  padding: 0.5rem;\n}\n\n.iv7YFV {\n  padding: 1rem;\n}\n\n.IPVp1z {\n  padding: 1.5rem;\n}\n\n.z3Ird8 {\n  padding-top: 0;\n}\n\n._0vKWCu {\n  padding-top: 0.5rem;\n}\n\n.eiosQ9 {\n  padding-top: 1rem;\n}\n\n.XyuA3U {\n  padding-top: 1.5rem;\n}\n\n.WMk9ZJ {\n  padding-left: 0;\n}\n\n.rw1IzZ {\n  padding-left: 0.5rem;\n}\n\n._5Ay-uS {\n  padding-left: 1rem;\n}\n\n.zSzGOb {\n  padding-left: 1.5rem;\n}\n\n.yvOluM {\n  padding-bottom: 0;\n}\n\n.UXfxM5 {\n  padding-bottom: 0.5rem;\n}\n\n.t-TneE {\n  padding-bottom: 1rem;\n}\n\n.Xhrlwr {\n  padding-bottom: 1.5rem;\n}\n\n._63-TA- {\n  padding-right: 0;\n}\n\n.MwzxXj {\n  padding-right: 0.5rem;\n}\n\n.vQfsyW {\n  padding-right: 1rem;\n}\n\n.P-j-ux {\n  padding-right: 1.5rem;\n}\n\n.ERim67 {\n  margin: 0;\n}\n\n.EwqtOC {\n  margin: 0.4rem;\n}\n\n.yximzo {\n  margin: 0.8rem;\n}\n\n.wlilZ3 {\n  margin: 1rem;\n}\n\n._3jdp75 {\n  margin-top: 0;\n}\n\n.wVwjb3 {\n  margin-top: 0.4rem;\n}\n\n.hjC4AQ {\n  margin-top: 0.8rem;\n}\n\n.vARmsw {\n  margin-top: 1rem;\n}\n\n.H1vksJ {\n  margin-left: 0;\n}\n\n.n2s-yc {\n  margin-left: 0.4rem;\n}\n\n.moKUTa {\n  margin-left: 0.8rem;\n}\n\n.ta6Cyw {\n  margin-left: 1rem;\n}\n\n._9cPwE7 {\n  margin-bottom: 0;\n}\n\n._6Iba-- {\n  margin-bottom: 0.4rem;\n}\n\n.a68ExA {\n  margin-bottom: 0.8rem;\n}\n\n.BIL8Th {\n  margin-bottom: 1rem;\n}\n\n._8pZ8-T {\n  margin-right: 0;\n}\n\n.-Bor7t {\n  margin-right: 0.4rem;\n}\n\n.Md8l9X {\n  margin-right: 0.8rem;\n}\n\n.KvI5pm {\n  margin-right: 1rem;\n}\n\n@media (prefers-color-scheme: dark) {\n  .L12lRQ {\n    background-color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .L12lRQ {\n    background-color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._6s-W0A {\n    background-color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._6s-W0A {\n    background-color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .PN21mR {\n    background-color: #48484a;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .PN21mR {\n    background-color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .Lzi4uJ {\n    background-color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .Lzi4uJ {\n    background-color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._0uoWxM {\n    background-color: #55bef0;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._0uoWxM {\n    background-color: #55bef0;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .y26s1W {\n    background-color: #59adc4;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .y26s1W {\n    background-color: #59adc4;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .-jwzMP {\n    background-color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .-jwzMP {\n    background-color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._5-S3sa {\n    background-color: #f2f2f7;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._5-S3sa {\n    background-color: #1c1c1e;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .uBwTfw {\n    background-color: #d1d1d6;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .uBwTfw {\n    background-color: #48484a;\n  }\n}\n\n.arBVGH {\n  cursor: pointer;\n  pointer-events: auto;\n}";
-var styles$1 = {"direction-column":"wK23-E","direction-row":"_-9-Yj5","alignment-center-center":"JVOsVu","alignment-center-start":"kkCXFx","alignment-center-end":"rigoW1","alignment-center-around":"Yaoxq-","alignment-center-between":"Kb8687","alignment-center-baseline":"ytCb4n","alignment-center-stretch":"yGb7zY","alignment-start-center":"oBjMip","alignment-start-start":"guBJdP","alignment-start-end":"qi8CXu","alignment-start-around":"B-yI6c","alignment-start-between":"-xpbIv","alignment-start-baseline":"OS1D-l","alignment-start-stretch":"JMroyX","alignment-end-center":"Ji8EX1","alignment-end-start":"sKIrDk","alignment-end-end":"ZOBXjo","alignment-end-around":"F6zDWW","alignment-end-between":"_8qZado","alignment-end-baseline":"CFzx5p","alignment-end-stretch":"_2ohi32","alignment-around-center":"Q3FJls","alignment-around-start":"U9MCmJ","alignment-around-end":"GG82Kd","alignment-around-around":"Ynr8YU","alignment-around-between":"_68NreT","alignment-around-baseline":"_0RPEd-","alignment-around-stretch":"q4hAAt","alignment-between-center":"RDeHJ-","alignment-between-start":"wZZvye","alignment-between-end":"K3MwWx","alignment-between-around":"SmYm-D","alignment-between-between":"D-nyMy","alignment-between-baseline":"hA7dup","alignment-between-stretch":"N9ywZE","alignment-baseline-center":"QZgDeR","alignment-baseline-start":"oEIXLT","alignment-baseline-end":"ydozdO","alignment-baseline-around":"To70Vr","alignment-baseline-between":"HjWX1-","alignment-baseline-baseline":"RLY3-R","alignment-baseline-stretch":"nmX41U","alignment-stretch-center":"NKxOaN","alignment-stretch-start":"_0R3Tdt","alignment-stretch-end":"QyimLf","alignment-stretch-around":"EDBb-Z","alignment-stretch-between":"VUQdTB","alignment-stretch-baseline":"_4WytG-","alignment-stretch-stretch":"zIcBpV","position-relative":"b92nbg","position-absolute":"dUe7jL","position-fixed":"a6jqJu","position-sticky":"oLUgQu","fill-width":"_0WX3w6","fill-height":"BkRz-N","fill-parent":"p-B4GE","fill-screen":"f-OnHJ","fill-auto":"cI5SF9","fill-none":"frXUzP","padding-all-none":"j35VJM","padding-all-small":"pjngfO","padding-all-medium":"iv7YFV","padding-all-large":"IPVp1z","padding-top-none":"z3Ird8","padding-top-small":"_0vKWCu","padding-top-medium":"eiosQ9","padding-top-large":"XyuA3U","padding-left-none":"WMk9ZJ","padding-left-small":"rw1IzZ","padding-left-medium":"_5Ay-uS","padding-left-large":"zSzGOb","padding-bottom-none":"yvOluM","padding-bottom-small":"UXfxM5","padding-bottom-medium":"t-TneE","padding-bottom-large":"Xhrlwr","padding-right-none":"_63-TA-","padding-right-small":"MwzxXj","padding-right-medium":"vQfsyW","padding-right-large":"P-j-ux","margin-all-none":"ERim67","margin-all-small":"EwqtOC","margin-all-medium":"yximzo","margin-all-large":"wlilZ3","margin-top-none":"_3jdp75","margin-top-small":"wVwjb3","margin-top-medium":"hjC4AQ","margin-top-large":"vARmsw","margin-left-none":"H1vksJ","margin-left-small":"n2s-yc","margin-left-medium":"moKUTa","margin-left-large":"ta6Cyw","margin-bottom-none":"_9cPwE7","margin-bottom-small":"_6Iba--","margin-bottom-medium":"a68ExA","margin-bottom-large":"BIL8Th","margin-right-none":"_8pZ8-T","margin-right-small":"-Bor7t","margin-right-medium":"Md8l9X","margin-right-large":"KvI5pm","color-base-1":"L12lRQ","color-base-2":"_6s-W0A","color-base-3":"PN21mR","color-accent-1":"Lzi4uJ","color-accent-2":"_0uoWxM","color-accent-3":"y26s1W","color-neutral-1":"-jwzMP","color-neutral-2":"_5-S3sa","color-neutral-3":"uBwTfw","can-click":"arBVGH"};
+var css_248z$1 = ".wK23-E {\n  display: flex;\n  flex-direction: column;\n  cursor: default;\n  pointer-events: initial;\n}\n\n._-9-Yj5 {\n  display: flex;\n  flex-direction: row;\n  cursor: default;\n  pointer-events: initial;\n}\n\n.JVOsVu {\n  justify-content: center;\n  align-items: center;\n}\n\n.kkCXFx {\n  justify-content: center;\n  align-items: flex-start;\n}\n\n.rigoW1 {\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.Yaoxq- {\n  justify-content: center;\n  align-items: space-around;\n}\n\n.Kb8687 {\n  justify-content: center;\n  align-items: space-between;\n}\n\n.ytCb4n {\n  justify-content: center;\n  align-items: first baseline;\n}\n\n.yGb7zY {\n  justify-content: center;\n  align-items: stretch;\n}\n\n.oBjMip {\n  justify-content: flex-start;\n  align-items: center;\n}\n\n.guBJdP {\n  justify-content: flex-start;\n  align-items: flex-start;\n}\n\n.qi8CXu {\n  justify-content: flex-start;\n  align-items: flex-end;\n}\n\n.B-yI6c {\n  justify-content: flex-start;\n  align-items: space-around;\n}\n\n.-xpbIv {\n  justify-content: flex-start;\n  align-items: space-between;\n}\n\n.OS1D-l {\n  justify-content: flex-start;\n  align-items: first baseline;\n}\n\n.JMroyX {\n  justify-content: flex-start;\n  align-items: stretch;\n}\n\n.Ji8EX1 {\n  justify-content: flex-end;\n  align-items: center;\n}\n\n.sKIrDk {\n  justify-content: flex-end;\n  align-items: flex-start;\n}\n\n.ZOBXjo {\n  justify-content: flex-end;\n  align-items: flex-end;\n}\n\n.F6zDWW {\n  justify-content: flex-end;\n  align-items: space-around;\n}\n\n._8qZado {\n  justify-content: flex-end;\n  align-items: space-between;\n}\n\n.CFzx5p {\n  justify-content: flex-end;\n  align-items: first baseline;\n}\n\n._2ohi32 {\n  justify-content: flex-end;\n  align-items: stretch;\n}\n\n.Q3FJls {\n  justify-content: space-around;\n  align-items: center;\n}\n\n.U9MCmJ {\n  justify-content: space-around;\n  align-items: flex-start;\n}\n\n.GG82Kd {\n  justify-content: space-around;\n  align-items: flex-end;\n}\n\n.Ynr8YU {\n  justify-content: space-around;\n  align-items: space-around;\n}\n\n._68NreT {\n  justify-content: space-around;\n  align-items: space-between;\n}\n\n._0RPEd- {\n  justify-content: space-around;\n  align-items: first baseline;\n}\n\n.q4hAAt {\n  justify-content: space-around;\n  align-items: stretch;\n}\n\n.RDeHJ- {\n  justify-content: space-between;\n  align-items: center;\n}\n\n.wZZvye {\n  justify-content: space-between;\n  align-items: flex-start;\n}\n\n.K3MwWx {\n  justify-content: space-between;\n  align-items: flex-end;\n}\n\n.SmYm-D {\n  justify-content: space-between;\n  align-items: space-around;\n}\n\n.D-nyMy {\n  justify-content: space-between;\n  align-items: space-between;\n}\n\n.hA7dup {\n  justify-content: space-between;\n  align-items: first baseline;\n}\n\n.N9ywZE {\n  justify-content: space-between;\n  align-items: stretch;\n}\n\n.QZgDeR {\n  justify-content: first baseline;\n  align-items: center;\n}\n\n.oEIXLT {\n  justify-content: first baseline;\n  align-items: flex-start;\n}\n\n.ydozdO {\n  justify-content: first baseline;\n  align-items: flex-end;\n}\n\n.To70Vr {\n  justify-content: first baseline;\n  align-items: space-around;\n}\n\n.HjWX1- {\n  justify-content: first baseline;\n  align-items: space-between;\n}\n\n.RLY3-R {\n  justify-content: first baseline;\n  align-items: first baseline;\n}\n\n.nmX41U {\n  justify-content: first baseline;\n  align-items: stretch;\n}\n\n.NKxOaN {\n  justify-content: stretch;\n  align-items: center;\n}\n\n._0R3Tdt {\n  justify-content: stretch;\n  align-items: flex-start;\n}\n\n.QyimLf {\n  justify-content: stretch;\n  align-items: flex-end;\n}\n\n.EDBb-Z {\n  justify-content: stretch;\n  align-items: space-around;\n}\n\n.VUQdTB {\n  justify-content: stretch;\n  align-items: space-between;\n}\n\n._4WytG- {\n  justify-content: stretch;\n  align-items: first baseline;\n}\n\n.zIcBpV {\n  justify-content: stretch;\n  align-items: stretch;\n}\n\n.b92nbg {\n  position: relative;\n}\n\n.dUe7jL {\n  position: absolute;\n}\n\n.a6jqJu {\n  position: fixed;\n}\n\n.oLUgQu {\n  top: 0;\n  position: -webkit-sticky;\n  position: sticky;\n}\n\n._0WX3w6 {\n  width: 100%;\n}\n\n.BkRz-N {\n  height: 100%;\n}\n\n.p-B4GE {\n  width: 100%;\n  height: 100%;\n  flex-grow: 1;\n}\n\n.f-OnHJ {\n  width: 100vw;\n  height: 100vh;\n  top: 0;\n  left: 0;\n  box-sizing: border-box;\n}\n\n.cI5SF9 {\n  width: auto;\n  height: auto;\n}\n\n.frXUzP {\n  width: initial;\n  height: initial;\n}\n\n.j35VJM {\n  padding: 0;\n}\n\n.pjngfO {\n  padding: 0.5rem;\n}\n\n.iv7YFV {\n  padding: 1rem;\n}\n\n.IPVp1z {\n  padding: 1.5rem;\n}\n\n.z3Ird8 {\n  padding-top: 0;\n}\n\n._0vKWCu {\n  padding-top: 0.5rem;\n}\n\n.eiosQ9 {\n  padding-top: 1rem;\n}\n\n.XyuA3U {\n  padding-top: 1.5rem;\n}\n\n.WMk9ZJ {\n  padding-left: 0;\n}\n\n.rw1IzZ {\n  padding-left: 0.5rem;\n}\n\n._5Ay-uS {\n  padding-left: 1rem;\n}\n\n.zSzGOb {\n  padding-left: 1.5rem;\n}\n\n.yvOluM {\n  padding-bottom: 0;\n}\n\n.UXfxM5 {\n  padding-bottom: 0.5rem;\n}\n\n.t-TneE {\n  padding-bottom: 1rem;\n}\n\n.Xhrlwr {\n  padding-bottom: 1.5rem;\n}\n\n._63-TA- {\n  padding-right: 0;\n}\n\n.MwzxXj {\n  padding-right: 0.5rem;\n}\n\n.vQfsyW {\n  padding-right: 1rem;\n}\n\n.P-j-ux {\n  padding-right: 1.5rem;\n}\n\n.ERim67 {\n  margin: 0;\n}\n\n.EwqtOC {\n  margin: 0.4rem;\n}\n\n.yximzo {\n  margin: 0.8rem;\n}\n\n.wlilZ3 {\n  margin: 1rem;\n}\n\n._3jdp75 {\n  margin-top: 0;\n}\n\n.wVwjb3 {\n  margin-top: 0.4rem;\n}\n\n.hjC4AQ {\n  margin-top: 0.8rem;\n}\n\n.vARmsw {\n  margin-top: 1rem;\n}\n\n.H1vksJ {\n  margin-left: 0;\n}\n\n.n2s-yc {\n  margin-left: 0.4rem;\n}\n\n.moKUTa {\n  margin-left: 0.8rem;\n}\n\n.ta6Cyw {\n  margin-left: 1rem;\n}\n\n._9cPwE7 {\n  margin-bottom: 0;\n}\n\n._6Iba-- {\n  margin-bottom: 0.4rem;\n}\n\n.a68ExA {\n  margin-bottom: 0.8rem;\n}\n\n.BIL8Th {\n  margin-bottom: 1rem;\n}\n\n._8pZ8-T {\n  margin-right: 0;\n}\n\n.-Bor7t {\n  margin-right: 0.4rem;\n}\n\n.Md8l9X {\n  margin-right: 0.8rem;\n}\n\n.KvI5pm {\n  margin-right: 1rem;\n}\n\n@media (prefers-color-scheme: dark) {\n  .L12lRQ {\n    background-color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .L12lRQ {\n    background-color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._6s-W0A {\n    background-color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._6s-W0A {\n    background-color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .PN21mR {\n    background-color: #48484a;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .PN21mR {\n    background-color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .Lzi4uJ {\n    background-color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .Lzi4uJ {\n    background-color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._0uoWxM {\n    background-color: #55bef0;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._0uoWxM {\n    background-color: #55bef0;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .y26s1W {\n    background-color: #59adc4;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .y26s1W {\n    background-color: #59adc4;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .-jwzMP {\n    background-color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .-jwzMP {\n    background-color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._5-S3sa {\n    background-color: #f2f2f7;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._5-S3sa {\n    background-color: #1c1c1e;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .uBwTfw {\n    background-color: #d1d1d6;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .uBwTfw {\n    background-color: #48484a;\n  }\n}\n\n.arBVGH {\n  cursor: pointer;\n  pointer-events: auto;\n}";
+var style$1 = {"direction-column":"wK23-E","direction-row":"_-9-Yj5","alignment-center-center":"JVOsVu","alignment-center-start":"kkCXFx","alignment-center-end":"rigoW1","alignment-center-around":"Yaoxq-","alignment-center-between":"Kb8687","alignment-center-baseline":"ytCb4n","alignment-center-stretch":"yGb7zY","alignment-start-center":"oBjMip","alignment-start-start":"guBJdP","alignment-start-end":"qi8CXu","alignment-start-around":"B-yI6c","alignment-start-between":"-xpbIv","alignment-start-baseline":"OS1D-l","alignment-start-stretch":"JMroyX","alignment-end-center":"Ji8EX1","alignment-end-start":"sKIrDk","alignment-end-end":"ZOBXjo","alignment-end-around":"F6zDWW","alignment-end-between":"_8qZado","alignment-end-baseline":"CFzx5p","alignment-end-stretch":"_2ohi32","alignment-around-center":"Q3FJls","alignment-around-start":"U9MCmJ","alignment-around-end":"GG82Kd","alignment-around-around":"Ynr8YU","alignment-around-between":"_68NreT","alignment-around-baseline":"_0RPEd-","alignment-around-stretch":"q4hAAt","alignment-between-center":"RDeHJ-","alignment-between-start":"wZZvye","alignment-between-end":"K3MwWx","alignment-between-around":"SmYm-D","alignment-between-between":"D-nyMy","alignment-between-baseline":"hA7dup","alignment-between-stretch":"N9ywZE","alignment-baseline-center":"QZgDeR","alignment-baseline-start":"oEIXLT","alignment-baseline-end":"ydozdO","alignment-baseline-around":"To70Vr","alignment-baseline-between":"HjWX1-","alignment-baseline-baseline":"RLY3-R","alignment-baseline-stretch":"nmX41U","alignment-stretch-center":"NKxOaN","alignment-stretch-start":"_0R3Tdt","alignment-stretch-end":"QyimLf","alignment-stretch-around":"EDBb-Z","alignment-stretch-between":"VUQdTB","alignment-stretch-baseline":"_4WytG-","alignment-stretch-stretch":"zIcBpV","position-relative":"b92nbg","position-absolute":"dUe7jL","position-fixed":"a6jqJu","position-sticky":"oLUgQu","fill-width":"_0WX3w6","fill-height":"BkRz-N","fill-parent":"p-B4GE","fill-screen":"f-OnHJ","fill-auto":"cI5SF9","fill-none":"frXUzP","padding-all-none":"j35VJM","padding-all-small":"pjngfO","padding-all-medium":"iv7YFV","padding-all-large":"IPVp1z","padding-top-none":"z3Ird8","padding-top-small":"_0vKWCu","padding-top-medium":"eiosQ9","padding-top-large":"XyuA3U","padding-left-none":"WMk9ZJ","padding-left-small":"rw1IzZ","padding-left-medium":"_5Ay-uS","padding-left-large":"zSzGOb","padding-bottom-none":"yvOluM","padding-bottom-small":"UXfxM5","padding-bottom-medium":"t-TneE","padding-bottom-large":"Xhrlwr","padding-right-none":"_63-TA-","padding-right-small":"MwzxXj","padding-right-medium":"vQfsyW","padding-right-large":"P-j-ux","margin-all-none":"ERim67","margin-all-small":"EwqtOC","margin-all-medium":"yximzo","margin-all-large":"wlilZ3","margin-top-none":"_3jdp75","margin-top-small":"wVwjb3","margin-top-medium":"hjC4AQ","margin-top-large":"vARmsw","margin-left-none":"H1vksJ","margin-left-small":"n2s-yc","margin-left-medium":"moKUTa","margin-left-large":"ta6Cyw","margin-bottom-none":"_9cPwE7","margin-bottom-small":"_6Iba--","margin-bottom-medium":"a68ExA","margin-bottom-large":"BIL8Th","margin-right-none":"_8pZ8-T","margin-right-small":"-Bor7t","margin-right-medium":"Md8l9X","margin-right-large":"KvI5pm","color-base-1":"L12lRQ","color-base-2":"_6s-W0A","color-base-3":"PN21mR","color-accent-1":"Lzi4uJ","color-accent-2":"_0uoWxM","color-accent-3":"y26s1W","color-neutral-1":"-jwzMP","color-neutral-2":"_5-S3sa","color-neutral-3":"uBwTfw","can-click":"arBVGH"};
 styleInject(css_248z$1);
 
-var _excluded$2 = ["id", "classes", "style", "direction", "alignment", "position", "fill", "padding", "margin", "color", "canClick", "children"];
+var _excluded$2 = ["id", "classes", "styles", "width", "height", "direction", "alignment", "position", "fill", "padding", "margin", "color", "canClick", "children"];
 
 var getClassesFromString$1 = function getClassesFromString(property, string) {
   var classes = '';
@@ -193,7 +193,11 @@ var getClassesFromString$1 = function getClassesFromString(property, string) {
   for (var i = 0; i < array.length; i += 2) {
     var x = array[i];
     var y = array[i + 1];
-    classes += styles$1[property + '-' + x + '-' + y];
+    var calculatedStyle = style$1[property + '-' + x + '-' + y];
+
+    if (calculatedStyle != undefined) {
+      classes += calculatedStyle;
+    }
 
     if (i != array.length - 1) {
       classes += ' ';
@@ -203,13 +207,35 @@ var getClassesFromString$1 = function getClassesFromString(property, string) {
   return classes;
 };
 
+var getStylesFromString$1 = function getStylesFromString(property, string) {
+  var accepted = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var styles = {};
+  var array = string.split(' ');
+
+  for (var i = 0; i < array.length; i += 2) {
+    var x = array[i];
+    var y = array[i + 1];
+
+    if (!accepted.includes(y)) {
+      var propertyName = property + x.charAt(0).toUpperCase() + x.slice(1);
+      styles[propertyName] = y;
+    }
+  }
+
+  return styles;
+};
+
 var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
   var _ref$id = _ref.id,
       id = _ref$id === void 0 ? '' : _ref$id,
       _ref$classes = _ref.classes,
       classes = _ref$classes === void 0 ? '' : _ref$classes,
-      _ref$style = _ref.style,
-      style = _ref$style === void 0 ? {} : _ref$style,
+      _ref$styles = _ref.styles,
+      styles = _ref$styles === void 0 ? {} : _ref$styles,
+      _ref$width = _ref.width,
+      width = _ref$width === void 0 ? null : _ref$width,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? null : _ref$height,
       _ref$direction = _ref.direction,
       direction = _ref$direction === void 0 ? 'column' : _ref$direction,
       _ref$alignment = _ref.alignment,
@@ -233,7 +259,7 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
     var alignmentClasses = getClassesFromString$1('alignment', alignment);
     var paddingClasses = getClassesFromString$1('padding', padding);
     var marginClasses = getClassesFromString$1('margin', margin);
-    return styles$1['direction-' + direction] + ' ' + alignmentClasses + ' ' + styles$1['position-' + position] + ' ' + styles$1['fill-' + fill] + ' ' + paddingClasses + ' ' + marginClasses + (color !== '' ? ' ' + styles$1['color-' + color] : '') + (canClick ? ' ' + styles$1['can-click'] : '');
+    return style$1['direction-' + direction] + ' ' + alignmentClasses + ' ' + style$1['position-' + position] + ' ' + style$1['fill-' + fill] + ' ' + paddingClasses + ' ' + marginClasses + (color !== '' && !color.includes('#') ? ' ' + style$1['color-' + color] : '') + (canClick ? ' ' + style$1['can-click'] : '');
   };
 
   var getColor = function getColor() {
@@ -246,10 +272,38 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
     }
   };
 
+  var getPadding = function getPadding() {
+    return getStylesFromString$1('padding', padding, ['small', 'medium', 'large', 'none']);
+  };
+
+  var getMargin = function getMargin() {
+    return getStylesFromString$1('margin', margin, ['small', 'medium', 'large', 'none']);
+  };
+
+  var getWidth = function getWidth() {
+    if (width !== null) {
+      return {
+        width: width
+      };
+    } else {
+      return {};
+    }
+  };
+
+  var getHeight = function getHeight() {
+    if (height !== null) {
+      return {
+        height: height
+      };
+    } else {
+      return {};
+    }
+  };
+
   return /*#__PURE__*/React.createElement("div", _extends({
     id: id != '' ? id : null,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2(_objectSpread2({}, style), getColor()),
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin()), getWidth()), getHeight()),
     ref: ref
   }, extras), children);
 });
@@ -2470,11 +2524,11 @@ function isPortrait() {
   return aspect < 1;
 }
 
-var css_248z = "@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap\");\n@import url(\"https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap\");\n.KUgPzN {\n  font-style: italic;\n}\n\n.BgaJqP {\n  font-weight: normal;\n}\n\n.L7OqmH {\n  font-weight: bold;\n}\n\n.Irwgbn {\n  font-weight: lighter;\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2jREhU {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2jREhU {\n    color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .vOm2uW {\n    color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .vOm2uW {\n    color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .PUFZ-s {\n    color: #48484a;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .PUFZ-s {\n    color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .TTGe5f {\n    color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .TTGe5f {\n    color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2IkPSj {\n    color: #55bef0;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2IkPSj {\n    color: #55bef0;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .qxhSkq {\n    color: #59adc4;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .qxhSkq {\n    color: #59adc4;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .MqW00G {\n    color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .MqW00G {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .Uc-VKN {\n    color: #f2f2f7;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .Uc-VKN {\n    color: #1c1c1e;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .suLIE8 {\n    color: #d1d1d6;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .suLIE8 {\n    color: #48484a;\n  }\n}\n\n.Rur-Sy {\n  text-align: left;\n}\n\n._51MYmx {\n  text-align: right;\n}\n\n.iBCjQO {\n  text-align: center;\n}\n\n.ql8Y3I {\n  text-align: justify;\n}\n\n.OWpWNF {\n  padding: 0;\n}\n\n.nH42ow {\n  padding: 0.5rem;\n}\n\n.CXxMAT {\n  padding: 1rem;\n}\n\n.T3Sw64 {\n  padding: 1.5rem;\n}\n\n.VG01gx {\n  padding-top: 0;\n}\n\n.nbL5Ov {\n  padding-top: 0.5rem;\n}\n\n._0QvlIC {\n  padding-top: 1rem;\n}\n\n.V-QYzV {\n  padding-top: 1.5rem;\n}\n\n.US9pLF {\n  padding-left: 0;\n}\n\n.ffmveg {\n  padding-left: 0.5rem;\n}\n\n.om3kk5 {\n  padding-left: 1rem;\n}\n\n.B1HE7T {\n  padding-left: 1.5rem;\n}\n\n._4jEQQi {\n  padding-bottom: 0;\n}\n\n.TDKaNH {\n  padding-bottom: 0.5rem;\n}\n\n.TMhcQG {\n  padding-bottom: 1rem;\n}\n\n.lfbKs7 {\n  padding-bottom: 1.5rem;\n}\n\n._2-jdmD {\n  padding-right: 0;\n}\n\n.FodmX4 {\n  padding-right: 0.5rem;\n}\n\n.dudm-x {\n  padding-right: 1rem;\n}\n\n.d4Aow2 {\n  padding-right: 1.5rem;\n}\n\n.EX3CPz {\n  margin: 0;\n}\n\n.IWtm79 {\n  margin: 0.4rem;\n}\n\n._1Sntb0 {\n  margin: 0.8rem;\n}\n\n.zM2hiw {\n  margin: 1rem;\n}\n\n.yolTyY {\n  margin-top: 0;\n}\n\n.MmDZ9y {\n  margin-top: 0.4rem;\n}\n\n.c6i2s1 {\n  margin-top: 0.8rem;\n}\n\n._2rwPx4 {\n  margin-top: 1rem;\n}\n\n.a83JmX {\n  margin-left: 0;\n}\n\n.E-hqQ8 {\n  margin-left: 0.4rem;\n}\n\n.keNVmG {\n  margin-left: 0.8rem;\n}\n\n.lhTZ2m {\n  margin-left: 1rem;\n}\n\n.ABl7B4 {\n  margin-bottom: 0;\n}\n\n.JELwf8 {\n  margin-bottom: 0.4rem;\n}\n\n.J3Jmle {\n  margin-bottom: 0.8rem;\n}\n\n.vf3q-r {\n  margin-bottom: 1rem;\n}\n\n.JUNt8N {\n  margin-right: 0;\n}\n\n.oqfENQ {\n  margin-right: 0.4rem;\n}\n\n.V-JTjI {\n  margin-right: 0.8rem;\n}\n\n.ijg4ie {\n  margin-right: 1rem;\n}\n\n.trIPjl {\n  cursor: pointer;\n  pointer-events: auto;\n}";
-var styles = {"italic":"KUgPzN","weight-normal":"BgaJqP","weight-bold":"L7OqmH","weight-light":"Irwgbn","color-base-1":"_2jREhU","color-base-2":"vOm2uW","color-base-3":"PUFZ-s","color-accent-1":"TTGe5f","color-accent-2":"_2IkPSj","color-accent-3":"qxhSkq","color-neutral-1":"MqW00G","color-neutral-2":"Uc-VKN","color-neutral-3":"suLIE8","alignment-left":"Rur-Sy","alignment-right":"_51MYmx","alignment-center":"iBCjQO","alignment-justify":"ql8Y3I","padding-all-none":"OWpWNF","padding-all-small":"nH42ow","padding-all-medium":"CXxMAT","padding-all-large":"T3Sw64","padding-top-none":"VG01gx","padding-top-small":"nbL5Ov","padding-top-medium":"_0QvlIC","padding-top-large":"V-QYzV","padding-left-none":"US9pLF","padding-left-small":"ffmveg","padding-left-medium":"om3kk5","padding-left-large":"B1HE7T","padding-bottom-none":"_4jEQQi","padding-bottom-small":"TDKaNH","padding-bottom-medium":"TMhcQG","padding-bottom-large":"lfbKs7","padding-right-none":"_2-jdmD","padding-right-small":"FodmX4","padding-right-medium":"dudm-x","padding-right-large":"d4Aow2","margin-all-none":"EX3CPz","margin-all-small":"IWtm79","margin-all-medium":"_1Sntb0","margin-all-large":"zM2hiw","margin-top-none":"yolTyY","margin-top-small":"MmDZ9y","margin-top-medium":"c6i2s1","margin-top-large":"_2rwPx4","margin-left-none":"a83JmX","margin-left-small":"E-hqQ8","margin-left-medium":"keNVmG","margin-left-large":"lhTZ2m","margin-bottom-none":"ABl7B4","margin-bottom-small":"JELwf8","margin-bottom-medium":"J3Jmle","margin-bottom-large":"vf3q-r","margin-right-none":"JUNt8N","margin-right-small":"oqfENQ","margin-right-medium":"V-JTjI","margin-right-large":"ijg4ie","can-click":"trIPjl"};
+var css_248z = ".KUgPzN {\n  font-style: italic;\n}\n\n.sEO-mW {\n  text-decoration: underline;\n}\n\n.BgaJqP {\n  font-weight: normal;\n}\n\n.L7OqmH {\n  font-weight: bold;\n}\n\n.Irwgbn {\n  font-weight: lighter;\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2jREhU {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2jREhU {\n    color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .vOm2uW {\n    color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .vOm2uW {\n    color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .PUFZ-s {\n    color: #48484a;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .PUFZ-s {\n    color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .TTGe5f {\n    color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .TTGe5f {\n    color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2IkPSj {\n    color: #55bef0;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2IkPSj {\n    color: #55bef0;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .qxhSkq {\n    color: #59adc4;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .qxhSkq {\n    color: #59adc4;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .MqW00G {\n    color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .MqW00G {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .Uc-VKN {\n    color: #f2f2f7;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .Uc-VKN {\n    color: #1c1c1e;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  .suLIE8 {\n    color: #d1d1d6;\n  }\n}\n@media (prefers-color-scheme: light) {\n  .suLIE8 {\n    color: #48484a;\n  }\n}\n\n.Rur-Sy {\n  text-align: left;\n}\n\n._51MYmx {\n  text-align: right;\n}\n\n.iBCjQO {\n  text-align: center;\n}\n\n.ql8Y3I {\n  text-align: justify;\n}\n\n.OWpWNF {\n  padding: 0;\n}\n\n.nH42ow {\n  padding: 0.5rem;\n}\n\n.CXxMAT {\n  padding: 1rem;\n}\n\n.T3Sw64 {\n  padding: 1.5rem;\n}\n\n.VG01gx {\n  padding-top: 0;\n}\n\n.nbL5Ov {\n  padding-top: 0.5rem;\n}\n\n._0QvlIC {\n  padding-top: 1rem;\n}\n\n.V-QYzV {\n  padding-top: 1.5rem;\n}\n\n.US9pLF {\n  padding-left: 0;\n}\n\n.ffmveg {\n  padding-left: 0.5rem;\n}\n\n.om3kk5 {\n  padding-left: 1rem;\n}\n\n.B1HE7T {\n  padding-left: 1.5rem;\n}\n\n._4jEQQi {\n  padding-bottom: 0;\n}\n\n.TDKaNH {\n  padding-bottom: 0.5rem;\n}\n\n.TMhcQG {\n  padding-bottom: 1rem;\n}\n\n.lfbKs7 {\n  padding-bottom: 1.5rem;\n}\n\n._2-jdmD {\n  padding-right: 0;\n}\n\n.FodmX4 {\n  padding-right: 0.5rem;\n}\n\n.dudm-x {\n  padding-right: 1rem;\n}\n\n.d4Aow2 {\n  padding-right: 1.5rem;\n}\n\n.EX3CPz {\n  margin: 0;\n}\n\n.IWtm79 {\n  margin: 0.4rem;\n}\n\n._1Sntb0 {\n  margin: 0.8rem;\n}\n\n.zM2hiw {\n  margin: 1rem;\n}\n\n.yolTyY {\n  margin-top: 0;\n}\n\n.MmDZ9y {\n  margin-top: 0.4rem;\n}\n\n.c6i2s1 {\n  margin-top: 0.8rem;\n}\n\n._2rwPx4 {\n  margin-top: 1rem;\n}\n\n.a83JmX {\n  margin-left: 0;\n}\n\n.E-hqQ8 {\n  margin-left: 0.4rem;\n}\n\n.keNVmG {\n  margin-left: 0.8rem;\n}\n\n.lhTZ2m {\n  margin-left: 1rem;\n}\n\n.ABl7B4 {\n  margin-bottom: 0;\n}\n\n.JELwf8 {\n  margin-bottom: 0.4rem;\n}\n\n.J3Jmle {\n  margin-bottom: 0.8rem;\n}\n\n.vf3q-r {\n  margin-bottom: 1rem;\n}\n\n.JUNt8N {\n  margin-right: 0;\n}\n\n.oqfENQ {\n  margin-right: 0.4rem;\n}\n\n.V-JTjI {\n  margin-right: 0.8rem;\n}\n\n.ijg4ie {\n  margin-right: 1rem;\n}\n\n.trIPjl {\n  cursor: pointer;\n  pointer-events: auto;\n}";
+var style = {"italic":"KUgPzN","underline":"sEO-mW","weight-normal":"BgaJqP","weight-bold":"L7OqmH","weight-light":"Irwgbn","color-base-1":"_2jREhU","color-base-2":"vOm2uW","color-base-3":"PUFZ-s","color-accent-1":"TTGe5f","color-accent-2":"_2IkPSj","color-accent-3":"qxhSkq","color-neutral-1":"MqW00G","color-neutral-2":"Uc-VKN","color-neutral-3":"suLIE8","alignment-left":"Rur-Sy","alignment-right":"_51MYmx","alignment-center":"iBCjQO","alignment-justify":"ql8Y3I","padding-all-none":"OWpWNF","padding-all-small":"nH42ow","padding-all-medium":"CXxMAT","padding-all-large":"T3Sw64","padding-top-none":"VG01gx","padding-top-small":"nbL5Ov","padding-top-medium":"_0QvlIC","padding-top-large":"V-QYzV","padding-left-none":"US9pLF","padding-left-small":"ffmveg","padding-left-medium":"om3kk5","padding-left-large":"B1HE7T","padding-bottom-none":"_4jEQQi","padding-bottom-small":"TDKaNH","padding-bottom-medium":"TMhcQG","padding-bottom-large":"lfbKs7","padding-right-none":"_2-jdmD","padding-right-small":"FodmX4","padding-right-medium":"dudm-x","padding-right-large":"d4Aow2","margin-all-none":"EX3CPz","margin-all-small":"IWtm79","margin-all-medium":"_1Sntb0","margin-all-large":"zM2hiw","margin-top-none":"yolTyY","margin-top-small":"MmDZ9y","margin-top-medium":"c6i2s1","margin-top-large":"_2rwPx4","margin-left-none":"a83JmX","margin-left-small":"E-hqQ8","margin-left-medium":"keNVmG","margin-left-large":"lhTZ2m","margin-bottom-none":"ABl7B4","margin-bottom-small":"JELwf8","margin-bottom-medium":"J3Jmle","margin-bottom-large":"vf3q-r","margin-right-none":"JUNt8N","margin-right-small":"oqfENQ","margin-right-medium":"V-JTjI","margin-right-large":"ijg4ie","can-click":"trIPjl"};
 styleInject(css_248z);
 
-var _excluded = ["id", "classes", "style", "alignment", "color", "size", "margin", "padding", "weight", "italic", "href", "canClick", "children"];
+var _excluded = ["id", "classes", "styles", "alignment", "color", "size", "margin", "padding", "weight", "italic", "underline", "href", "canClick", "children"];
 
 var getClassesFromString = function getClassesFromString(property, string) {
   var classes = '';
@@ -2483,7 +2537,7 @@ var getClassesFromString = function getClassesFromString(property, string) {
   for (var i = 0; i < array.length; i += 2) {
     var x = array[i];
     var y = array[i + 1];
-    classes += styles[property + '-' + x + '-' + y];
+    classes += style[property + '-' + x + '-' + y];
 
     if (i != array.length - 1) {
       classes += ' ';
@@ -2493,12 +2547,30 @@ var getClassesFromString = function getClassesFromString(property, string) {
   return classes;
 };
 
+var getStylesFromString = function getStylesFromString(property, string) {
+  var accepted = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
+  var styles = {};
+  var array = string.split(' ');
+
+  for (var i = 0; i < array.length; i += 2) {
+    var x = array[i];
+    var y = array[i + 1];
+
+    if (!accepted.includes(y)) {
+      var propertyName = property + x.charAt(0).toUpperCase() + x.slice(1);
+      styles[propertyName] = y;
+    }
+  }
+
+  return styles;
+};
+
 function Text(_ref) {
   var id = _ref.id,
       _ref$classes = _ref.classes,
       classes = _ref$classes === void 0 ? '' : _ref$classes,
-      _ref$style = _ref.style,
-      style = _ref$style === void 0 ? {} : _ref$style,
+      _ref$styles = _ref.styles,
+      styles = _ref$styles === void 0 ? {} : _ref$styles,
       _ref$alignment = _ref.alignment,
       alignment = _ref$alignment === void 0 ? 'center' : _ref$alignment,
       _ref$color = _ref.color,
@@ -2513,6 +2585,8 @@ function Text(_ref) {
       weight = _ref$weight === void 0 ? 'auto' : _ref$weight,
       _ref$italic = _ref.italic,
       italic = _ref$italic === void 0 ? false : _ref$italic,
+      _ref$underline = _ref.underline,
+      underline = _ref$underline === void 0 ? false : _ref$underline,
       _ref$href = _ref.href,
       href = _ref$href === void 0 ? '' : _ref$href,
       _ref$canClick = _ref.canClick,
@@ -2523,7 +2597,7 @@ function Text(_ref) {
   var getClasses = function getClasses() {
     var paddingClasses = getClassesFromString('padding', padding);
     var marginClasses = getClassesFromString('margin', margin);
-    return (italic ? styles['italic'] + ' ' : '') + styles['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + styles['weight-' + weight] + ' ' + (color !== '' ? ' ' + styles['color-' + color] : '') + (canClick ? ' ' + styles['can-click'] : '');
+    return (italic ? style['italic'] + ' ' : '') + (underline ? style['underline'] + ' ' : '') + style['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + style['weight-' + weight] + ' ' + (color !== '' && !color.includes('#') ? ' ' + style['color-' + color] : '') + (canClick ? ' ' + style['can-click'] : '');
   };
 
   var getChildren = function getChildren() {
@@ -2536,34 +2610,52 @@ function Text(_ref) {
     }
   };
 
+  var getColor = function getColor() {
+    if (color.includes('#')) {
+      return {
+        color: color
+      };
+    } else {
+      return {};
+    }
+  };
+
+  var getPadding = function getPadding() {
+    return getStylesFromString('padding', padding, ['small', 'medium', 'large', 'none']);
+  };
+
+  var getMargin = function getMargin() {
+    return getStylesFromString('margin', margin, ['small', 'medium', 'large', 'none']);
+  };
+
   return size == 'h1' ? /*#__PURE__*/React.createElement("h1", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'h2' ? /*#__PURE__*/React.createElement("h2", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'h3' ? /*#__PURE__*/React.createElement("h3", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'h4' ? /*#__PURE__*/React.createElement("h4", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'h5' ? /*#__PURE__*/React.createElement("h5", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'h6' ? /*#__PURE__*/React.createElement("h6", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : size == 'p' ? /*#__PURE__*/React.createElement("p", _extends({
     id: id,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, style)
+    style: _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin())
   }, extras), getChildren()) : /*#__PURE__*/React.createElement("div", null);
 }
 

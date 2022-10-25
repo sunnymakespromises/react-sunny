@@ -6,6 +6,9 @@ $alignments: left, right, center, justify;
 .italic {
     font-style: italic;
 }
+.underline {
+    text-decoration: underline;
+}
 @each $weight-name, $weight in $weights {
     .weight-#{$weight-name} {
         font-weight: $weight;
