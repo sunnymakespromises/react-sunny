@@ -167,82 +167,11 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 </>
 ```
 
-## Examples
-Simple Dropdown Menu using Container, Dropdown, and Text.
-```javascript
-import React, { useState, useEffect } from 'react'
-import { Container, Dropdown, Header, List, Option, Text } from 'react-sunny'
-
-const DropdownExample = () => {
-    const [isExpanded, setIsExpanded] = useState(false)
-    const onToggle = ( value ) => {
-        setIsExpanded(value)
-    }
-
-    const [selection, setSelection] = useState(null)
-    const onSelect = ( value ) => {
-        setSelection(value)
-    }
-    
-    return (
-        <Dropdown onToggle = { (v) => onToggle(v) } onSelect = { (v) => onSelect(v) } behavior = 'click' trigger = 'button' alignment = 'start center' styles = {{ width: '400px', height: 'auto' }} color = 'base-1'>
-            <Header direction = 'row' alignment = 'end center' fill = 'width' color = 'base-2'>
-                <Button styles = {{ right: '0px' }} fill = 'height' color = 'base-3'/>
-            </Header>
-            <List classes = {'Dropdown-List' + (isExpanded ? '-Expanded' : '')} direction = 'column' alignment = 'start center' fill = 'parent'  color = 'neutral-1'>
-                <Option value = 'Apple' color = 'neutral-2'/>
-                <Option value = 'Banana' color = 'neutral-2'/>
-                <Option value = 'Mango' color = 'neutral-2'/>
-            </List>
-        </Dropdown>
-    )
-}
-
-const Item = ( value ) => {
-    return (
-        <Option value = {value} fill = 'parent'>
-            <Text size = 'h2'>
-                {value}
-            </Text>
-        </Option>
-    )
-}
-
-export default DropdownExample
-```
-
-Responsive component that renders differently depending on the size of the viewport.
-```javascript
-import React  from 'react'
-import { Container, Responsive, Text } from 'react-sunny'
-
-const ResponsiveExample = () => {
-    return (
-        <>
-            <Responsive portrait>
-                <Container color = 'base-1'>
-                    <Text size = 'h1'>
-                        You are on a portrait device.
-                    </Text>
-                </Container>
-            </Responsive>
-
-            <Responsive landscape>
-                <Container color = 'base-2'>
-                    <Text size = 'h2'>
-                        You are on a landscape device.
-                    </Text>
-                </Container>
-            </Responsive>
-        </>
-    )
-}
-
-export default ResponsiveExample
-```
-
 ## User-Defined Variables
-
+To override the default variables for color, padding, and margin in the package, follow these steps:
+1. Locate the  `overrides.scss` and `override-variables.scss` files in the package.
+2. Copy them into your application and import `overrides.scss` into your global/top-level page.
+3. Change any variables in `override-variables.scss` and it should override them everywhere.
 
 ## Dependencies
 React Sunny has no dependecies besides React 16+ and Sass.
