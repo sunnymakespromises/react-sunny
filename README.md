@@ -218,15 +218,83 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 ```
 
 ## Package Variables
-To override the default variables for color, padding, and margin in the package, follow these steps:
-1. Locate the  `react-sunny-styles` folder in the package.
+#### To override the default variables for color, padding, and margin in the package, follow these steps:
+1. Locate the  `react-sunny-styles` folder or just download it from [here]('http://github.com/sunnymakespromises/react-sunny-public/tree/main/src').
 2. Copy the folder into your application and import `utils.scss` into your index/top-level page.
+```javascript
+import './react-sunny-styles/utils.scss'
+```
 3. Change any variables in `variables.scss` and it will override them everywhere.
 
-#### Default Package Variable Values
+### Default Package Variable Values
+##### Colors
+| name       | light     | dark      | editable? |
+|------------|-----------|-----------|-----------|
+| base-1     | #FFFFFF   | #000000   | yes       |
+| base-2     | #F2F2F7   | #1C1C1E   | yes       |
+| base-3     | #D1D1D6   | #3A3A3C   | yes       |
+| neutral-1  | #000000   | #FFFFFF   | yes       |
+| neutral-2  | #1D1D1F   | #F2F2F7   | yes       |
+| neutral-3  | #424245   | #D1D1D6   | yes       |
+| accent-1   | #007AFF   | #007AFF   | yes       |
+| accent-2   | #32ADE6   | #32ADE6   | yes       |
+| accent-3   | #55BEF0   | #55BEF0   | yes       |
+| tertiary-1 | #FA3B2F   | #FA3B2F   | yes       |
+| tertiary-2 | #F92B53   | #F92B53   | yes       |
+| tertiary-3 | #FA6A86   | #FA6A86   | yes       |
+| clear      | #00000000 | #00000000 | no        |
+| extra-1    | #000000   | #000000   | yes       |
+| extra-2    | #000000   | #000000   | yes       |
+| extra-3    | #000000   | #000000   | yes       |
+| white      | #FFFFFF   | #FFFFFF   | no        |
+| black      | #000000   | #000000   | no        |
+| gray-1     | #8E8E93   | #8E8E93   | no        |
+| gray-2     | #AEAEB2   | #636366   | no        |
+| gray-3     | #C7C7CC   | #48484A   | no        |
+| gray-4     | #D1D1D6   | #3A3A3C   | no        |
+| gray-5     | #E5E5EA   | #2C2C2E   | no        |
+| gray-6     | #F2F2F7   | #1C1C1E   | no        |
+| red        | #FA3B2F   | #FA3B2F   | no        |
+| orange     | #FF9500   | #FF9500   | no        |
+| yellow     | #FFCC02   | #FFCC02   | no        |
+| green      | #35C759   | #35C759   | no        |
+| blue       | #007AFF   | #007AFF   | no        |
+| purple     | #5856D5   | #5856D5   | no        |
+| pink       | #FF6482   | #FF6482   | no        |
+
+##### Paddings
+| name    | value   |
+|---------|---------|
+| none    | 0       |
+| x-small | 0.25rem |
+| small   | 0.5rem  |
+| medium  | 1rem    |
+| large   | 2rem    |
+| x-large | 4rem    |
+
+##### Margins
+| name    | value   |
+|---------|---------|
+| none    | 0       |
+| x-small | 0.25rem |
+| small   | 0.5rem  |
+| medium  | 1rem    |
+| large   | 2rem    |
+| x-large | 4rem    |
+
+##### Text Sizes
+| name | value  |
+|------|--------|
+| h1   | 2em    |
+| h2   | 1.5em  |
+| h3   | 1.17em |
+| h4   | 1em    |
+| h5   | 0.83em |
+| h6   | 0.67em |
+| p    | 1rem   |
 
 ## Dependencies
-React Sunny has no dependecies besides React 16+ and Sass.
+React Sunny has no dependecies besides React 16+, Sass, and react-responsive.
 
 ## License
 MIT © https://github.com/sunnymakespromises
