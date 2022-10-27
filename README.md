@@ -219,10 +219,10 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 
 ## Package Variables
 #### To override the default variables for color, padding, and margin in the package, follow these steps:
-1. Locate the  `react-sunny-styles` folder or just download it from [here]('http://github.com/sunnymakespromises/react-sunny-public/tree/main/src').
-2. Copy the folder into your application and import `utils.scss` into your index/top-level page.
+1. Locate the  `react-sunny-styles` folder or just download it from [here]('http://github.com/sunnymakespromises/react-sunny-public/tree/main/dist').
+2. Copy the folder into your application and import `overrides.scss` into your index/top-level page.
 ```javascript
-import './react-sunny-styles/utils.scss'
+import './react-sunny-styles/overrides.scss'
 ```
 3. Change any variables in `variables.scss` and it will override them everywhere.
 
