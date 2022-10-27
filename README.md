@@ -2,42 +2,70 @@
 React Sunny is a group of components that I re-use in my websites to write more compact code.
 
 ## Installation
-1. Install the package with **npm** or **yarn**.
+### 1. Install the package with **npm**.
 `npm install react-sunny`
-`yarn add react-sunny`
+### 2. Use the components in your project!
+```javascript
+import { Container, Text, Responsive, Dropdown } from 'react-sunny'
+```
 
 ## Components
 ### Container
 The Container component is a div with flex-box built-in so you dont have to worry about vertical and horizontal centering or any of that nonsense.
 #### Props
-| name        | type    | default         | options                                                              | description                                                                                                                                                                                                                                                                                              |
-|-------------|---------|-----------------|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `id`        | string  | empty string    | none                                                                 | The id of the generated div.                                                                                                                                                                                                                                                                             |
-| `classes`   | string  | empty string    | none                                                                 | List of classes that apply to the generated div.                                                                                                                                                                                                                                                         |
-| `styles`    | object  | empty object    | none                                                                 | Any in-line styles to be applied to the generated div.                                                                                                                                                                                                                                                   |
-| `width`     | string  | null            | any                                                                   | Width of the generated div.                                                                                                                                                                                                                                                   |
-| `height`    | string  | null            | any                                                                   | Height of the generated div.                                                                                                                                                                                                                                                   |
-| `direction` | string  | `column`        | `column`, `row`                                                      | The direction of the flex-box.                                                                                                                                                                                                                                                                           |
-| `alignment` | string  | `center center` | `center`, `start`, `end`, `around`, `between`, `baseline`, `stretch` | The alignment of the flex-box. The first alignment is on the main axis of the direction property, and the second is on the secondary axis. Must be a space in between the two.                                                                                                                           |
-| `position`  | string  | `relative`      | `relative`, `absolute`, `fixed`, `sticky`                            | The position property of the generated div.                                                                                                                                                                                                                                                              |
-| `fill`      | string  | `auto`          | `width`, `height`, `parent`, `screen`, `auto`, `none`                | The way in which the div generated wants to fill space.                                                                                                                                                                                                                                                  |
-| `padding`   | string  | `all none`      | `all`, `top`, `right`, `bottom`, `left`, user-defined<sup>1</sup>               | The padding property of the div generated. The first word is the position and the second is the size of the padding. Can have up to 4 paddings separated by spaces. Sizes can be from user-defined variable names overwritten in override-variables.scss or regular HTML size values. Must be a space in between the position and the size. |
-| `margin`    | string  | `all none`      | `all`, `top`, `right`, `bottom`, `left`, user-defined<sup>1</sup>               | The margin property of the div generated. The first word is the position and the second is the size of the margin. Can have up to 4 margins separated by spaces. Sizes can be from user-defined variable names overwritten in override-variables.scss or regular HTML size values. Must be a space in between the position and the size.    |
-| `color`     | string  | empty string    | user-defined<sup>1</sup>                                                        | The background-color property of the div generated. Will take a hex code or a user-defined variable name overwritten in override-variables.scss.                                                                                                                                                              |
-| `canClick`  | boolean | `false`         | `true`, `false`                                                      | If the div is clickable, i.e. if pointer-events are turned on or not. Also changes the cursor to pointer.                                                                                                                                                                                                |
-| `extras`<sup>2</sup>  | any     | none            | none                                                                 | Any other properties to be passed directly to the generated div, i.e. events or anything else I forgot.                                                                                                                                                                                                  |
-| `ref`       | ref     | none            | none                                                                 | A React ref to be passed to the div.                                                                                                                                                                                                                                                                     |
+| name        | type    | default         | options                                                              | description                                                                                                                                                                                                                                                                                      |
+|-------------|---------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `id`        | string  | empty string    | none                                                                 | The id of the generated div.                                                                                                                                                                                                                                                                     |
+| `classes`   | string  | empty string    | none                                                                 | List of classes that apply to the generated div.                                                                                                                                                                                                                                                 |
+| `styles`    | object  | empty object    | none                                                                 | Any in-line styles to be applied to the generated div.                                                                                                                                                                                                                                           |
+| `width`     | string  | empty string    | any                                                                  | Width of the generated div.                                                                                                                                                                                                                                                                      |
+| `height`    | string  | empty string    | any                                                                  | Height of the generated div.                                                                                                                                                                                                                                                                     |
+| `direction` | string  | `column`        | `column`, `row`                                                      | The direction of the flex-box.                                                                                                                                                                                                                                                                   |
+| `alignment` | string  | `center center` | `center`, `start`, `end`, `around`, `between`, `baseline`, `stretch` | The alignment of the flex-box. The first alignment is on the main axis of the direction property, and the second is on the secondary axis.                                                                                                                                                       |
+| `position`  | string  | `relative`      | `relative`, `absolute`, `fixed`, `sticky`                            | The position property of the generated div.                                                                                                                                                                                                                                                      |
+| `fill`      | string  | empty string    | `width`, `height`, `parent`, `screen`, `auto`, `none`                | The way in which the div generated wants to fill space.                                                                                                                                                                                                                                          |
+| `padding`   | string  | empty string    | `all`, `top`, `right`, `bottom`, `left`, [package variables](#package-variables)               | The padding property of the div generated. The first word is the position and the second is the size of the padding. Can have up to 4 paddings. Sizes can be from [package variables](#package-variables) or regular HTML size values. Size from variables can be negative as well. e.g. "bottom 50% top -medium" |
+| `margin`    | string  | empty string    | `all`, `top`, `right`, `bottom`, `left`, [package variables](#package-variables)               | The margin property of the div generated. The first word is the position and the second is the size of the margin. Can have up to 4 margins. Sizes can be from [package variables](#package-variables) or regular HTML size values. Size from variables can be negative as well. e.g. "bottom 50% top -medium"    |
+| `color`     | string  | empty string    | [package variables](#package-variables)                                                        | The background-color property of the div generated. Will take a hex code or a [package variable](#package-variables).                                                                                                                                                                                             |
+| `canClick`  | boolean | `false`         | `true`, `false`                                                      | If the div is clickable, i.e. if pointer-events are turned on or not. Also changes the cursor to pointer.                                                                                                                                                                                        |
+| `extras`<sup>1</sup>   | any     | none            | none                                                                 | Any other properties to be passed directly to the generated div, i.e. events or anything else I forgot.                                                                                                                                                                                          |
+| `ref`       | ref     | none            | none                                                                 | A React ref to be passed to the div.                                                                                                                                                                                                                                                             |
 
-<sup>1</sup> See [User-Defined Variables](#user-defined-variables).
-<sup>2</sup> extras is not a prop exactly, you dont pass `extras = { blah }`, but you simply pass the extra properties themselves and it gets captured and passed on directly to the div component. For example, putting `extras = {{ onClick: () => click('test') }}` will not work, but putting `onClick = { () => click('text') }` will pass the onClick property to the div. extras just means any other arguments passed. See example for more.
+<sup>1</sup> extras is not a prop exactly, you dont pass `extras = { blah }`, but you simply pass the extra properties themselves and it gets captured and passed on directly to the div component. For example, putting `extras = {{ onClick: () => click('test') }}` will not work, but putting `onClick = { () => click('text') }` will pass the onClick property to the div. extras just means any other arguments passed. See example for more.
 
 #### Example
 ```javascript
-<Container classes = 'main-container' fill = 'screen' alignment = 'around center' color = '#F1FAEE'>
-    <Container classes = 'box red' fill = 'width' padding = 'all medium' color = '#E63946' canClick ref = {redRef} onClick = { () => click('red') }/>
-    <Container classes = 'box light-blue' fill = 'height' padding = 'top small bottom small' color = '#A8DADC' canClick ref = {lightBlueRef}/>
-    <Container classes = 'box blue' fill = 'parent' padding = 'top small bottom small' color = '#457B9D' canClick ref = {blueRef} onClick = { () => click('blue') }/>
-    <Container classes = 'box dark-blue' styles = {{ bottom: 0 }} position = 'absolute' padding = 'all large' color = '#457B9D' ref = {darkBlueRef}/>
+<Container fill = 'parent' classes = 'rounded-container' alignment = 'around center' color = 'base-2' padding = 'all medium'>
+    <Container fill = 'parent' direction = 'row' alignment = 'start center'>
+        <Container styles = {{ aspectRatio: '1/1' }} classes = 'rounded-container' fill = 'parent' color = 'red' padding = 'all medium' position = 'relative' canClick onClick = { () => console.log('red') }>
+            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+        </Container>
+        <Container direction = 'row' styles = {{ aspectRatio: '1/1' }} classes = 'rounded-container' fill = 'parent' color = 'blue' margin = 'left small right small' padding = 'all medium' position = 'relative' canClick onClick = { () => console.log('blue') }>
+            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+        </Container>
+        <Container styles = {{ aspectRatio: '1/1' }} classes = 'rounded-container' fill = 'parent' padding = 'all medium' position = 'relative'>
+            <Container styles = {{ top: 0, left: 0 }} fill = 'parent' position = 'absolute'>
+                <Container direction = 'row' classes = 'rounded-container' fill = 'parent' margin = 'bottom x-small' padding = 'all medium' color = 'yellow' position = 'relative' canClick onClick = { () => console.log('yellow') }>
+                    <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                    <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                </Container>
+                <Container direction = 'row' classes = 'rounded-container' fill = 'parent' margin = 'top x-small' padding = 'all medium' position = 'relative'>
+                    <Container direction = 'row' styles = {{ top: 0, left: 0 }} fill = 'parent' position = 'absolute'>
+                        <Container direction = 'row' classes = 'rounded-container' fill = 'parent' margin = 'right x-small' padding = 'left x-small right x-small top medium bottom medium' color = 'green' position = 'relative' canClick onClick = { () => console.log('green') }>
+                            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                        </Container>
+                        <Container direction = 'row' classes = 'rounded-container' fill = 'parent' margin = 'left x-small' padding = 'left x-small right x-small top medium bottom medium' color = 'purple' position = 'relative' canClick onClick = { () => console.log('purple') }>
+                            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                            <Container classes = 'rounded-container' styles = {{ backdropFilter: 'brightness(80%)' }} fill = 'parent' margin = 'all small' position = 'relative' canClick/>
+                        </Container>
+                    </Container>
+                </Container>
+            </Container>
+        </Container>
+    </Container>
 </Container>
 ```
 
@@ -70,31 +98,43 @@ Option is the only Dropdown subcomponent that has a prop other than `container` 
 | `active`  | boolean | true    | `true`, `false` | Whether this option is active, or allowed to be selected. If `false`, `onSelect` will not be called when it is clicked.                                                      |
 
 #### Examples
-Dropdown without a dedicated Button, clicking anywhere on the header will trigger `onToggle`.
+Dropdown without a dedicated Button, hovering anywhere on the header will trigger `onToggle`.
 ```javascript
-<Dropdown onToggle = { (v) => onToggle(v) } onSelect = { (v) => onSelect(v) } behavior = 'click' trigger = 'header' container>
-    <Header direction = 'row' alignment = 'start center' fill = 'width'/>
-    <List direction = 'column' alignment = 'start center' fill = 'width'>
-        <Option value = 'Apple' container/>
-        <Option value = 'Banana' container/>
-        <Option value = 'Mango' container/>
-    </List>
+<Dropdown onSelect = {setSelection} onToggle = {setIsExpanded} behavior = 'hover' trigger = 'header' classes = 'dropdown' alignment = 'start start' fill = 'width'>
+        <Header classes = 'header' padding = 'all medium' color = 'base-2'>
+            <Text size = 'p'>{selection.toString()}</Text>
+        </Header>
+        <List classes = {'list' + (isExpanded ? '-expanded' : '')} alignment = 'start start' position = 'absolute' padding = 'left medium right medium bottom medium' color = 'base-2'>
+                <Option classes = 'option' value = 'apple' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Apple</Text>
+                </Option>
+                <Option classes = 'option' value = 'banana' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Banana</Text>
+                </Option>
+                <Option classes = 'option' value = 'mango' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Mango</Text>
+                </Option>
+        </List>
 </Dropdown>
 ```
 Dropdown *with* a dedicated Button, clicking only on the button will trigger `onToggle`.
 ```javascript
-<Dropdown onToggle = { (v) => onToggle(v) } onSelect = { (v) => onSelect(v) } behavior = 'click' trigger = 'button' fill = 'parent'>
-    <Header direction = 'row' fill = 'width'>
-        <Text size = 'h2'>
-            {selection.name}
-        </Text>
-        <Button styles = {{ left: 0 }} position = 'absolute'/>
-    </Header>
-    <List direction = 'column' alignment = 'start center' fill = 'width'>
-        <Option value = 'Apple' container/>
-        <Option value = 'Banana' container/>
-        <Option value = 'Mango' container/>
-    </List>
+<Dropdown onSelect = {setSelection} onToggle = {setIsExpanded} behavior = 'hover' trigger = 'header' classes = 'dropdown' alignment = 'start start' fill = 'width'>
+        <Header classes = 'header' direction = 'row' alignment = 'between center' padding = 'all medium' color = 'base-2'>
+            <Text size = 'p'>{selection.toString()}</Text>
+            <Button width = '20px' height = '20px' color = 'base-3'/>
+        </Header>
+        <List classes = {'list' + (isExpanded ? '-expanded' : '')} alignment = 'start start' position = 'absolute' padding = 'left medium right medium bottom medium' color = 'base-2'>
+                <Option classes = 'option' value = 'apple' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Apple</Text>
+                </Option>
+                <Option classes = 'option' value = 'banana' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Banana</Text>
+                </Option>
+                <Option classes = 'option' value = 'mango' initial alignment = 'start start' fill = 'parent' padding = 'top small bottom small'>
+                    <Text size = 'p'>Mango</Text>
+                </Option>
+        </List>
 </Dropdown>
 ```
 
@@ -106,28 +146,27 @@ The Text component is just an easier way to work with text and allows you to qui
 | `id`        | string  | empty string | none                                                   | The id of the generated text.                                                                                                                                                                                                                                                                             |
 | `classes`   | string  | empty string | none                                                   | List of classes that apply to the generated text.                                                                                                                                                                                                                                                         |
 | `styles`     | object  | empty object | none                                                   | Any in-line styles to be applied to the generated text.                                                                                                                                                                                                                                                   |
-| `color`     | string  | empty string | user-defined<sup>1</sup>                                           | The color property of the generated text. Will take a hex code or a user-defined variable name overwritten in override-variables.scss.                                                                                                                                                                                                                                                   |
-| `size`      | string  | `p`          | `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`                | The size of the generated text.                                                                                                                                                                                                                                                                           |
-| `padding`   | string  | `all medium` | `all`, `top`, `right`, `bottom`, `left`, user-defined<sup>1</sup> | The padding property of the generated text. The first word is the position and the second is the size of the padding. Can have up to 4 paddings separated by spaces. Sizes can be from user-defined variable names overwritten in override-variables.scss or regular HTML size values. Must be a space in between the position and the size. |
-| `margin`    | string  | `all none`   | `all`, `top`, `right`, `bottom`, `left`, user-defined<sup>1</sup> | The margin property of the generated text. The first word is the position and the second is the size of the margin. Can have up to 4 margins separated by spaces. Sizes can be from user-defined variable names overwritten in override-variables.scss or regular HTML size values. Must be a space in between the position and the size.    |
+| `color`     | string  | empty string | [package variables](#package-variables)                                           | The color property of the generated text. Will take a hex code or a [package variable](#package-variables).                                                                                                                                                                                                                                                |
+| `size`      | string  | empty string | `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`                | The size of the generated text.                                                                                                                                                                                                                                                                           |
+| `padding`   | string  | empty string | `all`, `top`, `right`, `bottom`, `left`, [package variables](#package-variables)               | The padding property of the div generated. The first word is the position and the second is the size of the padding. Can have up to 4 paddings. Sizes can be from [package variables](#package-variables) or regular HTML size values. Size from variables can be negative as well. e.g. "bottom 50% top -medium" |
+| `margin`    | string  | empty string | `all`, `top`, `right`, `bottom`, `left`, [package variables](#package-variables)               | The margin property of the div generated. The first word is the position and the second is the size of the margin. Can have up to 4 margins. Sizes can be from [package variables](#package-variables) or regular HTML size values. Size from variables can be negative as well. e.g. "bottom 50% top -medium"    |
 | `italic`    | boolean | `false`      | `true`, `false`                                        | Whether the text is italicized or not.                                                                                                                                                                                                                                                                    |
 | `underline` | boolean | `false`      | `true`, `false`                                        | Whether the text is underlined or not.                                                                                                                                                                                                                                                                     |
-| `weight`    | string  | `normal`     | `normal`, `bold`, `light`                              | The font weight of the generated text.                                                                                                                                                                                                                                                                    |
-| `alignment` | string  | `center`     | `center`, `left`, `right`, `justify`                   | The alignment of the generated text.                                                                                                                                                                                                                                                                      |
+| `weight`    | string  | empty string | `normal`, `bold`, `light`                              | The font weight of the generated text.                                                                                                                                                                                                                                                                    |
+| `alignment` | string  | empty string | `center`, `left`, `right`, `justify`                   | The alignment of the generated text.                                                                                                                                                                                                                                                                      |
 | `href`      | string  | empty string | none                                                   | The `href` attribute of the text, if not empty then the text will be wrapped in an anchor element.                                                                                                                                                                                                        |
 | `canClick`  | boolean | `false`      | `true`, `false`                                        | If the div is clickable, i.e. if pointer-events are turned on or not. Also changes the cursor to pointer.                                                                                                                                                                                                 |
-| `extras`<sup>2</sup>   | any     | none         | none                                                   | Any other properties to be passed directly to the generated text, i.e. events or anything else I forgot.                                                                                                                                                                                                  |
+| `extras`<sup>1</sup>   | any     | none         | none                                                   | Any other properties to be passed directly to the generated text, i.e. events or anything else I forgot.                                                                                                                                                                                                  |
 
-<sup>1</sup> See [User-Defined Variables](#user-defined-variables).
-<sup>2</sup> extras is not a prop exactly, you dont pass `extras = { blah }`, but you simply pass the extra properties themselves and it gets captured and passed on directly to the generated text. For example, putting `extras = {{ onClick: () => click(value) }}` will not work, but putting `onClick = { () => click(value) }` will pass the onClick property to the generated text. extras just means any other arguments passed. See example for more.
+<sup>1</sup> extras is not a prop exactly, you dont pass `extras = { blah }`, but you simply pass the extra properties themselves and it gets captured and passed on directly to the generated text. For example, putting `extras = {{ onClick: () => click(value) }}` will not work, but putting `onClick = { () => click(value) }` will pass the onClick property to the generated text. extras just means any other arguments passed. See example for more.
 
 #### Example
 ```javascript
-<>
-    <Text size = 'h1' weight = 'bold'>
-        This text is large! AND BOLD!!!
+<Container fill = 'parent' color = 'accent-1'>
+    <Text size = 'h1' weight = 'normal'>
+        This text is large! but not bold 😭
     </Text>
-    <Text size = 'h2' color = '#0000FF'>
+    <Text size = 'h2' color = 'blue'>
         This text is large but not THAT large. It's also blue.
     </Text>
     <Text size = 'h3' href = 'https://google.com'>
@@ -139,7 +178,7 @@ The Text component is just an easier way to work with text and allows you to qui
     <Text size = 'p' underline>
         This text is small, but underlined.
     </Text>
-</>
+</Container>
 ```
 
 ### Responsive
@@ -149,6 +188,12 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 |-------------|---------|---------|-----------------|--------------------------------------------------------------------------------------------------|
 | `portrait`  | boolean | `false` | `true`, `false` | If the component's children should be rendered when the viewport has a `portrait` aspect ratio.  |
 | `landscape` | boolean | `false` | `true`, `false` | If the component's children should be rendered when the viewport has a `landscape` aspect ratio. |
+
+#### Hooks
+| name          | type    | options         | returns                                                                                             |
+|---------------|---------|-----------------|-----------------------------------------------------------------------------------------------------|
+| `isPortrait`  | boolean | `true`, `false` | true if viewport is in a `portrait` orientation, false if viewport is in a `landscape` orientation. |
+| `isLandscape` | boolean | `true`, `false` | true if viewport is in a `landscape` orientation, false if viewport is in a `portrait` orientation. |
 
 #### Example
 ```javascript
@@ -172,11 +217,13 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 </Container>
 ```
 
-## User-Defined Variables
+## Package Variables
 To override the default variables for color, padding, and margin in the package, follow these steps:
-1. Locate the  `overrides.scss` and `override-variables.scss` files in the package.
-2. Copy them into your application and import `overrides.scss` into your global/top-level page.
-3. Change any variables in `override-variables.scss` and it should override them everywhere.
+1. Locate the  `react-sunny-styles` folder in the package.
+2. Copy the folder into your application and import `utils.scss` into your index/top-level page.
+3. Change any variables in `variables.scss` and it will override them everywhere.
+
+#### Default Package Variable Values
 
 ## Dependencies
 React Sunny has no dependecies besides React 16+ and Sass.

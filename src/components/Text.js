@@ -29,11 +29,28 @@ const getStylesFromString = ( property, string, accepted = [] ) => {
 	return styles
 }
 
-export default function Text({ id, classes = '', styles = {}, alignment = 'center', color = 'neutral-1', size = 'p', margin = 'all none', padding = 'all none', weight = 'auto', italic = false, underline = false, href = '', canClick = false, children, ...extras }) {
+const getClass = (valid, classname) => {
+    if (valid == true) {
+        return ' ' + style[classname]
+    }
+    else {
+        return ''
+    }
+}
+
+export default function Text({ id, classes = '', styles = {}, alignment = '', color = '', size = '', margin = '', padding = '', weight = '', italic = false, underline = false, href = '', canClick = false, children, ...extras }) {
     const getClasses = () => {
         var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)
-        return (italic ? style['italic'] + ' ' : '') + (underline ? style['underline'] + ' ' : '') + style['alignment-' + alignment] + ' ' + paddingClasses + ' ' + marginClasses + ' ' + style['weight-' + weight] + ' ' + (color !== '' && !color.includes('#') ? ' ' + style['color-' + color] : '') + (canClick ? ' ' + style['can-click'] : '')
+        return  getClass((size != ''), ('size-' + size)) + 
+                getClass(italic, 'italic') + 
+                getClass(underline, 'underline') + 
+                getClass((alignment != ''), ('alignment-' + alignment)) + 
+                (padding != '' ? ' ' +  paddingClasses : '') + 
+                (margin != '' ? ' ' +  marginClasses : '') + 
+                getClass((weight != ''), ('weight-' + weight)) +
+                getClass((color !== '' && !color.includes('#')), ('color-' + color)) + 
+                getClass(canClick, 'can-click')
     }
     const getChildren = () => {
         if (href != '') {

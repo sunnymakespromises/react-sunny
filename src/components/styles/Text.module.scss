@@ -9,13 +9,18 @@ $alignments: left, right, center, justify;
 .underline {
     text-decoration: underline;
 }
+@each $font-size, $size in $font-sizes {
+    .size-#{$font-size} {
+        font-size: $size;
+    }
+}
 @each $weight-name, $weight in $weights {
     .weight-#{$weight-name} {
         font-weight: $weight;
     }
 }
 @each $color-name, $color in $colors {
-    .color-#{$color-name} {
+    .color-#{"" + $color-name} {
         @media (prefers-color-scheme: dark) {
             color: color($color-name, dark);
         }
@@ -39,6 +44,14 @@ $alignments: left, right, center, justify;
                 padding-#{$div-position}: $padding;
             }
         }
+        .padding-#{$div-position}--#{$padding-name} {
+            @if ($div-position == all) {
+                padding: -$padding;
+            }
+            @else {
+                padding-#{$div-position}: -$padding;
+            }
+        }
     }
 }
 
@@ -50,6 +63,14 @@ $alignments: left, right, center, justify;
             }
             @else {
                 margin-#{$div-position}: $margin;
+            }
+        }
+        .margin-#{$div-position}--#{$margin-name} {
+            @if ($div-position == all) {
+                margin: -$margin;
+            }
+            @else {
+                margin-#{$div-position}: -$margin;
             }
         }
     }

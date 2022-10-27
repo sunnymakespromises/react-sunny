@@ -32,12 +32,28 @@ const getStylesFromString = ( property, string, accepted = [] ) => {
 	return styles
 }
 
-const Container = forwardRef(({id = '', classes = '', styles = {}, width = null, height = null, direction = 'column', alignment = 'center center', position = 'relative', fill = 'auto', padding = 'all none', margin = 'all none', color = '', canClick = false, children, ...extras }, ref) => {
+const getClass = (valid, classname) => {
+    if (valid == true) {
+        return ' ' + style[classname]
+    }
+    else {
+        return ''
+    }
+}
+
+const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', height = '', direction = 'column', alignment = 'center center', position = '', fill = '', padding = '', margin = '', color = '', canClick = false, children, ...extras }, ref) => {
 	const getClasses = () => {
 		var alignmentClasses = getClassesFromString('alignment', alignment)
 		var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)
-		return style['direction-' + direction] + ' ' + alignmentClasses + ' ' + style['position-' + position] + ' ' + style['fill-' + fill] + ' ' + paddingClasses + ' ' + marginClasses + (color !== '' && !color.includes('#') ? ' ' + style['color-' + color] : '') + (canClick ? ' ' + style['can-click'] : '')
+		return 	style['direction-' + direction] + ' ' + 
+				alignmentClasses + ' ' + 
+				getClass((position != ''), ('position-' + position)) + 
+				getClass((fill != ''), ('fill-' + fill)) + 
+				(padding != '' ? ' ' + paddingClasses : '') + 
+				(margin != '' ? ' ' + marginClasses : '') + 
+				getClass((color !== '' && !color.includes('#')), ('color-' + color)) + 
+				getClass(canClick, 'can-click')
 	}
 	const getColor = () => {
 		if (color.includes('#')) {
@@ -54,7 +70,7 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = null,
 		return getStylesFromString('margin', margin, ['small', 'medium', 'large', 'none'])
 	}
 	const getWidth = () => {
-		if (width !== null) {
+		if (width !== '') {
 			return { width: width }
 		}
 		else {
@@ -62,15 +78,18 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = null,
 		}
 	}
 	const getHeight= () => {
-		if (height !== null) {
+		if (height !== '') {
 			return { height: height }
 		}
 		else {
 			return {}
 		}
 	}
+	const getStyles = () => {
+		return { ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getWidth(), ...getHeight() }
+	}
   	return (
-		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = {{ ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getWidth(), ...getHeight() }} ref = {ref} {...extras}>
+		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = {{ ...getStyles() }} ref = {ref} {...extras}>
 			{children}
 		</div>
   	)

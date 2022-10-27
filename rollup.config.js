@@ -28,7 +28,7 @@ export default [
       		}),
       		postcss({
 				modules: {
-					generateScopedName: "[hash:base64:6]"
+					generateScopedName: "_[hash:base64:6]"
 				},
 				autoModules: true
 			}),

@@ -1,0 +1,202 @@
+@import './override-variables.scss';
+//COLORS
+$container-colors: (
+    'L12lRQ': map-get($colors, base-1), //base-1
+    '_6s-W0A': map-get($colors, base-2), //base-2
+    'PN21mR': map-get($colors, base-3), //base-3
+    'Lzi4uJ': map-get($colors, accent-1), //accent-1
+    '_0uoWxM': map-get($colors, accent-2), //accent-2
+    'y26s1W': map-get($colors, accent-3), //accent-3
+    '-jwzMP': map-get($colors, neutral-1), //neutral-1
+    '_5-S3sa': map-get($colors, neutral-2), //neutral-2
+    'uBwTfw': map-get($colors, neutral-3), //neutral-3
+    // 'L12lRQ': map-get($container-colors, tertiary-1), //tertiary-1
+    // '_6s-W0A': map-get($container-colors, tertiary-2), //tertiary-2
+    // 'PN21mR': map-get($container-colors, tertiary-3), //tertiary-3
+    // 'Lzi4uJ': map-get($container-colors, extra-1), //extra-1
+    // '_0uoWxM': map-get($container-colors, extra-2), //extra-2
+    // 'y26s1W': map-get($container-colors, extra-3), //extra-3
+);
+
+$text-colors: (
+    '2jREh': map-get($colors, base-1), //base-1
+    'vOm2u': map-get($colors, base-2), //base-2
+    'PUFZ-': map-get($colors, base-3), //base-3
+    'TTGe5': map-get($colors, accent-1), //accent-1
+    '2IkPS': map-get($colors, accent-2), //accent-2
+    'qxhSk': map-get($colors, accent-3), //accent-3
+    'MqW00': map-get($colors, neutral-1), //neutral-1
+    'Uc-VK': map-get($colors, neutral-2), //neutral-2
+    'suLIE': map-get($colors, neutral-3), //neutral-3
+    // 'L12lRQ': map-get($container-colors, tertiary-1), //tertiary-1
+    // '_6s-W0A': map-get($container-colors, tertiary-2), //tertiary-2
+    // 'PN21mR': map-get($container-colors, tertiary-3), //tertiary-3
+    // 'Lzi4uJ': map-get($container-colors, extra-1), //extra-1
+    // '_0uoWxM': map-get($container-colors, extra-2), //extra-2
+    // 'y26s1W': map-get($container-colors, extra-3), //extra-3
+);
+
+@each $classname, $colors in $container-colors {
+    ._#{$classname} {
+        @media (prefers-color-scheme: dark) {
+            background-color: map-get($colors, dark) !important;
+        }
+        @media (prefers-color-scheme: light) {
+            background-color: map-get($colors, light) !important;
+        }
+    }
+}
+
+@each $classname, $colors in $text-colors {
+    ._#{$classname} {
+        @media (prefers-color-scheme: dark) {
+            background-color: map-get($colors, dark) !important;
+        }
+        @media (prefers-color-scheme: light) {
+            background-color: map-get($colors, light) !important;
+        }
+    }
+}
+
+//PADDINGS
+$container-paddings: (
+    'j35VJM': (padding: map-get($container-padding-sizes, none)), //all-none
+    'z3Ird': (padding-top: map-get($container-padding-sizes, none)), //top-none
+    '63-TA': (padding-right: map-get($container-padding-sizes, none)), //right-none
+    'yvOlu': (padding-bottom: map-get($container-padding-sizes, none)), //bottom-none
+    'WMk9Z': (padding-left: map-get($container-padding-sizes, none)), //left-none
+    'pjngf': (padding: map-get($container-padding-sizes, small)), //all-x-small
+    '0vKWC': (padding-top: map-get($container-padding-sizes, small)), //top-x-small
+    'MwzxX': (padding-right: map-get($container-padding-sizes, small)), //right-x-small
+    'UXfxM': (padding-bottom: map-get($container-padding-sizes, small)), //bottom-x-small
+    'rw1Iz': (padding-left: map-get($container-padding-sizes, small)), //left-x-small
+    'pjngf': (padding: map-get($container-padding-sizes, small)), //all-small
+    '0vKWC': (padding-top: map-get($container-padding-sizes, small)), //top-small
+    'MwzxX': (padding-right: map-get($container-padding-sizes, small)), //right-small
+    'UXfxM': (padding-bottom: map-get($container-padding-sizes, small)), //bottom-small
+    'rw1Iz': (padding-left: map-get($container-padding-sizes, small)), //left-small
+    'iv7YF': (padding: map-get($container-padding-sizes, medium)), //all-medium
+    'eiosQ': (padding-top: map-get($container-padding-sizes, medium)), //top-medium
+    'vQfsy': (padding-right: map-get($container-padding-sizes, medium)), //right-medium
+    't-Tne': (padding-bottom: map-get($container-padding-sizes, medium)), //bottom-medium
+    '5Ay-u': (padding-left: map-get($container-padding-sizes, medium)), //left-medium
+    'IPVp1': (padding: map-get($container-padding-sizes, large)), //all-large
+    'XyuA3': (padding-top: map-get($container-padding-sizes, large)), //top-large
+    'P-j-u': (padding-right: map-get($container-padding-sizes, large)), //right-large
+    'Xhrlw': (padding-bottom: map-get($container-padding-sizes, large)), //bottom-large 
+    'zSzGO': (padding-left: map-get($container-padding-sizes, large)), //left-large
+);
+@each $classname, $padding in $container-paddings {
+    ._#{$classname} {
+        @each $property, $value in $padding {
+            #{$property}: $value;
+        }
+    }
+}
+
+$text-paddings: (
+    'OWpWN': (padding: map-get($text-padding-sizes, none)), //all-none
+    'VG01g': (padding-top: map-get($text-padding-sizes, none)), //top-none
+    '2-jdm': (padding-right: map-get($text-padding-sizes, none)), //right-none
+    '4jEQQ': (padding-bottom: map-get($text-padding-sizes, none)), //bottom-none
+    'US9pL': (padding-left: map-get($text-padding-sizes, none)), //left-none
+    'nH42o': (padding: map-get($text-padding-sizes, small)), //all-small
+    'nbL5O': (padding-top: map-get($text-padding-sizes, small)), //top-small
+    'FodmX': (padding-right: map-get($text-padding-sizes, small)), //right-small
+    'TDKaN': (padding-bottom: map-get($text-padding-sizes, small)), //bottom-small
+    'ffmve': (padding-left: map-get($text-padding-sizes, small)), //left-small
+    'CXxMA': (padding: map-get($text-padding-sizes, medium)), //all-medium
+    '0QvlI': (padding-top: map-get($text-padding-sizes, medium)), //top-medium
+    'dudm-': (padding-right: map-get($text-padding-sizes, medium)), //right-medium
+    'TMhcQ': (padding-bottom: map-get($text-padding-sizes, medium)), //bottom-medium
+    'om3kk': (padding-left: map-get($text-padding-sizes, medium)), //left-medium
+    'T3Sw6': (padding: map-get($text-padding-sizes, large)), //all-large
+    'V-QYz': (padding-top: map-get($text-padding-sizes, large)), //top-large
+    'd4Aow': (padding-right: map-get($text-padding-sizes, large)), //right-large
+    'lfbKs': (padding-bottom: map-get($text-padding-sizes, large)), //bottom-large 
+    'B1HE7': (padding-left: map-get($text-padding-sizes, large)), //left-large
+);
+@each $classname, $padding in $text-paddings {
+    ._#{$classname} {
+        @each $property, $value in $padding {
+            #{$property}: $value;
+        }
+    }
+}
+
+//MARGINS
+$container-margins: (
+    'ERim6': (margin: map-get($container-margin-sizes, none)), //all-none
+    '3jdp7': (margin-top: map-get($container-margin-sizes, none)), //top-none
+    '8pZ8-': (margin-right: map-get($container-margin-sizes, none)), //right-none
+    '9cPwE': (margin-bottom: map-get($container-margin-sizes, none)), //bottom-none
+    'H1vks': (margin-left: map-get($container-margin-sizes, none)), //left-none
+    'EwqtO': (margin: map-get($container-margin-sizes, small)), //all-small
+    'wVwjb': (margin-top: map-get($container-margin-sizes, small)), //top-small
+    '-Bor7': (margin-right: map-get($container-margin-sizes, small)), //right-small
+    '6Iba-': (margin-bottom: map-get($container-margin-sizes, small)), //bottom-small
+    'n2s-y': (margin-left: map-get($container-margin-sizes, small)), //left-small
+    'yximz': (margin: map-get($container-margin-sizes, medium)), //all-medium
+    'hjC4A': (margin-top: map-get($container-margin-sizes, medium)), //top-medium
+    'Md8l9': (margin-right: map-get($container-margin-sizes, medium)), //right-medium
+    'a68Ex': (margin-bottom: map-get($container-margin-sizes, medium)), //bottom-medium
+    'moKUT': (margin-left: map-get($container-margin-sizes, medium)), //left-medium
+    'wlilZ': (margin: map-get($container-margin-sizes, large)), //all-large
+    'vARms': (margin-top: map-get($container-margin-sizes, large)), //top-large
+    'KvI5p': (margin-right: map-get($container-margin-sizes, large)), //right-large
+    'BIL8T': (margin-bottom: map-get($container-margin-sizes, large)), //bottom-large 
+    'ta6Cy': (margin-left: map-get($container-margin-sizes, large)), //left-large
+);
+@each $classname, $margin in $container-margins {
+    ._#{$classname} {
+        @each $property, $value in $margin {
+            #{$property}: $value;
+        }
+    }
+}
+
+$text-margins: (
+    'EX3CP': (margin: map-get($text-margin-sizes, none)), //all-none
+    'yolTy': (margin-top: map-get($text-margin-sizes, none)), //top-none
+    'JUNt8': (margin-right: map-get($text-margin-sizes, none)), //right-none
+    'ABl7B': (margin-bottom: map-get($text-margin-sizes, none)), //bottom-none
+    'a83Jm': (margin-left: map-get($text-margin-sizes, none)), //left-none
+    'IWtm7': (margin: map-get($text-margin-sizes, small)), //all-small
+    'MmDZ9': (margin-top: map-get($text-margin-sizes, small)), //top-small
+    'oqfEN': (margin-right: map-get($text-margin-sizes, small)), //right-small
+    'JELwf': (margin-bottom: map-get($text-margin-sizes, small)), //bottom-small
+    'E-hqQ': (margin-left: map-get($text-margin-sizes, small)), //left-small
+    '1Sntb': (margin: map-get($text-margin-sizes, medium)), //all-medium
+    'c6i2s': (margin-top: map-get($text-margin-sizes, medium)), //top-medium
+    'V-JTj': (margin-right: map-get($text-margin-sizes, medium)), //right-medium
+    'J3Jml': (margin-bottom: map-get($text-margin-sizes, medium)), //bottom-medium
+    'keNVm': (margin-left: map-get($text-margin-sizes, medium)), //left-medium
+    'zM2hi': (margin: map-get($text-margin-sizes, large)), //all-large
+    '2rwPx': (margin-top: map-get($text-margin-sizes, large)), //top-large
+    'ijg4i': (margin-right: map-get($text-margin-sizes, large)), //right-large
+    'vf3q-': (margin-bottom: map-get($text-margin-sizes, large)), //bottom-large 
+    'lhTZ2': (margin-left: map-get($text-margin-sizes, large)) //left-large
+);
+@each $classname, $margin in $text-margins {
+    ._#{$classname} {
+        @each $property, $value in $margin {
+            #{$property}: $value;
+        }
+    }
+}
+
+// $text-sizes: (
+//     'L12lRQ': map-get($text-font-sizes, h1), //h1
+//     '_6s-W0A': map-get($text-font-sizes, h2), //h2
+//     'PN21mR': map-get($text-font-sizes, h3), //h3
+//     'Lzi4uJ': map-get($text-font-sizes, h4), //h4
+//     '_0uoWxM': map-get($text-font-sizes, h5), //h5
+//     'y26s1W': map-get($text-font-sizes, h6), //h6
+//     '-jwzMP': map-get($text-font-sizes, p), //p
+// );
+
+// @each $classname, $size in $text-sizes {
+//     .ts-#{$classname} {
+//         font-size: $size !important;
+//     }
+// }

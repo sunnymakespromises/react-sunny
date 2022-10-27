@@ -1,3 +1,4 @@
+// COLORS
 $colors: (
     base-1: (light: #FFFFFF, dark: #000000),
     base-2: (light: #F2F2F7, dark: #1C1C1E),
@@ -30,24 +31,30 @@ $colors: (
     blue: (light: #007AFF, dark: #007AFF),
     purple: (light: #5856D5, dark: #5856D5),
     pink: (light: #FF6482, dark: #FF6482)
-) !default;
+);
+
+// PADDINGS
 $paddings: (
-    none: 0,
+    none: 0, 
     x-small: 0.25rem,
-    small: 0.5rem,
-    medium: 1rem,
-    large: 2rem,
+    small: 0.5rem, 
+    medium: 1rem, 
+    large: 2rem
     x-large: 4rem
-) !default;
+);
+
+// MARGINS 
 $margins: (
-    none: 0,
+    none: 0, 
     x-small: 0.25rem,
-    small: 0.5rem,
-    medium: 1rem,
-    large: 2rem,
+    small: 0.5rem, 
+    medium: 1rem, 
+    large: 2rem
     x-large: 4rem
-) !default;
-$font-sizes: (
+);
+
+// TEXT SIZES
+$sizes: (
     h1: 2em,
     h2: 1.5em,
     h3: 1.17em,

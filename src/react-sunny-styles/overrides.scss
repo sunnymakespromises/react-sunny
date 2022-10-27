@@ -1,0 +1,359 @@
+@import './variables.scss';
+$container-paddings: (
+   '_j35VJM': (padding: map-get($paddings, none)), //all-none
+   '_laYwNS': (padding: -(map-get($paddings, none))), //all--none
+   '_6N3CyI': (padding: map-get($paddings, x-small)), //all-x-small
+   '_34hWtK': (padding: -(map-get($paddings, x-small))), //all--x-small
+   '_pjngfO': (padding: map-get($paddings, small)), //all-small
+   '_ubDgSc': (padding: -(map-get($paddings, small))), //all--small
+   '_iv7YFV': (padding: map-get($paddings, medium)), //all-medium
+   '_gL3tK8': (padding: -(map-get($paddings, medium))), //all--medium
+   '_IPVp1z': (padding: map-get($paddings, large)), //all-large
+   '_2J8qD9': (padding: -(map-get($paddings, large))), //all--large
+   '_iZOasQ': (padding: map-get($paddings, x-large)), //all-x-large
+   '_W7ciDG': (padding: -(map-get($paddings, x-large))), //all--x-large
+   '_z3Ird8': (padding-top: map-get($paddings, none)), //top-none
+   '_EaPz0Z': (padding-top: -(map-get($paddings, none))), //top--none
+   '_RoOPSq': (padding-top: map-get($paddings, x-small)), //top-x-small
+   '_GmVc9Z': (padding-top: -(map-get($paddings, x-small))), //top--x-small
+   '_0vKWCu': (padding-top: map-get($paddings, small)), //top-small
+   '_hQCR9x': (padding-top: -(map-get($paddings, small))), //top--small
+   '_eiosQ9': (padding-top: map-get($paddings, medium)), //top-medium
+   '_YQfp8J': (padding-top: -(map-get($paddings, medium))), //top--medium
+   '_XyuA3U': (padding-top: map-get($paddings, large)), //top-large
+   '_z-Mwvt': (padding-top: -(map-get($paddings, large))), //top--large
+   '_alHTHR': (padding-top: map-get($paddings, x-large)), //top-x-large
+   '_HiAMq2': (padding-top: -(map-get($paddings, x-large))), //top--x-large
+   '_WMk9ZJ': (padding-left: map-get($paddings, none)), //left-none
+   '_-0aic8': (padding-left: -(map-get($paddings, none))), //left--none
+   '_xmdg1z': (padding-left: map-get($paddings, x-small)), //left-x-small
+   '_65FEto': (padding-left: -(map-get($paddings, x-small))), //left--x-small
+   '_rw1IzZ': (padding-left: map-get($paddings, small)), //left-small
+   '_FXMtJj': (padding-left: -(map-get($paddings, small))), //left--small
+   '_5Ay-uS': (padding-left: map-get($paddings, medium)), //left-medium
+   '_NIbIKC': (padding-left: -(map-get($paddings, medium))), //left--medium
+   '_zSzGOb': (padding-left: map-get($paddings, large)), //left-large
+   '_uyziRm': (padding-left: -(map-get($paddings, large))), //left--large
+   '_NOD7cA': (padding-left: map-get($paddings, x-large)), //left-x-large
+   '_e3v4e0': (padding-left: -(map-get($paddings, x-large))), //left--x-large
+   '_yvOluM': (padding-bottom: map-get($paddings, none)), //bottom-none
+   '_WepSWg': (padding-bottom: -(map-get($paddings, none))), //bottom--none
+   '_iHWbWJ': (padding-bottom: map-get($paddings, x-small)), //bottom-x-small
+   '_2A2C6s': (padding-bottom: -(map-get($paddings, x-small))), //bottom--x-small
+   '_UXfxM5': (padding-bottom: map-get($paddings, small)), //bottom-small
+   '_J6XUGL': (padding-bottom: -(map-get($paddings, small))), //bottom--small
+   '_t-TneE': (padding-bottom: map-get($paddings, medium)), //bottom-medium
+   '_TnZ806': (padding-bottom: -(map-get($paddings, medium))), //bottom--medium
+   '_Xhrlwr': (padding-bottom: map-get($paddings, large)), //bottom-large
+   '_VF-cpL': (padding-bottom: -(map-get($paddings, large))), //bottom--large
+   '_JTvyXv': (padding-bottom: map-get($paddings, x-large)), //bottom-x-large
+   '_ygh6wx': (padding-bottom: -(map-get($paddings, x-large))), //bottom--x-large
+   '_63-TA-': (padding-right: map-get($paddings, none)), //right-none
+   '_Te9LM1': (padding-right: -(map-get($paddings, none))), //right--none
+   '_IP4Yfp': (padding-right: map-get($paddings, x-small)), //right-x-small
+   '_2dNDBH': (padding-right: -(map-get($paddings, x-small))), //right--x-small
+   '_MwzxXj': (padding-right: map-get($paddings, small)), //right-small
+   '_aNRgRK': (padding-right: -(map-get($paddings, small))), //right--small
+   '_vQfsyW': (padding-right: map-get($paddings, medium)), //right-medium
+   '_oS3YjE': (padding-right: -(map-get($paddings, medium))), //right--medium
+   '_P-j-ux': (padding-right: map-get($paddings, large)), //right-large
+   '_M83Xl8': (padding-right: -(map-get($paddings, large))), //right--large
+   '_n-TNnz': (padding-right: map-get($paddings, x-large)), //right-x-large
+   '_-VPHPj': (padding-right: -(map-get($paddings, x-large))), //right--x-large
+);
+
+@each $classname, $paddings in $container-paddings {
+    .#{$classname} {
+       @each $property, $value in $paddings {
+            #{$property}: $value;
+        }
+    }
+}
+
+$container-margins: (
+   '_ERim67': (margin: map-get($margins, none)), //all-none
+   '_Or-eJL': (margin: -(map-get($margins, none))), //all--none
+   '_KERUhi': (margin: map-get($margins, x-small)), //all-x-small
+   '_TMPzXT': (margin: -(map-get($margins, x-small))), //all--x-small
+   '_EwqtOC': (margin: map-get($margins, small)), //all-small
+   '_9Z-wsk': (margin: -(map-get($margins, small))), //all--small
+   '_yximzo': (margin: map-get($margins, medium)), //all-medium
+   '_fLSxea': (margin: -(map-get($margins, medium))), //all--medium
+   '_wlilZ3': (margin: map-get($margins, large)), //all-large
+   '_jGDqRC': (margin: -(map-get($margins, large))), //all--large
+   '_GWnWvC': (margin: map-get($margins, x-large)), //all-x-large
+   '_cLbKqJ': (margin: -(map-get($margins, x-large))), //all--x-large
+   '_3jdp75': (margin-top: map-get($margins, none)), //top-none
+   '_0WRWj5': (margin-top: -(map-get($margins, none))), //top--none
+   '_VW22Kv': (margin-top: map-get($margins, x-small)), //top-x-small
+   '_LtHoWc': (margin-top: -(map-get($margins, x-small))), //top--x-small
+   '_wVwjb3': (margin-top: map-get($margins, small)), //top-small
+   '_lGqYFL': (margin-top: -(map-get($margins, small))), //top--small
+   '_hjC4AQ': (margin-top: map-get($margins, medium)), //top-medium
+   '_vQ78uS': (margin-top: -(map-get($margins, medium))), //top--medium
+   '_vARmsw': (margin-top: map-get($margins, large)), //top-large
+   '_YechZq': (margin-top: -(map-get($margins, large))), //top--large
+   '_5lAROs': (margin-top: map-get($margins, x-large)), //top-x-large
+   '_cPyuIj': (margin-top: -(map-get($margins, x-large))), //top--x-large
+   '_H1vksJ': (margin-left: map-get($margins, none)), //left-none
+   '_XSEkrl': (margin-left: -(map-get($margins, none))), //left--none
+   '_Ay4VhN': (margin-left: map-get($margins, x-small)), //left-x-small
+   '_mBOu9r': (margin-left: -(map-get($margins, x-small))), //left--x-small
+   '_n2s-yc': (margin-left: map-get($margins, small)), //left-small
+   '_IOPnLC': (margin-left: -(map-get($margins, small))), //left--small
+   '_moKUTa': (margin-left: map-get($margins, medium)), //left-medium
+   '_JuMFMY': (margin-left: -(map-get($margins, medium))), //left--medium
+   '_ta6Cyw': (margin-left: map-get($margins, large)), //left-large
+   '_CYCXyF': (margin-left: -(map-get($margins, large))), //left--large
+   '_fDWZVq': (margin-left: map-get($margins, x-large)), //left-x-large
+   '_lAPdEn': (margin-left: -(map-get($margins, x-large))), //left--x-large
+   '_9cPwE7': (margin-bottom: map-get($margins, none)), //bottom-none
+   '_GcxiMz': (margin-bottom: -(map-get($margins, none))), //bottom--none
+   '_WLeS0A': (margin-bottom: map-get($margins, x-small)), //bottom-x-small
+   '_LE2Pbf': (margin-bottom: -(map-get($margins, x-small))), //bottom--x-small
+   '_6Iba--': (margin-bottom: map-get($margins, small)), //bottom-small
+   '_mB1UY4': (margin-bottom: -(map-get($margins, small))), //bottom--small
+   '_a68ExA': (margin-bottom: map-get($margins, medium)), //bottom-medium
+   '_wskTnp': (margin-bottom: -(map-get($margins, medium))), //bottom--medium
+   '_BIL8Th': (margin-bottom: map-get($margins, large)), //bottom-large
+   '_Bllmr3': (margin-bottom: -(map-get($margins, large))), //bottom--large
+   '_EzjFfS': (margin-bottom: map-get($margins, x-large)), //bottom-x-large
+   '_wkKt1B': (margin-bottom: -(map-get($margins, x-large))), //bottom--x-large
+   '_8pZ8-T': (margin-right: map-get($margins, none)), //right-none
+   '_V9oa5v': (margin-right: -(map-get($margins, none))), //right--none
+   '_HEYmiL': (margin-right: map-get($margins, x-small)), //right-x-small
+   '_9hVn6O': (margin-right: -(map-get($margins, x-small))), //right--x-small
+   '_-Bor7t': (margin-right: map-get($margins, small)), //right-small
+   '_-YEuFl': (margin-right: -(map-get($margins, small))), //right--small
+   '_Md8l9X': (margin-right: map-get($margins, medium)), //right-medium
+   '_19jgoM': (margin-right: -(map-get($margins, medium))), //right--medium
+   '_KvI5pm': (margin-right: map-get($margins, large)), //right-large
+   '_CgZc6L': (margin-right: -(map-get($margins, large))), //right--large
+   '_afaSsp': (margin-right: map-get($margins, x-large)), //right-x-large
+   '_OEypNn': (margin-right: -(map-get($margins, x-large))), //right--x-large
+);
+
+@each $classname, $margins in $container-margins {
+    .#{$classname} {
+       @each $property, $value in $margins {
+            #{$property}: $value;
+        }
+    }
+}
+
+$container-colors: (
+   '_L12lRQ': map-get($colors, base-1), //base-1
+   '_6s-W0A': map-get($colors, base-2), //base-2
+   '_PN21mR': map-get($colors, base-3), //base-3
+   '_-jwzMP': map-get($colors, neutral-1), //neutral-1
+   '_5-S3sa': map-get($colors, neutral-2), //neutral-2
+   '_uBwTfw': map-get($colors, neutral-3), //neutral-3
+   '_Lzi4uJ': map-get($colors, accent-1), //accent-1
+   '_0uoWxM': map-get($colors, accent-2), //accent-2
+   '_y26s1W': map-get($colors, accent-3), //accent-3
+   '_TZd62R': map-get($colors, tertiary-1), //tertiary-1
+   '_EUBECn': map-get($colors, tertiary-2), //tertiary-2
+   '_yxx2o5': map-get($colors, tertiary-3), //tertiary-3
+   '_bfKH2E': map-get($colors, extra-1), //extra-1
+   '_CeCLI8': map-get($colors, extra-2), //extra-2
+   '_bxvcmG': map-get($colors, extra-3), //extra-3
+);
+
+@each $classname, $colors in $container-colors {
+    .#{$classname} {
+       @media (prefers-color-scheme: dark) {
+            background-color: map-get($colors, dark) !important;
+        }
+        @media (prefers-color-scheme: light) {
+            background-color: map-get($colors, light) !important;
+        }
+    }
+}
+
+$text-sizes: (
+   '_ECYGLn': map-get($sizes, h1), //h1
+   '_1AibuH': map-get($sizes, h2), //h2
+   '_VUwLHs': map-get($sizes, h3), //h3
+   '_OzBbZO': map-get($sizes, h4), //h4
+   '_aJfbVP': map-get($sizes, h5), //h5
+   '_LKDNHE': map-get($sizes, h6), //h6
+   '_vKit1j': map-get($sizes, p), //p
+);
+
+@each $classname, $sizes in $text-sizes {
+    .#{$classname} {
+       font-size: $sizes !important;
+    }
+}
+
+$text-paddings: (
+   '_OWpWNF': (padding: map-get($paddings, none)), //all-none
+   '_RbOFXt': (padding: -(map-get($paddings, none))), //all--none
+   '_NhI0Yq': (padding: map-get($paddings, x-small)), //all-x-small
+   '_Q3Hhas': (padding: -(map-get($paddings, x-small))), //all--x-small
+   '_nH42ow': (padding: map-get($paddings, small)), //all-small
+   '_YbOSoI': (padding: -(map-get($paddings, small))), //all--small
+   '_CXxMAT': (padding: map-get($paddings, medium)), //all-medium
+   '_xv0-DG': (padding: -(map-get($paddings, medium))), //all--medium
+   '_T3Sw64': (padding: map-get($paddings, large)), //all-large
+   '_2Q81vt': (padding: -(map-get($paddings, large))), //all--large
+   '_A-Up3-': (padding: map-get($paddings, x-large)), //all-x-large
+   '_B8su0o': (padding: -(map-get($paddings, x-large))), //all--x-large
+   '_VG01gx': (padding-top: map-get($paddings, none)), //top-none
+   '_wGoVjn': (padding-top: -(map-get($paddings, none))), //top--none
+   '_-nNmt5': (padding-top: map-get($paddings, x-small)), //top-x-small
+   '_IWSlqx': (padding-top: -(map-get($paddings, x-small))), //top--x-small
+   '_nbL5Ov': (padding-top: map-get($paddings, small)), //top-small
+   '_Lrpi-8': (padding-top: -(map-get($paddings, small))), //top--small
+   '_0QvlIC': (padding-top: map-get($paddings, medium)), //top-medium
+   '_odIrup': (padding-top: -(map-get($paddings, medium))), //top--medium
+   '_V-QYzV': (padding-top: map-get($paddings, large)), //top-large
+   '_mmk0iI': (padding-top: -(map-get($paddings, large))), //top--large
+   '_QpmwZ9': (padding-top: map-get($paddings, x-large)), //top-x-large
+   '_FCZNgW': (padding-top: -(map-get($paddings, x-large))), //top--x-large
+   '_US9pLF': (padding-left: map-get($paddings, none)), //left-none
+   '_L2KLP5': (padding-left: -(map-get($paddings, none))), //left--none
+   '_KmjaaQ': (padding-left: map-get($paddings, x-small)), //left-x-small
+   '_kyh43F': (padding-left: -(map-get($paddings, x-small))), //left--x-small
+   '_ffmveg': (padding-left: map-get($paddings, small)), //left-small
+   '_Ao-AXv': (padding-left: -(map-get($paddings, small))), //left--small
+   '_om3kk5': (padding-left: map-get($paddings, medium)), //left-medium
+   '_mA5bc-': (padding-left: -(map-get($paddings, medium))), //left--medium
+   '_B1HE7T': (padding-left: map-get($paddings, large)), //left-large
+   '_aOyuSZ': (padding-left: -(map-get($paddings, large))), //left--large
+   '_wJSa7p': (padding-left: map-get($paddings, x-large)), //left-x-large
+   '_qKIp8I': (padding-left: -(map-get($paddings, x-large))), //left--x-large
+   '_4jEQQi': (padding-bottom: map-get($paddings, none)), //bottom-none
+   '_SVKNzo': (padding-bottom: -(map-get($paddings, none))), //bottom--none
+   '_jqy-OI': (padding-bottom: map-get($paddings, x-small)), //bottom-x-small
+   '_C6dnVh': (padding-bottom: -(map-get($paddings, x-small))), //bottom--x-small
+   '_TDKaNH': (padding-bottom: map-get($paddings, small)), //bottom-small
+   '_-UiaZO': (padding-bottom: -(map-get($paddings, small))), //bottom--small
+   '_TMhcQG': (padding-bottom: map-get($paddings, medium)), //bottom-medium
+   '_30miCN': (padding-bottom: -(map-get($paddings, medium))), //bottom--medium
+   '_lfbKs7': (padding-bottom: map-get($paddings, large)), //bottom-large
+   '_i3jC68': (padding-bottom: -(map-get($paddings, large))), //bottom--large
+   '_sQAJMy': (padding-bottom: map-get($paddings, x-large)), //bottom-x-large
+   '_TfriFV': (padding-bottom: -(map-get($paddings, x-large))), //bottom--x-large
+   '_2-jdmD': (padding-right: map-get($paddings, none)), //right-none
+   '_cK8TBy': (padding-right: -(map-get($paddings, none))), //right--none
+   '_6wagfb': (padding-right: map-get($paddings, x-small)), //right-x-small
+   '_4eN3Ci': (padding-right: -(map-get($paddings, x-small))), //right--x-small
+   '_FodmX4': (padding-right: map-get($paddings, small)), //right-small
+   '_8nLPCU': (padding-right: -(map-get($paddings, small))), //right--small
+   '_dudm-x': (padding-right: map-get($paddings, medium)), //right-medium
+   '_qMCjrb': (padding-right: -(map-get($paddings, medium))), //right--medium
+   '_d4Aow2': (padding-right: map-get($paddings, large)), //right-large
+   '_qVDKg1': (padding-right: -(map-get($paddings, large))), //right--large
+   '_6TViBz': (padding-right: map-get($paddings, x-large)), //right-x-large
+   '_5VGBms': (padding-right: -(map-get($paddings, x-large))), //right--x-large
+);
+
+@each $classname, $paddings in $text-paddings {
+    .#{$classname} {
+       @each $property, $value in $paddings {
+            #{$property}: $value;
+        }
+    }
+}
+
+$text-margins: (
+   '_EX3CPz': (margin: map-get($margins, none)), //all-none
+   '_DwOaLi': (margin: -(map-get($margins, none))), //all--none
+   '_WxTR5j': (margin: map-get($margins, x-small)), //all-x-small
+   '_V5xhcC': (margin: -(map-get($margins, x-small))), //all--x-small
+   '_IWtm79': (margin: map-get($margins, small)), //all-small
+   '_4ROkRp': (margin: -(map-get($margins, small))), //all--small
+   '_1Sntb0': (margin: map-get($margins, medium)), //all-medium
+   '_eLOue3': (margin: -(map-get($margins, medium))), //all--medium
+   '_zM2hiw': (margin: map-get($margins, large)), //all-large
+   '_lpi3v2': (margin: -(map-get($margins, large))), //all--large
+   '_2x2cqe': (margin: map-get($margins, x-large)), //all-x-large
+   '_AyZUeO': (margin: -(map-get($margins, x-large))), //all--x-large
+   '_yolTyY': (margin-top: map-get($margins, none)), //top-none
+   '_imWQvC': (margin-top: -(map-get($margins, none))), //top--none
+   '_OK2LE2': (margin-top: map-get($margins, x-small)), //top-x-small
+   '_ngXg2e': (margin-top: -(map-get($margins, x-small))), //top--x-small
+   '_MmDZ9y': (margin-top: map-get($margins, small)), //top-small
+   '_bQck6P': (margin-top: -(map-get($margins, small))), //top--small
+   '_c6i2s1': (margin-top: map-get($margins, medium)), //top-medium
+   '_k3lB8I': (margin-top: -(map-get($margins, medium))), //top--medium
+   '_2rwPx4': (margin-top: map-get($margins, large)), //top-large
+   '_GPk-Yl': (margin-top: -(map-get($margins, large))), //top--large
+   '_W6YRad': (margin-top: map-get($margins, x-large)), //top-x-large
+   '_TJ5k8G': (margin-top: -(map-get($margins, x-large))), //top--x-large
+   '_a83JmX': (margin-left: map-get($margins, none)), //left-none
+   '_3jMQyn': (margin-left: -(map-get($margins, none))), //left--none
+   '_QCGgfz': (margin-left: map-get($margins, x-small)), //left-x-small
+   '_hx-Ykp': (margin-left: -(map-get($margins, x-small))), //left--x-small
+   '_E-hqQ8': (margin-left: map-get($margins, small)), //left-small
+   '_dLwMXa': (margin-left: -(map-get($margins, small))), //left--small
+   '_keNVmG': (margin-left: map-get($margins, medium)), //left-medium
+   '_Ry03db': (margin-left: -(map-get($margins, medium))), //left--medium
+   '_lhTZ2m': (margin-left: map-get($margins, large)), //left-large
+   '_57JQVF': (margin-left: -(map-get($margins, large))), //left--large
+   '_tt0MIG': (margin-left: map-get($margins, x-large)), //left-x-large
+   '_dh8vGJ': (margin-left: -(map-get($margins, x-large))), //left--x-large
+   '_ABl7B4': (margin-bottom: map-get($margins, none)), //bottom-none
+   '_hwAETC': (margin-bottom: -(map-get($margins, none))), //bottom--none
+   '_-S88Kp': (margin-bottom: map-get($margins, x-small)), //bottom-x-small
+   '_zCwJNw': (margin-bottom: -(map-get($margins, x-small))), //bottom--x-small
+   '_JELwf8': (margin-bottom: map-get($margins, small)), //bottom-small
+   '_7wYvUl': (margin-bottom: -(map-get($margins, small))), //bottom--small
+   '_J3Jmle': (margin-bottom: map-get($margins, medium)), //bottom-medium
+   '_gpBvy-': (margin-bottom: -(map-get($margins, medium))), //bottom--medium
+   '_vf3q-r': (margin-bottom: map-get($margins, large)), //bottom-large
+   '_Y55zub': (margin-bottom: -(map-get($margins, large))), //bottom--large
+   '_wbLVQG': (margin-bottom: map-get($margins, x-large)), //bottom-x-large
+   '_XiXU41': (margin-bottom: -(map-get($margins, x-large))), //bottom--x-large
+   '_JUNt8N': (margin-right: map-get($margins, none)), //right-none
+   '_6-N1Fk': (margin-right: -(map-get($margins, none))), //right--none
+   '_xqgdQx': (margin-right: map-get($margins, x-small)), //right-x-small
+   '_ujPvYw': (margin-right: -(map-get($margins, x-small))), //right--x-small
+   '_oqfENQ': (margin-right: map-get($margins, small)), //right-small
+   '_1iCYkZ': (margin-right: -(map-get($margins, small))), //right--small
+   '_V-JTjI': (margin-right: map-get($margins, medium)), //right-medium
+   '_-Dox2Z': (margin-right: -(map-get($margins, medium))), //right--medium
+   '_ijg4ie': (margin-right: map-get($margins, large)), //right-large
+   '_E2d5nk': (margin-right: -(map-get($margins, large))), //right--large
+   '_3oM90j': (margin-right: map-get($margins, x-large)), //right-x-large
+   '_jLMUiD': (margin-right: -(map-get($margins, x-large))), //right--x-large
+);
+
+@each $classname, $margins in $text-margins {
+    .#{$classname} {
+       @each $property, $value in $margins {
+            #{$property}: $value;
+        }
+    }
+}
+
+$text-colors: (
+   '_2jREhU': map-get($colors, base-1), //base-1
+   '_vOm2uW': map-get($colors, base-2), //base-2
+   '_PUFZ-s': map-get($colors, base-3), //base-3
+   '_MqW00G': map-get($colors, neutral-1), //neutral-1
+   '_Uc-VKN': map-get($colors, neutral-2), //neutral-2
+   '_suLIE8': map-get($colors, neutral-3), //neutral-3
+   '_TTGe5f': map-get($colors, accent-1), //accent-1
+   '_2IkPSj': map-get($colors, accent-2), //accent-2
+   '_qxhSkq': map-get($colors, accent-3), //accent-3
+   '_zwNxUY': map-get($colors, tertiary-1), //tertiary-1
+   '_AbfntO': map-get($colors, tertiary-2), //tertiary-2
+   '_98d0ef': map-get($colors, tertiary-3), //tertiary-3
+   '_EC-VwS': map-get($colors, extra-1), //extra-1
+   '_K84tt-': map-get($colors, extra-2), //extra-2
+   '_-DYnPX': map-get($colors, extra-3), //extra-3
+);
+
+@each $classname, $colors in $text-colors {
+    .#{$classname} {
+       @media (prefers-color-scheme: dark) {
+            color: map-get($colors, dark) !important;
+        }
+        @media (prefers-color-scheme: light) {
+            color: map-get($colors, light) !important;
+        }
+    }
+}
+
