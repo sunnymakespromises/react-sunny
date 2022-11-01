@@ -1,5 +1,5 @@
-# react-sunny
-React Sunny is a group of components that I re-use in my websites to write more compact code.
+# :butterfly::sunny: react-sunny :sunny::hatched_chick:
+React Sunny is just a group of useful components that I re-use in my websites. It includes the components [Container](#container), [Text](#text), [Dropdown](#dropdown), and [Responsive](#responsive). It may not be the most useful to anybody else but I like it :blush: I really just wanted to see if I could successfully finish a project with proper documentation and publish it to the npm registry :eyes:
 
 ## Installation
 ### 1. Install the package with **npm**.
@@ -10,8 +10,8 @@ import { Container, Text, Responsive, Dropdown } from 'react-sunny'
 ```
 
 ## Components
-### Container
-The Container component is a div with flex-box built-in so you dont have to worry about vertical and horizontal centering or any of that nonsense.
+### <a name="container"></a>Container :package:
+The Container component is a div with flex-box built-in so you dont have to worry about vertical and horizontal centering or any of that nonsense. It also comes with some other style props that you can use to make writing your code just a little bit cleaner :stuck_out_tongue_winking_eye:
 #### Props
 | name        | type    | default         | options                                                              | description                                                                                                                                                                                                                                                                                      |
 |-------------|---------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ The Container component is a div with flex-box built-in so you dont have to worr
 ```
 
 
-### Dropdown
+### <a name="dropdown"></a>Dropdown :point_down:
 The Dropdown component- and all of its subcomponents- allows you to abstract away all of the functionality of the dropdown
 and focus on the styling alone. Dropdown includes the components Header, List, Option, and Button.
 #### Props
@@ -138,7 +138,7 @@ Dropdown *with* a dedicated Button, clicking only on the button will trigger `on
 </Dropdown>
 ```
 
-### Text
+### <a name="text"></a>Text :abc:
 The Text component is just an easier way to work with text and allows you to quickly change styles cleanly with less code.
 #### Props
 | name        | type    | default      | options                                                | description                                                                                                                                                                                                                                                                                               |
@@ -181,7 +181,7 @@ The Text component is just an easier way to work with text and allows you to qui
 </Container>
 ```
 
-### Responsive
+### <a name="responsive"></a>Responsive :mirror:
 The Responsive component, mainly used in SSR projects like Next.js, conditionally renders based on the aspect ratio of the viewport.
 #### Props
 | name        | type    | default | options         | description                                                                                      |
@@ -217,7 +217,7 @@ The Responsive component, mainly used in SSR projects like Next.js, conditionall
 </Container>
 ```
 
-## Package Variables
+## <a name="package-variables"></a>Package Variables
 #### To override the default variables for color, padding, and margin in the package, follow these steps:
 1. Locate the  `react-sunny-styles` folder or just download it from [here]('http://github.com/sunnymakespromises/react-sunny-public/tree/main/dist').
 2. Copy the folder into your application and import `overrides.scss` into your index/top-level page.
@@ -228,70 +228,70 @@ import './react-sunny-styles/overrides.scss'
 
 ### Default Package Variable Values
 ##### Colors
-| name       | light     | dark      | editable? |
-|------------|-----------|-----------|-----------|
-| base-1     | #FFFFFF   | #000000   | yes       |
-| base-2     | #F2F2F7   | #1C1C1E   | yes       |
-| base-3     | #D1D1D6   | #3A3A3C   | yes       |
-| neutral-1  | #000000   | #FFFFFF   | yes       |
-| neutral-2  | #1D1D1F   | #F2F2F7   | yes       |
-| neutral-3  | #424245   | #D1D1D6   | yes       |
-| accent-1   | #007AFF   | #007AFF   | yes       |
-| accent-2   | #32ADE6   | #32ADE6   | yes       |
-| accent-3   | #55BEF0   | #55BEF0   | yes       |
-| tertiary-1 | #FA3B2F   | #FA3B2F   | yes       |
-| tertiary-2 | #F92B53   | #F92B53   | yes       |
-| tertiary-3 | #FA6A86   | #FA6A86   | yes       |
-| clear      | #00000000 | #00000000 | no        |
-| extra-1    | #000000   | #000000   | yes       |
-| extra-2    | #000000   | #000000   | yes       |
-| extra-3    | #000000   | #000000   | yes       |
-| white      | #FFFFFF   | #FFFFFF   | no        |
-| black      | #000000   | #000000   | no        |
-| gray-1     | #8E8E93   | #8E8E93   | no        |
-| gray-2     | #AEAEB2   | #636366   | no        |
-| gray-3     | #C7C7CC   | #48484A   | no        |
-| gray-4     | #D1D1D6   | #3A3A3C   | no        |
-| gray-5     | #E5E5EA   | #2C2C2E   | no        |
-| gray-6     | #F2F2F7   | #1C1C1E   | no        |
-| red        | #FA3B2F   | #FA3B2F   | no        |
-| orange     | #FF9500   | #FF9500   | no        |
-| yellow     | #FFCC02   | #FFCC02   | no        |
-| green      | #35C759   | #35C759   | no        |
-| blue       | #007AFF   | #007AFF   | no        |
-| purple     | #5856D5   | #5856D5   | no        |
-| pink       | #FF6482   | #FF6482   | no        |
+| name       | light       | dark        | editable? |
+|------------|-------------|-------------|-----------|
+| base-1     | `#FFFFFF`   | `#000000`   | yes       |
+| base-2     | `#F2F2F7`   | `#1C1C1E`   | yes       |
+| base-3     | `#D1D1D6`   | `#3A3A3C`   | yes       |
+| neutral-1  | `#000000`   | `#FFFFFF`   | yes       |
+| neutral-2  | `#1D1D1F`   | `#F2F2F7`   | yes       |
+| neutral-3  | `#424245`   | `#D1D1D6`   | yes       |
+| accent-1   | `#007AFF`   | `#007AFF`   | yes       |
+| accent-2   | `#32ADE6`   | `#32ADE6`   | yes       |
+| accent-3   | `#55BEF0`   | `#55BEF0`   | yes       |
+| tertiary-1 | `#FA3B2F`   | `#FA3B2F`   | yes       |
+| tertiary-2 | `#F92B53`   | `#F92B53`   | yes       |
+| tertiary-3 | `#FA6A86`   | `#FA6A86`   | yes       |
+| clear      | `#00000000` | `#00000000` | no        |
+| extra-1    | `#000000`   | `#000000`   | yes       |
+| extra-2    | `#000000`   | `#000000`   | yes       |
+| extra-3    | `#000000`   | `#000000`   | yes       |
+| white      | `#FFFFFF`   | `#FFFFFF`   | no        |
+| black      | `#000000`   | `#000000`   | no        |
+| gray-1     | `#8E8E93`   | `#8E8E93`   | no        |
+| gray-2     | `#AEAEB2`   | `#636366`   | no        |
+| gray-3     | `#C7C7CC`   | `#48484A`   | no        |
+| gray-4     | `#D1D1D6`   | `#3A3A3C`   | no        |
+| gray-5     | `#E5E5EA`   | `#2C2C2E`   | no        |
+| gray-6     | `#F2F2F7`   | `#1C1C1E`   | no        |
+| red        | `#FA3B2F`   | `#FA3B2F`   | no        |
+| orange     | `#FF9500`   | `#FF9500`   | no        |
+| yellow     | `#FFCC02`   | `#FFCC02`   | no        |
+| green      | `#35C759`   | `#35C759`   | no        |
+| blue       | `#007AFF`   | `#007AFF`   | no        |
+| purple     | `#5856D5`   | `#5856D5`   | no        |
+| pink       | `#FF6482`   | `#FF6482`   | no        |
 
 ##### Paddings
-| name    | value   |
-|---------|---------|
-| none    | 0       |
-| x-small | 0.25rem |
-| small   | 0.5rem  |
-| medium  | 1rem    |
-| large   | 2rem    |
-| x-large | 4rem    |
+| name    | value     |
+|---------|-----------|
+| none    | `0`       |
+| x-small | `0.25rem` |
+| small   | `0.5rem`  |
+| medium  | `1rem`    |
+| large   | `2rem`    |
+| x-large | `4rem`    |
 
 ##### Margins
-| name    | value   |
-|---------|---------|
-| none    | 0       |
-| x-small | 0.25rem |
-| small   | 0.5rem  |
-| medium  | 1rem    |
-| large   | 2rem    |
-| x-large | 4rem    |
+| name    | value     |
+|---------|-----------|
+| none    | `0`       |
+| x-small | `0.25rem` |
+| small   | `0.5rem`  |
+| medium  | `1rem`    |
+| large   | `2rem`    |
+| x-large | `4rem`    |
 
 ##### Text Sizes
-| name | value  |
-|------|--------|
-| h1   | 2em    |
-| h2   | 1.5em  |
-| h3   | 1.17em |
-| h4   | 1em    |
-| h5   | 0.83em |
-| h6   | 0.67em |
-| p    | 1rem   |
+| name | value    |
+|------|----------|
+| h1   | `2em`    |
+| h2   | `1.5em`  |
+| h3   | `1.17em` |
+| h4   | `1em`    |
+| h5   | `0.83em` |
+| h6   | `0.67em` |
+| p    | `1rem`   |
 
 ## Dependencies
 React Sunny has no dependecies besides React 16+, Sass, and react-responsive.
