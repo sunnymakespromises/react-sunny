@@ -49,7 +49,7 @@ export default function Text({ id, classes = '', styles = {}, alignment = '', co
                 (padding != '' ? ' ' +  paddingClasses : '') + 
                 (margin != '' ? ' ' +  marginClasses : '') + 
                 getClass((weight != ''), ('weight-' + weight)) +
-                getClass((color !== '' && !color.includes('#')), ('color-' + color)) + 
+                getClass((color != '' && !color.includes('#')), ('color-' + color)) + 
                 getClass(canClick, 'can-click')
     }
     const getChildren = () => {

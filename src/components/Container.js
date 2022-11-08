@@ -8,10 +8,11 @@ const getClassesFromString = ( property, string ) => {
 		const x = array[i]
 		const y = array[i + 1]
 		const calculatedStyle = style[property + '-' + x + '-' + y]
+		console.log(i, array.length)
 		if (calculatedStyle != undefined) {
 			classes += calculatedStyle
 		}
-		if (i != array.length - 1) {
+		if (i != array.length - 2) {
 			classes += ' '
 		}
 	}
@@ -47,12 +48,12 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', h
 		var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)
 		return 	style['direction-' + direction] + ' ' + 
-				alignmentClasses + ' ' + 
+				alignmentClasses + 
 				getClass((position != ''), ('position-' + position)) + 
 				getClass((fill != ''), ('fill-' + fill)) + 
 				(padding != '' ? ' ' + paddingClasses : '') + 
 				(margin != '' ? ' ' + marginClasses : '') + 
-				getClass((color !== '' && !color.includes('#')), ('color-' + color)) + 
+				getClass((color != '' && !color.includes('#')), ('color-' + color)) + 
 				getClass(canClick, 'can-click')
 	}
 	const getColor = () => {
