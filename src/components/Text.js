@@ -7,8 +7,11 @@ const getClassesFromString = ( property, string ) => {
 	for (var i = 0; i < array.length; i += 2) {
 		const x = array[i]
 		const y = array[i + 1]
-		classes += style[property + '-' + x + '-' + y]
-		if (i != array.length - 1) {
+		const calculatedStyle = style[property + '-' + x + '-' + y]
+		if (calculatedStyle != undefined) {
+			classes += calculatedStyle
+		}
+		if (i != array.length - 2) {
 			classes += ' '
 		}
 	}
