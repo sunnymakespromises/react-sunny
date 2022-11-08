@@ -8,7 +8,6 @@ const getClassesFromString = ( property, string ) => {
 		const x = array[i]
 		const y = array[i + 1]
 		const calculatedStyle = style[property + '-' + x + '-' + y]
-		console.log(i, array.length)
 		if (calculatedStyle != undefined) {
 			classes += calculatedStyle
 		}
