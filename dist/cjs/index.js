@@ -202,7 +202,6 @@ var getClassesFromString$1 = function getClassesFromString(property, string) {
     var x = array[i];
     var y = array[i + 1];
     var calculatedStyle = style$1[property + '-' + x + '-' + y];
-    console.log(i, array.length);
 
     if (calculatedStyle != undefined) {
       classes += calculatedStyle;
@@ -2558,9 +2557,13 @@ var getClassesFromString = function getClassesFromString(property, string) {
   for (var i = 0; i < array.length; i += 2) {
     var x = array[i];
     var y = array[i + 1];
-    classes += style[property + '-' + x + '-' + y];
+    var calculatedStyle = style[property + '-' + x + '-' + y];
 
-    if (i != array.length - 1) {
+    if (calculatedStyle != undefined) {
+      classes += calculatedStyle;
+    }
+
+    if (i != array.length - 2) {
       classes += ' ';
     }
   }
