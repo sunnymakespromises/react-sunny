@@ -89,7 +89,7 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', h
 		return { ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getWidth(), ...getHeight() }
 	}
   	return (
-		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = {{ ...getStyles() }} ref = {ref} {...extras}>
+		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = { getStyles() } ref = {ref} {...extras}>
 			{children}
 		</div>
   	)

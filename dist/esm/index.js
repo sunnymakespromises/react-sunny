@@ -315,7 +315,7 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
   return /*#__PURE__*/React.createElement("div", _extends({
     id: id != '' ? id : null,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),
-    style: _objectSpread2({}, getStyles()),
+    style: getStyles(),
     ref: ref
   }, extras), children);
 });
