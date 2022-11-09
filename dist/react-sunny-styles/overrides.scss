@@ -65,7 +65,7 @@ $container-paddings: (
 @each $classname, $paddings in $container-paddings {
     .#{$classname} {
        @each $property, $value in $paddings {
-            #{$property}: $value;
+            #{$property}: $value !important;
         }
     }
 }
@@ -136,7 +136,7 @@ $container-margins: (
 @each $classname, $margins in $container-margins {
     .#{$classname} {
        @each $property, $value in $margins {
-            #{$property}: $value;
+            #{$property}: $value !important;
         }
     }
 }
@@ -252,7 +252,7 @@ $text-paddings: (
 @each $classname, $paddings in $text-paddings {
     .#{$classname} {
        @each $property, $value in $paddings {
-            #{$property}: $value;
+            #{$property}: $value !important;
         }
     }
 }
@@ -323,7 +323,7 @@ $text-margins: (
 @each $classname, $margins in $text-margins {
     .#{$classname} {
        @each $property, $value in $margins {
-            #{$property}: $value;
+            #{$property}: $value !important;
         }
     }
 }
