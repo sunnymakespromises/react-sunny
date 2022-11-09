@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+@function color($color, $theme: light, $opacity: 100) {
+    @if (map-get($colors, $color)) {
+        @return rgba(map-get(map-get($colors, $color), $theme), calc($opacity / 100));
+    }
+    @else {
+        @return rgba($color, $opacity);
+    }
+}

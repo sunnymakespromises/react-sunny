@@ -1,0 +1,65 @@
+// COLORS
+$colors: (
+    base-1: (light: #FFFFFF, dark: #000000),
+    base-2: (light: #F2F2F7, dark: #1C1C1E),
+    base-3: (light: #D1D1D6, dark: #3A3A3C),
+    neutral-1: (light: #000000, dark: #FFFFFF),
+    neutral-2: (light: #1D1D1F, dark: #F2F2F7),
+    neutral-3: (light: #424245, dark: #D1D1D6),
+    accent-1: (light: #007AFF, dark: #007AFF),
+    accent-2: (light: #0059B8, dark: #0059B8),
+    accent-3: (light: #70B5FF, dark: #70B5FF),
+    tertiary-1: (light: #FA3B2F, dark: #FA3B2F),
+    tertiary-2: (light: #F92B53, dark: #F92B53),
+    tertiary-3: (light: #FA6A86, dark: #FA6A86),
+    clear: (light: #00000000, dark: #00000000),
+    extra-1: (light: #000000, dark: #000000),
+    extra-2: (light: #000000, dark: #000000),
+    extra-3: (light: #000000, dark: #000000),
+    white: (light: #FFFFFF, dark: #FFFFFF),
+    black: (light: #000000, dark: #000000),
+    gray-1: (light: #8E8E93, dark: #8E8E93),
+    gray-2: (light: #AEAEB2, dark: #636366),
+    gray-3: (light: #C7C7CC, dark: #48484A),
+    gray-4: (light: #D1D1D6, dark: #3A3A3C),
+    gray-5: (light: #E5E5EA, dark: #2C2C2E),
+    gray-6: (light: #F2F2F7, dark: #1C1C1E),
+    red: (light: #FA3B2F, dark: #FA3B2F),
+    orange: (light: #FF9500, dark: #FF9500),
+    yellow: (light: #FFCC02, dark: #FFCC02),
+    green: (light: #35C759, dark: #35C759),
+    blue: (light: #007AFF, dark: #007AFF),
+    purple: (light: #5856D5, dark: #5856D5),
+    pink: (light: #FF6482, dark: #FF6482)
+);
+
+// PADDINGS
+$paddings: (
+    none: 0, 
+    x-small: 0.25rem,
+    small: 0.5rem, 
+    medium: 1rem, 
+    large: 2rem,
+    x-large: 4rem
+);
+
+// MARGINS 
+$margins: (
+    none: 0, 
+    x-small: 0.25rem,
+    small: 0.5rem, 
+    medium: 1rem, 
+    large: 2rem,
+    x-large: 4rem
+);
+
+// TEXT SIZES
+$sizes: (
+    h1: 2em,
+    h2: 1.5em,
+    h3: 1.17em,
+    h4: 1em,
+    h5: 0.83em,
+    h6: 0.67em,
+    p: 1em
+);
