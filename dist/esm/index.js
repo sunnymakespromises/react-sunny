@@ -1,4 +1,4 @@
-import React, { forwardRef, createContext, useContext, useRef, useState, useEffect, useLayoutEffect } from 'react';
+import React, { forwardRef, useState, useLayoutEffect, useEffect } from 'react';
 
 function ownKeys(object, enumerableOnly) {
   var keys = Object.keys(object);
@@ -184,7 +184,7 @@ var css_248z$1 = "._wK23-E {\n  display: flex;\n  flex-direction: column;\n  cur
 var style$1 = {"direction-column":"_wK23-E","direction-row":"_-9-Yj5","alignment-center-center":"_JVOsVu","alignment-center-start":"_kkCXFx","alignment-center-end":"_rigoW1","alignment-center-around":"_Yaoxq-","alignment-center-between":"_Kb8687","alignment-center-baseline":"_ytCb4n","alignment-center-stretch":"_yGb7zY","alignment-start-center":"_oBjMip","alignment-start-start":"_guBJdP","alignment-start-end":"_qi8CXu","alignment-start-around":"_B-yI6c","alignment-start-between":"_-xpbIv","alignment-start-baseline":"_OS1D-l","alignment-start-stretch":"_JMroyX","alignment-end-center":"_Ji8EX1","alignment-end-start":"_sKIrDk","alignment-end-end":"_ZOBXjo","alignment-end-around":"_F6zDWW","alignment-end-between":"_8qZado","alignment-end-baseline":"_CFzx5p","alignment-end-stretch":"_2ohi32","alignment-around-center":"_Q3FJls","alignment-around-start":"_U9MCmJ","alignment-around-end":"_GG82Kd","alignment-around-around":"_Ynr8YU","alignment-around-between":"_68NreT","alignment-around-baseline":"_0RPEd-","alignment-around-stretch":"_q4hAAt","alignment-between-center":"_RDeHJ-","alignment-between-start":"_wZZvye","alignment-between-end":"_K3MwWx","alignment-between-around":"_SmYm-D","alignment-between-between":"_D-nyMy","alignment-between-baseline":"_hA7dup","alignment-between-stretch":"_N9ywZE","alignment-baseline-center":"_QZgDeR","alignment-baseline-start":"_oEIXLT","alignment-baseline-end":"_ydozdO","alignment-baseline-around":"_To70Vr","alignment-baseline-between":"_HjWX1-","alignment-baseline-baseline":"_RLY3-R","alignment-baseline-stretch":"_nmX41U","alignment-stretch-center":"_NKxOaN","alignment-stretch-start":"_0R3Tdt","alignment-stretch-end":"_QyimLf","alignment-stretch-around":"_EDBb-Z","alignment-stretch-between":"_VUQdTB","alignment-stretch-baseline":"_4WytG-","alignment-stretch-stretch":"_zIcBpV","position-relative":"_b92nbg","position-absolute":"_dUe7jL","position-fixed":"_a6jqJu","position-sticky":"_oLUgQu","fill-width":"_0WX3w6","fill-height":"_BkRz-N","fill-parent":"_p-B4GE","fill-screen":"_f-OnHJ","fill-auto":"_cI5SF9","fill-none":"_frXUzP","padding-all-none":"_j35VJM","padding-all--none":"_laYwNS","padding-all-x-small":"_6N3CyI","padding-all--x-small":"_34hWtK","padding-all-small":"_pjngfO","padding-all--small":"_ubDgSc","padding-all-medium":"_iv7YFV","padding-all--medium":"_gL3tK8","padding-all-large":"_IPVp1z","padding-all--large":"_2J8qD9","padding-all-x-large":"_iZOasQ","padding-all--x-large":"_W7ciDG","padding-top-none":"_z3Ird8","padding-top--none":"_EaPz0Z","padding-top-x-small":"_RoOPSq","padding-top--x-small":"_GmVc9Z","padding-top-small":"_0vKWCu","padding-top--small":"_hQCR9x","padding-top-medium":"_eiosQ9","padding-top--medium":"_YQfp8J","padding-top-large":"_XyuA3U","padding-top--large":"_z-Mwvt","padding-top-x-large":"_alHTHR","padding-top--x-large":"_HiAMq2","padding-left-none":"_WMk9ZJ","padding-left--none":"_-0aic8","padding-left-x-small":"_xmdg1z","padding-left--x-small":"_65FEto","padding-left-small":"_rw1IzZ","padding-left--small":"_FXMtJj","padding-left-medium":"_5Ay-uS","padding-left--medium":"_NIbIKC","padding-left-large":"_zSzGOb","padding-left--large":"_uyziRm","padding-left-x-large":"_NOD7cA","padding-left--x-large":"_e3v4e0","padding-bottom-none":"_yvOluM","padding-bottom--none":"_WepSWg","padding-bottom-x-small":"_iHWbWJ","padding-bottom--x-small":"_2A2C6s","padding-bottom-small":"_UXfxM5","padding-bottom--small":"_J6XUGL","padding-bottom-medium":"_t-TneE","padding-bottom--medium":"_TnZ806","padding-bottom-large":"_Xhrlwr","padding-bottom--large":"_VF-cpL","padding-bottom-x-large":"_JTvyXv","padding-bottom--x-large":"_ygh6wx","padding-right-none":"_63-TA-","padding-right--none":"_Te9LM1","padding-right-x-small":"_IP4Yfp","padding-right--x-small":"_2dNDBH","padding-right-small":"_MwzxXj","padding-right--small":"_aNRgRK","padding-right-medium":"_vQfsyW","padding-right--medium":"_oS3YjE","padding-right-large":"_P-j-ux","padding-right--large":"_M83Xl8","padding-right-x-large":"_n-TNnz","padding-right--x-large":"_-VPHPj","margin-all-none":"_ERim67","margin-all--none":"_Or-eJL","margin-all-x-small":"_KERUhi","margin-all--x-small":"_TMPzXT","margin-all-small":"_EwqtOC","margin-all--small":"_9Z-wsk","margin-all-medium":"_yximzo","margin-all--medium":"_fLSxea","margin-all-large":"_wlilZ3","margin-all--large":"_jGDqRC","margin-all-x-large":"_GWnWvC","margin-all--x-large":"_cLbKqJ","margin-top-none":"_3jdp75","margin-top--none":"_0WRWj5","margin-top-x-small":"_VW22Kv","margin-top--x-small":"_LtHoWc","margin-top-small":"_wVwjb3","margin-top--small":"_lGqYFL","margin-top-medium":"_hjC4AQ","margin-top--medium":"_vQ78uS","margin-top-large":"_vARmsw","margin-top--large":"_YechZq","margin-top-x-large":"_5lAROs","margin-top--x-large":"_cPyuIj","margin-left-none":"_H1vksJ","margin-left--none":"_XSEkrl","margin-left-x-small":"_Ay4VhN","margin-left--x-small":"_mBOu9r","margin-left-small":"_n2s-yc","margin-left--small":"_IOPnLC","margin-left-medium":"_moKUTa","margin-left--medium":"_JuMFMY","margin-left-large":"_ta6Cyw","margin-left--large":"_CYCXyF","margin-left-x-large":"_fDWZVq","margin-left--x-large":"_lAPdEn","margin-bottom-none":"_9cPwE7","margin-bottom--none":"_GcxiMz","margin-bottom-x-small":"_WLeS0A","margin-bottom--x-small":"_LE2Pbf","margin-bottom-small":"_6Iba--","margin-bottom--small":"_mB1UY4","margin-bottom-medium":"_a68ExA","margin-bottom--medium":"_wskTnp","margin-bottom-large":"_BIL8Th","margin-bottom--large":"_Bllmr3","margin-bottom-x-large":"_EzjFfS","margin-bottom--x-large":"_wkKt1B","margin-right-none":"_8pZ8-T","margin-right--none":"_V9oa5v","margin-right-x-small":"_HEYmiL","margin-right--x-small":"_9hVn6O","margin-right-small":"_-Bor7t","margin-right--small":"_-YEuFl","margin-right-medium":"_Md8l9X","margin-right--medium":"_19jgoM","margin-right-large":"_KvI5pm","margin-right--large":"_CgZc6L","margin-right-x-large":"_afaSsp","margin-right--x-large":"_OEypNn","color-base-1":"_L12lRQ","color-base-2":"_6s-W0A","color-base-3":"_PN21mR","color-neutral-1":"_-jwzMP","color-neutral-2":"_5-S3sa","color-neutral-3":"_uBwTfw","color-accent-1":"_Lzi4uJ","color-accent-2":"_0uoWxM","color-accent-3":"_y26s1W","color-tertiary-1":"_TZd62R","color-tertiary-2":"_EUBECn","color-tertiary-3":"_yxx2o5","color-clear":"_rRT5zh","color-extra-1":"_bfKH2E","color-extra-2":"_CeCLI8","color-extra-3":"_bxvcmG","color-white":"_qLMeKM","color-black":"_aggqve","color-gray-1":"_WKE9J9","color-gray-2":"_r8czTI","color-gray-3":"_YU6hw7","color-gray-4":"_8rCk-8","color-gray-5":"_OsXfc8","color-gray-6":"_qnnZXb","color-red":"_1xC0Nl","color-orange":"_R6aex8","color-yellow":"_DWkBNY","color-green":"_J7c-Yd","color-blue":"_PuTjSx","color-purple":"_7r7ssM","color-pink":"_UCrMXf","can-click":"_arBVGH"};
 styleInject(css_248z$1);
 
-var _excluded$2 = ["id", "classes", "styles", "width", "height", "direction", "alignment", "position", "fill", "padding", "margin", "color", "canClick", "children"];
+var _excluded$1 = ["id", "classes", "styles", "width", "height", "direction", "alignment", "position", "fill", "padding", "margin", "color", "canClick", "children"];
 
 var getClassesFromString$1 = function getClassesFromString(property, string) {
   var classes = '';
@@ -261,7 +261,7 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
       _ref$canClick = _ref.canClick,
       canClick = _ref$canClick === void 0 ? false : _ref$canClick,
       children = _ref.children,
-      extras = _objectWithoutProperties(_ref, _excluded$2);
+      extras = _objectWithoutProperties(_ref, _excluded$1);
 
   var getClasses = function getClasses() {
     var alignmentClasses = getClassesFromString$1('alignment', alignment);
@@ -319,296 +319,6 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
     ref: ref
   }, extras), children);
 });
-
-var DropdownContext = /*#__PURE__*/createContext();
-function DropdownProvider(props) {
-  var value = props.value,
-      children = props.children;
-  return /*#__PURE__*/React.createElement(DropdownContext.Provider, {
-    value: value
-  }, children);
-}
-function useDropdownContext() {
-  return useContext(DropdownContext);
-}
-
-var _excluded$1 = ["children", "container"],
-    _excluded2 = ["children", "container"],
-    _excluded3 = ["children", "container"],
-    _excluded4 = ["children", "value", "container", "initial", "active"],
-    _excluded5 = ["children", "container"],
-    _excluded6 = ["behavior", "trigger", "onToggle", "onSelect", "closeOnSelect", "closeOnOutsideClick", "children", "container"];
-var Wrapper = /*#__PURE__*/forwardRef(function (_ref, wrapperRef) {
-  var children = _ref.children,
-      _ref$container = _ref.container,
-      container = _ref$container === void 0 ? false : _ref$container,
-      extras = _objectWithoutProperties(_ref, _excluded$1);
-
-  var _useDropdownContext = useDropdownContext(),
-      expanding = _useDropdownContext.expanding;
-
-  var _expanding = _slicedToArray(expanding, 4),
-      behavior = _expanding[3];
-
-  if (behavior == 'hover') {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React.createElement(Activator, null, /*#__PURE__*/React.createElement(Container, _extends({}, extras, {
-        ref: wrapperRef
-      }), children));
-    } else {
-      return /*#__PURE__*/React.createElement(Activator, null, /*#__PURE__*/React.cloneElement(children, {
-        ref: wrapperRef
-      }));
-    }
-  }
-
-  if (Object.keys(extras).length != 0 || container) {
-    return /*#__PURE__*/React.createElement(Container, _extends({}, extras, {
-      ref: wrapperRef
-    }), children);
-  } else {
-    return /*#__PURE__*/React.cloneElement(children, {
-      ref: wrapperRef
-    });
-  }
-});
-function Header(_ref2) {
-  var children = _ref2.children,
-      _ref2$container = _ref2.container,
-      container = _ref2$container === void 0 ? false : _ref2$container,
-      extras = _objectWithoutProperties(_ref2, _excluded2);
-
-  var _useDropdownContext2 = useDropdownContext(),
-      expanding = _useDropdownContext2.expanding;
-
-  var _expanding2 = _slicedToArray(expanding, 5),
-      behavior = _expanding2[3],
-      trigger = _expanding2[4];
-
-  if (trigger == 'header' && behavior != 'hover') {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React.createElement(Activator, null, /*#__PURE__*/React.createElement(Container, extras, children));
-    } else {
-      return /*#__PURE__*/React.createElement(Activator, null, children);
-    }
-  } else {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React.createElement(Container, extras, children);
-    } else {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, children);
-    }
-  }
-}
-function List(_ref3) {
-  var children = _ref3.children,
-      _ref3$container = _ref3.container,
-      container = _ref3$container === void 0 ? false : _ref3$container,
-      extras = _objectWithoutProperties(_ref3, _excluded3);
-
-  if (Object.keys(extras).length != 0 || container) {
-    return /*#__PURE__*/React.createElement(Container, extras, children);
-  } else {
-    return /*#__PURE__*/React.createElement(React.Fragment, null, children);
-  }
-}
-function Option(_ref4) {
-  var children = _ref4.children,
-      value = _ref4.value,
-      _ref4$container = _ref4.container,
-      container = _ref4$container === void 0 ? false : _ref4$container,
-      _ref4$initial = _ref4.initial,
-      initial = _ref4$initial === void 0 ? false : _ref4$initial,
-      _ref4$active = _ref4.active,
-      active = _ref4$active === void 0 ? true : _ref4$active,
-      extras = _objectWithoutProperties(_ref4, _excluded4);
-
-  var _useDropdownContext3 = useDropdownContext(),
-      selecting = _useDropdownContext3.selecting;
-
-  var _selecting = _slicedToArray(selecting, 3),
-      select = _selecting[1],
-      initialize = _selecting[2];
-
-  useEffect(function () {
-    if (initial) {
-      initialize(value);
-    }
-  }, []);
-
-  if (Object.keys(extras).length != 0 || container) {
-    if (active) {
-      return /*#__PURE__*/React.createElement(Container, _extends({}, extras, {
-        canClick: true,
-        onClick: function onClick() {
-          return select(value);
-        }
-      }), children);
-    } else {
-      return /*#__PURE__*/React.createElement(Container, _extends({}, extras, {
-        canClick: true
-      }), children);
-    }
-  } else {
-    if (active) {
-      return /*#__PURE__*/React.cloneElement(children, {
-        canClick: true,
-        onClick: function onClick() {
-          return select(value);
-        }
-      });
-    } else {
-      return /*#__PURE__*/React.cloneElement(children, {
-        canClick: true
-      });
-    }
-  }
-}
-function Button(_ref5) {
-  var children = _ref5.children,
-      _ref5$container = _ref5.container,
-      container = _ref5$container === void 0 ? false : _ref5$container,
-      extras = _objectWithoutProperties(_ref5, _excluded5);
-
-  var _useDropdownContext4 = useDropdownContext(),
-      expanding = _useDropdownContext4.expanding;
-
-  var _expanding3 = _slicedToArray(expanding, 5),
-      behavior = _expanding3[3],
-      trigger = _expanding3[4];
-
-  if (trigger == 'header' && behavior != 'hover') {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React.createElement(Container, extras, children);
-    } else {
-      return /*#__PURE__*/React.createElement(React.Fragment, null, children);
-    }
-  } else {
-    if (Object.keys(extras).length != 0 || container) {
-      return /*#__PURE__*/React.createElement(Activator, null, /*#__PURE__*/React.createElement(Container, extras, children));
-    } else {
-      return /*#__PURE__*/React.createElement(Activator, null, children);
-    }
-  }
-}
-
-function Activator(_ref6) {
-  var children = _ref6.children;
-
-  var _useDropdownContext5 = useDropdownContext(),
-      expanding = _useDropdownContext5.expanding;
-
-  var _expanding4 = _slicedToArray(expanding, 4),
-      toggle = _expanding4[0],
-      open = _expanding4[1],
-      close = _expanding4[2],
-      behavior = _expanding4[3];
-
-  var event = behavior == 'hover' ? {
-    onMouseEnter: open,
-    onMouseLeave: close
-  } : {
-    onClick: toggle
-  };
-  return /*#__PURE__*/React.cloneElement(children, _objectSpread2({
-    canClick: true
-  }, event));
-}
-
-function Dropdown(_ref7) {
-  var behavior = _ref7.behavior,
-      trigger = _ref7.trigger,
-      onToggle = _ref7.onToggle,
-      onSelect = _ref7.onSelect,
-      _ref7$closeOnSelect = _ref7.closeOnSelect,
-      closeOnSelect = _ref7$closeOnSelect === void 0 ? true : _ref7$closeOnSelect,
-      _ref7$closeOnOutsideC = _ref7.closeOnOutsideClick,
-      closeOnOutsideClick = _ref7$closeOnOutsideC === void 0 ? true : _ref7$closeOnOutsideC,
-      children = _ref7.children,
-      _ref7$container = _ref7.container,
-      container = _ref7$container === void 0 ? false : _ref7$container,
-      extras = _objectWithoutProperties(_ref7, _excluded6);
-
-  var wrapperRef = useRef();
-
-  var _useState = useState(null),
-      _useState2 = _slicedToArray(_useState, 2),
-      selection = _useState2[0],
-      setSelection = _useState2[1];
-
-  var _useState3 = useState(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isExpanded = _useState4[0],
-      setIsExpanded = _useState4[1];
-
-  useEffect(function () {
-    if (closeOnOutsideClick) {
-      var handleClickOutside = function handleClickOutside(event) {
-        if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-          close();
-        }
-      };
-
-      window.addEventListener('click', handleClickOutside, true);
-      return function () {
-        window.removeEventListener('click', handleClickOutside, true);
-      };
-    }
-  }, [closeOnOutsideClick]);
-
-  var toggle = function toggle(value) {
-    if (typeof value != 'boolean') {
-      if (isExpanded) {
-        close();
-      } else {
-        open();
-      }
-    } else {
-      if (value) {
-        open();
-      } else {
-        close();
-      }
-    }
-  };
-
-  var open = function open() {
-    setIsExpanded(true);
-    onToggle(true);
-  };
-
-  var close = function close() {
-    setIsExpanded(false);
-    onToggle(false);
-  };
-
-  var select = function select(value) {
-    setSelection(value);
-    onSelect(value);
-
-    if (closeOnSelect) {
-      close();
-    }
-  };
-
-  var initialize = function initialize(value) {
-    if (selection == null) {
-      select(value);
-    }
-  };
-
-  var expanding = {
-    expanding: [toggle, open, close, behavior, trigger]
-  };
-  var selecting = {
-    selecting: [selection, select, initialize]
-  };
-  return /*#__PURE__*/React.createElement(DropdownProvider, {
-    value: _objectSpread2(_objectSpread2({}, expanding), selecting)
-  }, /*#__PURE__*/React.createElement(Wrapper, _extends({
-    ref: wrapperRef,
-    container: container
-  }, extras), children));
-}
 
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -2683,5 +2393,5 @@ function Text(_ref) {
   }, extras), getChildren()) : /*#__PURE__*/React.createElement("div", null);
 }
 
-export { Button, Container, Dropdown, Header, List, Option, Responsive, Text, aspectRatio, isLandscape, isPortrait };
+export { Container, Responsive, Text, aspectRatio, isLandscape, isPortrait };
 //# sourceMappingURL=index.js.map
