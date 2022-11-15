@@ -70,7 +70,7 @@ The Container component is a div with flex-box built-in so you dont have to worr
 ```
 
 
-### <a name="dropdown"></a>Dropdown :point_down:
+<!-- ### <a name="dropdown"></a>Dropdown :point_down:
 The Dropdown component- and all of its subcomponents- allows you to abstract away all of the functionality of the dropdown
 and focus on the styling alone. Dropdown includes the components Header, List, Option, and Button.
 #### Props
@@ -136,7 +136,7 @@ Dropdown *with* a dedicated Button, clicking only on the button will trigger `on
                 </Option>
         </List>
 </Dropdown>
-```
+``` -->
 
 ### <a name="text"></a>Text :abc:
 The Text component is just an easier way to work with text and allows you to quickly change styles cleanly with less code.
