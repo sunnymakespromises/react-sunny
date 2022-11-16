@@ -40,37 +40,62 @@ function getAspect() {
 }
 
 export function aspectRatio() {
+    const [isClient, setIsClient] = useState(false)
     const [aspect, setAspect] = useState(getAspect())
-    useEffect(() => {
-        function handleResize() {
-            setAspect(getAspect())
-        }
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
+    useLayoutEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsClient(true)
+        } 
     }, [])
+    useEffect(() => {
+        if (isClient) {
+            function handleResize() {
+                setAspect(getAspect())
+            }
+            window.addEventListener('resize', handleResize)
+            return () => window.removeEventListener('resize', handleResize)
+        }
+    }, [isClient])
     return aspect
 }
 
 export function isLandscape() {
+    const [isClient, setIsClient] = useState(false)
     const [aspect, setAspect] = useState(getAspect())
-    useEffect(() => {
-        function handleResize() {
-            setAspect(getAspect())
-        }
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
+    useLayoutEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsClient(true)
+        } 
     }, [])
-    return (aspect > 1)
+    useEffect(() => {
+        if (isClient) {
+            function handleResize() {
+                setAspect(getAspect())
+            }
+            window.addEventListener('resize', handleResize)
+            return () => window.removeEventListener('resize', handleResize)
+        }
+    }, [isClient])
+    return (isClient ? aspect > 1 : false)
 }
 
 export function isPortrait() {
+    const [isClient, setIsClient] = useState(false)
     const [aspect, setAspect] = useState(getAspect())
+    useLayoutEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsClient(true)
+        } 
+    }, [isClient])
     useEffect(() => {
-        function handleResize() {
-            setAspect(getAspect())
+        if (isClient) {
+            function handleResize() {
+                console.log('hiya')
+                setAspect(getAspect())
+            }
+            window.addEventListener('resize', handleResize)
+            return () => window.removeEventListener('resize', handleResize)
         }
-        window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
-    }, [])
-    return (aspect < 1)
+    }, [isClient])
+    return (isClient ? aspect < 1 : false)
 }

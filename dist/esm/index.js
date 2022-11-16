@@ -2192,58 +2192,95 @@ function getAspect() {
 }
 
 function aspectRatio() {
-  var _useState3 = useState(getAspect()),
+  var _useState3 = useState(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      aspect = _useState4[0],
-      setAspect = _useState4[1];
+      isClient = _useState4[0],
+      setIsClient = _useState4[1];
 
-  useEffect(function () {
-    function handleResize() {
-      setAspect(getAspect());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return function () {
-      return window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  return aspect;
-}
-function isLandscape() {
   var _useState5 = useState(getAspect()),
       _useState6 = _slicedToArray(_useState5, 2),
       aspect = _useState6[0],
       setAspect = _useState6[1];
 
-  useEffect(function () {
-    function handleResize() {
-      setAspect(getAspect());
+  useLayoutEffect(function () {
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
     }
-
-    window.addEventListener('resize', handleResize);
-    return function () {
-      return window.removeEventListener('resize', handleResize);
-    };
   }, []);
-  return aspect > 1;
+  useEffect(function () {
+    if (isClient) {
+      var handleResize = function handleResize() {
+        setAspect(getAspect());
+      };
+
+      window.addEventListener('resize', handleResize);
+      return function () {
+        return window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [isClient]);
+  return aspect;
+}
+function isLandscape() {
+  var _useState7 = useState(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      isClient = _useState8[0],
+      setIsClient = _useState8[1];
+
+  var _useState9 = useState(getAspect()),
+      _useState10 = _slicedToArray(_useState9, 2),
+      aspect = _useState10[0],
+      setAspect = _useState10[1];
+
+  useLayoutEffect(function () {
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
+    }
+  }, []);
+  useEffect(function () {
+    if (isClient) {
+      var handleResize = function handleResize() {
+        setAspect(getAspect());
+      };
+
+      window.addEventListener('resize', handleResize);
+      return function () {
+        return window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [isClient]);
+  return isClient ? aspect > 1 : false;
 }
 function isPortrait() {
-  var _useState7 = useState(getAspect()),
-      _useState8 = _slicedToArray(_useState7, 2),
-      aspect = _useState8[0],
-      setAspect = _useState8[1];
+  var _useState11 = useState(false),
+      _useState12 = _slicedToArray(_useState11, 2),
+      isClient = _useState12[0],
+      setIsClient = _useState12[1];
 
-  useEffect(function () {
-    function handleResize() {
-      setAspect(getAspect());
+  var _useState13 = useState(getAspect()),
+      _useState14 = _slicedToArray(_useState13, 2),
+      aspect = _useState14[0],
+      setAspect = _useState14[1];
+
+  useLayoutEffect(function () {
+    if (typeof window !== 'undefined') {
+      setIsClient(true);
     }
+  }, [isClient]);
+  useEffect(function () {
+    if (isClient) {
+      var handleResize = function handleResize() {
+        console.log('hiya');
+        setAspect(getAspect());
+      };
 
-    window.addEventListener('resize', handleResize);
-    return function () {
-      return window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  return aspect < 1;
+      window.addEventListener('resize', handleResize);
+      return function () {
+        return window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, [isClient]);
+  return isClient ? aspect < 1 : false;
 }
 
 var css_248z = "._KUgPzN {\n  font-style: italic;\n}\n\n._sEO-mW {\n  text-decoration: underline;\n}\n\n._ECYGLn {\n  font-size: 2em;\n}\n\n._1AibuH {\n  font-size: 1.5em;\n}\n\n._VUwLHs {\n  font-size: 1.17em;\n}\n\n._OzBbZO {\n  font-size: 1em;\n}\n\n._aJfbVP {\n  font-size: 0.83em;\n}\n\n._LKDNHE {\n  font-size: 0.67em;\n}\n\n._vKit1j {\n  font-size: 1em;\n}\n\n._BgaJqP {\n  font-weight: normal;\n}\n\n._L7OqmH {\n  font-weight: bold;\n}\n\n._Irwgbn {\n  font-weight: lighter;\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2jREhU {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2jREhU {\n    color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._vOm2uW {\n    color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._vOm2uW {\n    color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._PUFZ-s {\n    color: #3a3a3c;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._PUFZ-s {\n    color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._MqW00G {\n    color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._MqW00G {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._Uc-VKN {\n    color: #f2f2f7;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._Uc-VKN {\n    color: #1d1d1f;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._suLIE8 {\n    color: #d1d1d6;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._suLIE8 {\n    color: #424245;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._TTGe5f {\n    color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._TTGe5f {\n    color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._2IkPSj {\n    color: #0059b8;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._2IkPSj {\n    color: #0059b8;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._qxhSkq {\n    color: #70b5ff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._qxhSkq {\n    color: #70b5ff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._zwNxUY {\n    color: #fa3b2f;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._zwNxUY {\n    color: #fa3b2f;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._AbfntO {\n    color: #f92b53;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._AbfntO {\n    color: #f92b53;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._98d0ef {\n    color: #fa6a86;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._98d0ef {\n    color: #fa6a86;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._9KhHnW {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._9KhHnW {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._EC-VwS {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._EC-VwS {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._K84tt- {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._K84tt- {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._-DYnPX {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._-DYnPX {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._ReA-aU {\n    color: white;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._ReA-aU {\n    color: white;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._gc52Mn {\n    color: black;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._gc52Mn {\n    color: black;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._pfJXGU {\n    color: #8e8e93;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._pfJXGU {\n    color: #8e8e93;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._QxaLGK {\n    color: #636366;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._QxaLGK {\n    color: #aeaeb2;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._UXaYXz {\n    color: #48484a;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._UXaYXz {\n    color: #c7c7cc;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._d-hUzx {\n    color: #3a3a3c;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._d-hUzx {\n    color: #d1d1d6;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._HjzbSy {\n    color: #2c2c2e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._HjzbSy {\n    color: #e5e5ea;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._kXCMtN {\n    color: #1c1c1e;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._kXCMtN {\n    color: #f2f2f7;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._jCjIJZ {\n    color: #fa3b2f;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._jCjIJZ {\n    color: #fa3b2f;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._0PpcT7 {\n    color: #ff9500;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._0PpcT7 {\n    color: #ff9500;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._hsGg0j {\n    color: #ffcc02;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._hsGg0j {\n    color: #ffcc02;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._qfTMEF {\n    color: #35c759;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._qfTMEF {\n    color: #35c759;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._wKExWW {\n    color: #007aff;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._wKExWW {\n    color: #007aff;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._Lpb14Y {\n    color: #5856d5;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._Lpb14Y {\n    color: #5856d5;\n  }\n}\n\n@media (prefers-color-scheme: dark) {\n  ._-UyIT1 {\n    color: #ff6482;\n  }\n}\n@media (prefers-color-scheme: light) {\n  ._-UyIT1 {\n    color: #ff6482;\n  }\n}\n\n._Rur-Sy {\n  text-align: left;\n}\n\n._51MYmx {\n  text-align: right;\n}\n\n._iBCjQO {\n  text-align: center;\n}\n\n._ql8Y3I {\n  text-align: justify;\n}\n\n._OWpWNF {\n  padding: 0;\n}\n\n._RbOFXt {\n  padding: 0;\n}\n\n._NhI0Yq {\n  padding: 0.25rem;\n}\n\n._Q3Hhas {\n  padding: -0.25rem;\n}\n\n._nH42ow {\n  padding: 0.5rem;\n}\n\n._YbOSoI {\n  padding: -0.5rem;\n}\n\n._CXxMAT {\n  padding: 1rem;\n}\n\n._xv0-DG {\n  padding: -1rem;\n}\n\n._T3Sw64 {\n  padding: 2rem;\n}\n\n._2Q81vt {\n  padding: -2rem;\n}\n\n._A-Up3- {\n  padding: 4rem;\n}\n\n._B8su0o {\n  padding: -4rem;\n}\n\n._VG01gx {\n  padding-top: 0;\n}\n\n._wGoVjn {\n  padding-top: 0;\n}\n\n._-nNmt5 {\n  padding-top: 0.25rem;\n}\n\n._IWSlqx {\n  padding-top: -0.25rem;\n}\n\n._nbL5Ov {\n  padding-top: 0.5rem;\n}\n\n._Lrpi-8 {\n  padding-top: -0.5rem;\n}\n\n._0QvlIC {\n  padding-top: 1rem;\n}\n\n._odIrup {\n  padding-top: -1rem;\n}\n\n._V-QYzV {\n  padding-top: 2rem;\n}\n\n._mmk0iI {\n  padding-top: -2rem;\n}\n\n._QpmwZ9 {\n  padding-top: 4rem;\n}\n\n._FCZNgW {\n  padding-top: -4rem;\n}\n\n._US9pLF {\n  padding-left: 0;\n}\n\n._L2KLP5 {\n  padding-left: 0;\n}\n\n._KmjaaQ {\n  padding-left: 0.25rem;\n}\n\n._kyh43F {\n  padding-left: -0.25rem;\n}\n\n._ffmveg {\n  padding-left: 0.5rem;\n}\n\n._Ao-AXv {\n  padding-left: -0.5rem;\n}\n\n._om3kk5 {\n  padding-left: 1rem;\n}\n\n._mA5bc- {\n  padding-left: -1rem;\n}\n\n._B1HE7T {\n  padding-left: 2rem;\n}\n\n._aOyuSZ {\n  padding-left: -2rem;\n}\n\n._wJSa7p {\n  padding-left: 4rem;\n}\n\n._qKIp8I {\n  padding-left: -4rem;\n}\n\n._4jEQQi {\n  padding-bottom: 0;\n}\n\n._SVKNzo {\n  padding-bottom: 0;\n}\n\n._jqy-OI {\n  padding-bottom: 0.25rem;\n}\n\n._C6dnVh {\n  padding-bottom: -0.25rem;\n}\n\n._TDKaNH {\n  padding-bottom: 0.5rem;\n}\n\n._-UiaZO {\n  padding-bottom: -0.5rem;\n}\n\n._TMhcQG {\n  padding-bottom: 1rem;\n}\n\n._30miCN {\n  padding-bottom: -1rem;\n}\n\n._lfbKs7 {\n  padding-bottom: 2rem;\n}\n\n._i3jC68 {\n  padding-bottom: -2rem;\n}\n\n._sQAJMy {\n  padding-bottom: 4rem;\n}\n\n._TfriFV {\n  padding-bottom: -4rem;\n}\n\n._2-jdmD {\n  padding-right: 0;\n}\n\n._cK8TBy {\n  padding-right: 0;\n}\n\n._6wagfb {\n  padding-right: 0.25rem;\n}\n\n._4eN3Ci {\n  padding-right: -0.25rem;\n}\n\n._FodmX4 {\n  padding-right: 0.5rem;\n}\n\n._8nLPCU {\n  padding-right: -0.5rem;\n}\n\n._dudm-x {\n  padding-right: 1rem;\n}\n\n._qMCjrb {\n  padding-right: -1rem;\n}\n\n._d4Aow2 {\n  padding-right: 2rem;\n}\n\n._qVDKg1 {\n  padding-right: -2rem;\n}\n\n._6TViBz {\n  padding-right: 4rem;\n}\n\n._5VGBms {\n  padding-right: -4rem;\n}\n\n._EX3CPz {\n  margin: 0;\n}\n\n._DwOaLi {\n  margin: 0;\n}\n\n._WxTR5j {\n  margin: 0.25rem;\n}\n\n._V5xhcC {\n  margin: -0.25rem;\n}\n\n._IWtm79 {\n  margin: 0.5rem;\n}\n\n._4ROkRp {\n  margin: -0.5rem;\n}\n\n._1Sntb0 {\n  margin: 1rem;\n}\n\n._eLOue3 {\n  margin: -1rem;\n}\n\n._zM2hiw {\n  margin: 2rem;\n}\n\n._lpi3v2 {\n  margin: -2rem;\n}\n\n._2x2cqe {\n  margin: 4rem;\n}\n\n._AyZUeO {\n  margin: -4rem;\n}\n\n._yolTyY {\n  margin-top: 0;\n}\n\n._imWQvC {\n  margin-top: 0;\n}\n\n._OK2LE2 {\n  margin-top: 0.25rem;\n}\n\n._ngXg2e {\n  margin-top: -0.25rem;\n}\n\n._MmDZ9y {\n  margin-top: 0.5rem;\n}\n\n._bQck6P {\n  margin-top: -0.5rem;\n}\n\n._c6i2s1 {\n  margin-top: 1rem;\n}\n\n._k3lB8I {\n  margin-top: -1rem;\n}\n\n._2rwPx4 {\n  margin-top: 2rem;\n}\n\n._GPk-Yl {\n  margin-top: -2rem;\n}\n\n._W6YRad {\n  margin-top: 4rem;\n}\n\n._TJ5k8G {\n  margin-top: -4rem;\n}\n\n._a83JmX {\n  margin-left: 0;\n}\n\n._3jMQyn {\n  margin-left: 0;\n}\n\n._QCGgfz {\n  margin-left: 0.25rem;\n}\n\n._hx-Ykp {\n  margin-left: -0.25rem;\n}\n\n._E-hqQ8 {\n  margin-left: 0.5rem;\n}\n\n._dLwMXa {\n  margin-left: -0.5rem;\n}\n\n._keNVmG {\n  margin-left: 1rem;\n}\n\n._Ry03db {\n  margin-left: -1rem;\n}\n\n._lhTZ2m {\n  margin-left: 2rem;\n}\n\n._57JQVF {\n  margin-left: -2rem;\n}\n\n._tt0MIG {\n  margin-left: 4rem;\n}\n\n._dh8vGJ {\n  margin-left: -4rem;\n}\n\n._ABl7B4 {\n  margin-bottom: 0;\n}\n\n._hwAETC {\n  margin-bottom: 0;\n}\n\n._-S88Kp {\n  margin-bottom: 0.25rem;\n}\n\n._zCwJNw {\n  margin-bottom: -0.25rem;\n}\n\n._JELwf8 {\n  margin-bottom: 0.5rem;\n}\n\n._7wYvUl {\n  margin-bottom: -0.5rem;\n}\n\n._J3Jmle {\n  margin-bottom: 1rem;\n}\n\n._gpBvy- {\n  margin-bottom: -1rem;\n}\n\n._vf3q-r {\n  margin-bottom: 2rem;\n}\n\n._Y55zub {\n  margin-bottom: -2rem;\n}\n\n._wbLVQG {\n  margin-bottom: 4rem;\n}\n\n._XiXU41 {\n  margin-bottom: -4rem;\n}\n\n._JUNt8N {\n  margin-right: 0;\n}\n\n._6-N1Fk {\n  margin-right: 0;\n}\n\n._xqgdQx {\n  margin-right: 0.25rem;\n}\n\n._ujPvYw {\n  margin-right: -0.25rem;\n}\n\n._oqfENQ {\n  margin-right: 0.5rem;\n}\n\n._1iCYkZ {\n  margin-right: -0.5rem;\n}\n\n._V-JTjI {\n  margin-right: 1rem;\n}\n\n._-Dox2Z {\n  margin-right: -1rem;\n}\n\n._ijg4ie {\n  margin-right: 2rem;\n}\n\n._E2d5nk {\n  margin-right: -2rem;\n}\n\n._3oM90j {\n  margin-right: 4rem;\n}\n\n._jLMUiD {\n  margin-right: -4rem;\n}\n\n._trIPjl {\n  cursor: pointer;\n  pointer-events: auto;\n}";
