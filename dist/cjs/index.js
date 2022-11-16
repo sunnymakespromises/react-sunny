@@ -2193,7 +2193,7 @@ function Responsive(_ref) {
 }
 
 function getAspect(window) {
-  if (window) {
+  if (window !== null && window !== undefined && typeof window !== 'undefined') {
     var width = window.innerWidth,
         height = window.innerHeight;
     return width / height;
@@ -2213,7 +2213,7 @@ function aspectRatio() {
       aspect = _useState6[0],
       setAspect = _useState6[1];
 
-  React.useLayoutEffect(function () {
+  React.useEffect(function () {
     if (typeof window !== 'undefined') {
       setIsClient(true);
     }
@@ -2243,7 +2243,7 @@ function isLandscape() {
       aspect = _useState10[0],
       setAspect = _useState10[1];
 
-  React.useLayoutEffect(function () {
+  React.useEffect(function () {
     if (typeof window !== 'undefined') {
       setIsClient(true);
     }
@@ -2273,11 +2273,11 @@ function isPortrait() {
       aspect = _useState14[0],
       setAspect = _useState14[1];
 
-  React.useLayoutEffect(function () {
+  React.useEffect(function () {
     if (typeof window !== 'undefined') {
       setIsClient(true);
     }
-  }, [isClient]);
+  }, []);
   React.useEffect(function () {
     if (isClient) {
       var handleResize = function handleResize() {
