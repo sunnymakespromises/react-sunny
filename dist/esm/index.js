@@ -2185,7 +2185,7 @@ function Responsive(_ref) {
 }
 
 function getAspect(window) {
-  if (typeof window !== 'undefined') {
+  if (window) {
     var width = window.innerWidth,
         height = window.innerHeight;
     return width / height;
@@ -2195,7 +2195,7 @@ function getAspect(window) {
 }
 
 function aspectRatio() {
-  var _useState3 = useState(false),
+  var _useState3 = useState(),
       _useState4 = _slicedToArray(_useState3, 2),
       isClient = _useState4[0],
       setIsClient = _useState4[1];

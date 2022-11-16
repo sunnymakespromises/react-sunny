@@ -35,7 +35,7 @@ export default function Responsive({portrait = false, landscape = false, childre
 }
 
 function getAspect(window) {
-    if (typeof window !== 'undefined') {
+    if (window) {
         const { innerWidth: width, innerHeight: height } = window
         return width/height
     }
@@ -45,7 +45,7 @@ function getAspect(window) {
 }
 
 export function aspectRatio() {
-    const [isClient, setIsClient] = useState(false)
+    const [isClient, setIsClient] = useState()
     const [aspect, setAspect] = useState(getAspect())
     useLayoutEffect(() => {
         if (typeof window !== 'undefined') {
