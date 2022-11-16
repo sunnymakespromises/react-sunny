@@ -2184,11 +2184,14 @@ function Responsive(_ref) {
   }
 }
 
-function getAspect() {
-  var _window = window,
-      width = _window.innerWidth,
-      height = _window.innerHeight;
-  return width / height;
+function getAspect(window) {
+  if (typeof window !== 'undefined') {
+    var width = window.innerWidth,
+        height = window.innerHeight;
+    return width / height;
+  } else {
+    return false;
+  }
 }
 
 function aspectRatio() {
@@ -2210,7 +2213,7 @@ function aspectRatio() {
   useEffect(function () {
     if (isClient) {
       var handleResize = function handleResize() {
-        setAspect(getAspect());
+        setAspect(getAspect(window));
       };
 
       window.addEventListener('resize', handleResize);
@@ -2240,7 +2243,7 @@ function isLandscape() {
   useEffect(function () {
     if (isClient) {
       var handleResize = function handleResize() {
-        setAspect(getAspect());
+        setAspect(getAspect(window));
       };
 
       window.addEventListener('resize', handleResize);

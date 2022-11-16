@@ -34,9 +34,14 @@ export default function Responsive({portrait = false, landscape = false, childre
     }
 }
 
-function getAspect() {
-    const { innerWidth: width, innerHeight: height } = window
-    return width/height
+function getAspect(window) {
+    if (typeof window !== 'undefined') {
+        const { innerWidth: width, innerHeight: height } = window
+        return width/height
+    }
+    else {
+        return false
+    }
 }
 
 export function aspectRatio() {
@@ -50,7 +55,7 @@ export function aspectRatio() {
     useEffect(() => {
         if (isClient) {
             function handleResize() {
-                setAspect(getAspect())
+                setAspect(getAspect(window))
             }
             window.addEventListener('resize', handleResize)
             return () => window.removeEventListener('resize', handleResize)
@@ -70,7 +75,7 @@ export function isLandscape() {
     useEffect(() => {
         if (isClient) {
             function handleResize() {
-                setAspect(getAspect())
+                setAspect(getAspect(window))
             }
             window.addEventListener('resize', handleResize)
             return () => window.removeEventListener('resize', handleResize)
