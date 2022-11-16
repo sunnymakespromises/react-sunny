@@ -34,19 +34,9 @@ export default function Responsive({portrait = false, landscape = false, childre
     }
 }
 
-function getAspect(window) {
-    if (window !== null && window !== undefined && typeof window !== 'undefined') {
-        const { innerWidth: width, innerHeight: height } = window
-        return width/height
-    }
-    else {
-        return false
-    }
-}
-
 export function aspectRatio() {
     const [isClient, setIsClient] = useState()
-    const [aspect, setAspect] = useState(getAspect())
+    const [aspect, setAspect] = useState()
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setIsClient(true)
@@ -54,9 +44,14 @@ export function aspectRatio() {
     }, [])
     useEffect(() => {
         if (isClient) {
-            function handleResize() {
-                setAspect(getAspect(window))
+            function getAspect() {
+                const { innerWidth: width, innerHeight: height } = window
+                return width/height
             }
+            function handleResize() {
+                setAspect(getAspect())
+            }
+            handleResize()
             window.addEventListener('resize', handleResize)
             return () => window.removeEventListener('resize', handleResize)
         }
@@ -65,8 +60,8 @@ export function aspectRatio() {
 }
 
 export function isLandscape() {
-    const [isClient, setIsClient] = useState(false)
-    const [aspect, setAspect] = useState(getAspect())
+    const [isClient, setIsClient] = useState()
+    const [aspect, setAspect] = useState()
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setIsClient(true)
@@ -74,9 +69,14 @@ export function isLandscape() {
     }, [])
     useEffect(() => {
         if (isClient) {
-            function handleResize() {
-                setAspect(getAspect(window))
+            function getAspect() {
+                const { innerWidth: width, innerHeight: height } = window
+                return width/height
             }
+            function handleResize() {
+                setAspect(getAspect())
+            }
+            handleResize()
             window.addEventListener('resize', handleResize)
             return () => window.removeEventListener('resize', handleResize)
         }
@@ -85,8 +85,8 @@ export function isLandscape() {
 }
 
 export function isPortrait() {
-    const [isClient, setIsClient] = useState(false)
-    const [aspect, setAspect] = useState(getAspect())
+    const [isClient, setIsClient] = useState()
+    const [aspect, setAspect] = useState()
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setIsClient(true)
@@ -94,10 +94,14 @@ export function isPortrait() {
     }, [])
     useEffect(() => {
         if (isClient) {
+            function getAspect() {
+                const { innerWidth: width, innerHeight: height } = window
+                return width/height
+            }
             function handleResize() {
-                console.log('hiya')
                 setAspect(getAspect())
             }
+            handleResize()
             window.addEventListener('resize', handleResize)
             return () => window.removeEventListener('resize', handleResize)
         }

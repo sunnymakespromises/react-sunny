@@ -2191,24 +2191,13 @@ function Responsive(_ref) {
     return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null);
   }
 }
-
-function getAspect(window) {
-  if (window !== null && window !== undefined && typeof window !== 'undefined') {
-    var width = window.innerWidth,
-        height = window.innerHeight;
-    return width / height;
-  } else {
-    return false;
-  }
-}
-
 function aspectRatio() {
   var _useState3 = React.useState(),
       _useState4 = _slicedToArray(_useState3, 2),
       isClient = _useState4[0],
       setIsClient = _useState4[1];
 
-  var _useState5 = React.useState(getAspect()),
+  var _useState5 = React.useState(),
       _useState6 = _slicedToArray(_useState5, 2),
       aspect = _useState6[0],
       setAspect = _useState6[1];
@@ -2220,10 +2209,18 @@ function aspectRatio() {
   }, []);
   React.useEffect(function () {
     if (isClient) {
-      var handleResize = function handleResize() {
-        setAspect(getAspect(window));
+      var getAspect = function getAspect() {
+        var _window = window,
+            width = _window.innerWidth,
+            height = _window.innerHeight;
+        return width / height;
       };
 
+      var handleResize = function handleResize() {
+        setAspect(getAspect());
+      };
+
+      handleResize();
       window.addEventListener('resize', handleResize);
       return function () {
         return window.removeEventListener('resize', handleResize);
@@ -2233,12 +2230,12 @@ function aspectRatio() {
   return aspect;
 }
 function isLandscape() {
-  var _useState7 = React.useState(false),
+  var _useState7 = React.useState(),
       _useState8 = _slicedToArray(_useState7, 2),
       isClient = _useState8[0],
       setIsClient = _useState8[1];
 
-  var _useState9 = React.useState(getAspect()),
+  var _useState9 = React.useState(),
       _useState10 = _slicedToArray(_useState9, 2),
       aspect = _useState10[0],
       setAspect = _useState10[1];
@@ -2250,10 +2247,18 @@ function isLandscape() {
   }, []);
   React.useEffect(function () {
     if (isClient) {
-      var handleResize = function handleResize() {
-        setAspect(getAspect(window));
+      var getAspect = function getAspect() {
+        var _window2 = window,
+            width = _window2.innerWidth,
+            height = _window2.innerHeight;
+        return width / height;
       };
 
+      var handleResize = function handleResize() {
+        setAspect(getAspect());
+      };
+
+      handleResize();
       window.addEventListener('resize', handleResize);
       return function () {
         return window.removeEventListener('resize', handleResize);
@@ -2263,12 +2268,12 @@ function isLandscape() {
   return isClient ? aspect > 1 : false;
 }
 function isPortrait() {
-  var _useState11 = React.useState(false),
+  var _useState11 = React.useState(),
       _useState12 = _slicedToArray(_useState11, 2),
       isClient = _useState12[0],
       setIsClient = _useState12[1];
 
-  var _useState13 = React.useState(getAspect()),
+  var _useState13 = React.useState(),
       _useState14 = _slicedToArray(_useState13, 2),
       aspect = _useState14[0],
       setAspect = _useState14[1];
@@ -2280,11 +2285,18 @@ function isPortrait() {
   }, []);
   React.useEffect(function () {
     if (isClient) {
+      var getAspect = function getAspect() {
+        var _window3 = window,
+            width = _window3.innerWidth,
+            height = _window3.innerHeight;
+        return width / height;
+      };
+
       var handleResize = function handleResize() {
-        console.log('hiya');
         setAspect(getAspect());
       };
 
+      handleResize();
       window.addEventListener('resize', handleResize);
       return function () {
         return window.removeEventListener('resize', handleResize);
