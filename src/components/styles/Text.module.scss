@@ -44,14 +44,6 @@ $alignments: left, right, center, justify;
                 padding-#{$div-position}: $padding;
             }
         }
-        .padding-#{$div-position}--#{$padding-name} {
-            @if ($div-position == all) {
-                padding: -$padding;
-            }
-            @else {
-                padding-#{$div-position}: -$padding;
-            }
-        }
     }
 }
 
