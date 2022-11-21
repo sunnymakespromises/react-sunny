@@ -1,65 +1,35 @@
 @import './variables.scss';
 $container-paddings: (
    '_j35VJM': (padding: map-get($paddings, none)), //all-none
-   '_laYwNS': (padding: map-get($paddings, -none)), //all--none
    '_6N3CyI': (padding: map-get($paddings, x-small)), //all-x-small
-   '_34hWtK': (padding: map-get($paddings, -x-small)), //all--x-small
    '_pjngfO': (padding: map-get($paddings, small)), //all-small
-   '_ubDgSc': (padding: map-get($paddings, -small)), //all--small
    '_iv7YFV': (padding: map-get($paddings, medium)), //all-medium
-   '_gL3tK8': (padding: map-get($paddings, -medium)), //all--medium
    '_IPVp1z': (padding: map-get($paddings, large)), //all-large
-   '_2J8qD9': (padding: map-get($paddings, -large)), //all--large
    '_iZOasQ': (padding: map-get($paddings, x-large)), //all-x-large
-   '_W7ciDG': (padding: map-get($paddings, -x-large)), //all--x-large
    '_z3Ird8': (padding-top: map-get($paddings, none)), //top-none
-   '_EaPz0Z': (padding-top: map-get($paddings, -none)), //top--none
    '_RoOPSq': (padding-top: map-get($paddings, x-small)), //top-x-small
-   '_GmVc9Z': (padding-top: map-get($paddings, -x-small)), //top--x-small
    '_0vKWCu': (padding-top: map-get($paddings, small)), //top-small
-   '_hQCR9x': (padding-top: map-get($paddings, -small)), //top--small
    '_eiosQ9': (padding-top: map-get($paddings, medium)), //top-medium
-   '_YQfp8J': (padding-top: map-get($paddings, -medium)), //top--medium
    '_XyuA3U': (padding-top: map-get($paddings, large)), //top-large
-   '_z-Mwvt': (padding-top: map-get($paddings, -large)), //top--large
    '_alHTHR': (padding-top: map-get($paddings, x-large)), //top-x-large
-   '_HiAMq2': (padding-top: map-get($paddings, -x-large)), //top--x-large
    '_WMk9ZJ': (padding-left: map-get($paddings, none)), //left-none
-   '_-0aic8': (padding-left: map-get($paddings, -none)), //left--none
    '_xmdg1z': (padding-left: map-get($paddings, x-small)), //left-x-small
-   '_65FEto': (padding-left: map-get($paddings, -x-small)), //left--x-small
    '_rw1IzZ': (padding-left: map-get($paddings, small)), //left-small
-   '_FXMtJj': (padding-left: map-get($paddings, -small)), //left--small
    '_5Ay-uS': (padding-left: map-get($paddings, medium)), //left-medium
-   '_NIbIKC': (padding-left: map-get($paddings, -medium)), //left--medium
    '_zSzGOb': (padding-left: map-get($paddings, large)), //left-large
-   '_uyziRm': (padding-left: map-get($paddings, -large)), //left--large
    '_NOD7cA': (padding-left: map-get($paddings, x-large)), //left-x-large
-   '_e3v4e0': (padding-left: map-get($paddings, -x-large)), //left--x-large
    '_yvOluM': (padding-bottom: map-get($paddings, none)), //bottom-none
-   '_WepSWg': (padding-bottom: map-get($paddings, -none)), //bottom--none
    '_iHWbWJ': (padding-bottom: map-get($paddings, x-small)), //bottom-x-small
-   '_2A2C6s': (padding-bottom: map-get($paddings, -x-small)), //bottom--x-small
    '_UXfxM5': (padding-bottom: map-get($paddings, small)), //bottom-small
-   '_J6XUGL': (padding-bottom: map-get($paddings, -small)), //bottom--small
    '_t-TneE': (padding-bottom: map-get($paddings, medium)), //bottom-medium
-   '_TnZ806': (padding-bottom: map-get($paddings, -medium)), //bottom--medium
    '_Xhrlwr': (padding-bottom: map-get($paddings, large)), //bottom-large
-   '_VF-cpL': (padding-bottom: map-get($paddings, -large)), //bottom--large
    '_JTvyXv': (padding-bottom: map-get($paddings, x-large)), //bottom-x-large
-   '_ygh6wx': (padding-bottom: map-get($paddings, -x-large)), //bottom--x-large
    '_63-TA-': (padding-right: map-get($paddings, none)), //right-none
-   '_Te9LM1': (padding-right: map-get($paddings, -none)), //right--none
    '_IP4Yfp': (padding-right: map-get($paddings, x-small)), //right-x-small
-   '_2dNDBH': (padding-right: map-get($paddings, -x-small)), //right--x-small
    '_MwzxXj': (padding-right: map-get($paddings, small)), //right-small
-   '_aNRgRK': (padding-right: map-get($paddings, -small)), //right--small
    '_vQfsyW': (padding-right: map-get($paddings, medium)), //right-medium
-   '_oS3YjE': (padding-right: map-get($paddings, -medium)), //right--medium
    '_P-j-ux': (padding-right: map-get($paddings, large)), //right-large
-   '_M83Xl8': (padding-right: map-get($paddings, -large)), //right--large
    '_n-TNnz': (padding-right: map-get($paddings, x-large)), //right-x-large
-   '_-VPHPj': (padding-right: map-get($paddings, -x-large)), //right--x-large
 );
 
 @each $classname, $paddings in $container-paddings {
@@ -211,65 +181,35 @@ $text-sizes: (
 
 $text-paddings: (
    '_OWpWNF': (padding: map-get($paddings, none)), //all-none
-   '_RbOFXt': (padding: map-get($paddings, -none)), //all--none
    '_NhI0Yq': (padding: map-get($paddings, x-small)), //all-x-small
-   '_Q3Hhas': (padding: map-get($paddings, -x-small)), //all--x-small
    '_nH42ow': (padding: map-get($paddings, small)), //all-small
-   '_YbOSoI': (padding: map-get($paddings, -small)), //all--small
    '_CXxMAT': (padding: map-get($paddings, medium)), //all-medium
-   '_xv0-DG': (padding: map-get($paddings, -medium)), //all--medium
    '_T3Sw64': (padding: map-get($paddings, large)), //all-large
-   '_2Q81vt': (padding: map-get($paddings, -large)), //all--large
    '_A-Up3-': (padding: map-get($paddings, x-large)), //all-x-large
-   '_B8su0o': (padding: map-get($paddings, -x-large)), //all--x-large
    '_VG01gx': (padding-top: map-get($paddings, none)), //top-none
-   '_wGoVjn': (padding-top: map-get($paddings, -none)), //top--none
    '_-nNmt5': (padding-top: map-get($paddings, x-small)), //top-x-small
-   '_IWSlqx': (padding-top: map-get($paddings, -x-small)), //top--x-small
    '_nbL5Ov': (padding-top: map-get($paddings, small)), //top-small
-   '_Lrpi-8': (padding-top: map-get($paddings, -small)), //top--small
    '_0QvlIC': (padding-top: map-get($paddings, medium)), //top-medium
-   '_odIrup': (padding-top: map-get($paddings, -medium)), //top--medium
    '_V-QYzV': (padding-top: map-get($paddings, large)), //top-large
-   '_mmk0iI': (padding-top: map-get($paddings, -large)), //top--large
    '_QpmwZ9': (padding-top: map-get($paddings, x-large)), //top-x-large
-   '_FCZNgW': (padding-top: map-get($paddings, -x-large)), //top--x-large
    '_US9pLF': (padding-left: map-get($paddings, none)), //left-none
-   '_L2KLP5': (padding-left: map-get($paddings, -none)), //left--none
    '_KmjaaQ': (padding-left: map-get($paddings, x-small)), //left-x-small
-   '_kyh43F': (padding-left: map-get($paddings, -x-small)), //left--x-small
    '_ffmveg': (padding-left: map-get($paddings, small)), //left-small
-   '_Ao-AXv': (padding-left: map-get($paddings, -small)), //left--small
    '_om3kk5': (padding-left: map-get($paddings, medium)), //left-medium
-   '_mA5bc-': (padding-left: map-get($paddings, -medium)), //left--medium
    '_B1HE7T': (padding-left: map-get($paddings, large)), //left-large
-   '_aOyuSZ': (padding-left: map-get($paddings, -large)), //left--large
    '_wJSa7p': (padding-left: map-get($paddings, x-large)), //left-x-large
-   '_qKIp8I': (padding-left: map-get($paddings, -x-large)), //left--x-large
    '_4jEQQi': (padding-bottom: map-get($paddings, none)), //bottom-none
-   '_SVKNzo': (padding-bottom: map-get($paddings, -none)), //bottom--none
    '_jqy-OI': (padding-bottom: map-get($paddings, x-small)), //bottom-x-small
-   '_C6dnVh': (padding-bottom: map-get($paddings, -x-small)), //bottom--x-small
    '_TDKaNH': (padding-bottom: map-get($paddings, small)), //bottom-small
-   '_-UiaZO': (padding-bottom: map-get($paddings, -small)), //bottom--small
    '_TMhcQG': (padding-bottom: map-get($paddings, medium)), //bottom-medium
-   '_30miCN': (padding-bottom: map-get($paddings, -medium)), //bottom--medium
    '_lfbKs7': (padding-bottom: map-get($paddings, large)), //bottom-large
-   '_i3jC68': (padding-bottom: map-get($paddings, -large)), //bottom--large
    '_sQAJMy': (padding-bottom: map-get($paddings, x-large)), //bottom-x-large
-   '_TfriFV': (padding-bottom: map-get($paddings, -x-large)), //bottom--x-large
    '_2-jdmD': (padding-right: map-get($paddings, none)), //right-none
-   '_cK8TBy': (padding-right: map-get($paddings, -none)), //right--none
    '_6wagfb': (padding-right: map-get($paddings, x-small)), //right-x-small
-   '_4eN3Ci': (padding-right: map-get($paddings, -x-small)), //right--x-small
    '_FodmX4': (padding-right: map-get($paddings, small)), //right-small
-   '_8nLPCU': (padding-right: map-get($paddings, -small)), //right--small
    '_dudm-x': (padding-right: map-get($paddings, medium)), //right-medium
-   '_qMCjrb': (padding-right: map-get($paddings, -medium)), //right--medium
    '_d4Aow2': (padding-right: map-get($paddings, large)), //right-large
-   '_qVDKg1': (padding-right: map-get($paddings, -large)), //right--large
    '_6TViBz': (padding-right: map-get($paddings, x-large)), //right-x-large
-   '_5VGBms': (padding-right: map-get($paddings, -x-large)), //right--x-large
 );
 
 @each $classname, $paddings in $text-paddings {
