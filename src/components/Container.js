@@ -41,13 +41,15 @@ const getClass = (valid, classname) => {
     }
 }
 
-const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', height = '', direction = 'column', alignment = 'center center', position = '', fill = '', padding = '', margin = '', color = '', canClick = false, children, ...extras }, ref) => {
+const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', height = '', direction = 'column', alignment = 'center center', gap = '', position = '', fill = '', padding = '', margin = '', color = '', canClick = false, children, ...extras }, ref) => {
 	const getClasses = () => {
 		var alignmentClasses = getClassesFromString('alignment', alignment)
 		var paddingClasses = getClassesFromString('padding', padding)
 		var marginClasses = getClassesFromString('margin', margin)
+        var gapClasses = getClassesFromString('gap', gap)
 		return 	style['direction-' + direction] + ' ' + 
 				alignmentClasses + 
+				(gap != '' ? ' ' + gapClasses : '') + 
 				getClass((position != ''), ('position-' + position)) + 
 				getClass((fill != ''), ('fill-' + fill)) + 
 				(padding != '' ? ' ' + paddingClasses : '') + 
@@ -69,6 +71,9 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', h
 	const getMargin = () => {
 		return getStylesFromString('margin', margin, ['small', 'medium', 'large', 'none'])
 	}
+    const getGap = () => {
+		return getStylesFromString('gap', gap, ['small', 'medium', 'large', 'none'])
+	}
 	const getWidth = () => {
 		if (width !== '') {
 			return { width: width }
@@ -86,8 +91,9 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', h
 		}
 	}
 	const getStyles = () => {
-		return { ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getWidth(), ...getHeight() }
+		return { ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getGap(), ...getWidth(), ...getHeight() }
 	}
+    console.log(getGap())
   	return (
 		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = { getStyles() } ref = {ref} {...extras}>
 			{children}

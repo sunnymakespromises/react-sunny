@@ -53,14 +53,6 @@ $fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, hei
                 padding-#{$div-position}: $padding;
             }
         }
-        .padding-#{$div-position}--#{$padding-name} {
-            @if ($div-position == all) {
-                padding: -$padding;
-            }
-            @else {
-                padding-#{$div-position}: -$padding;
-            }
-        }
     }
 }
 
@@ -81,6 +73,14 @@ $fills: (width: (width: 100%), height: (height: 100%), parent: (width: 100%, hei
             @else {
                 margin-#{$div-position}: -$margin;
             }
+        }
+    }
+}
+
+@each $direction in $directions {
+    @each $gap-name, $gap in $gaps {
+        .gap-#{$direction}-#{$gap-name} {
+            #{$direction}-gap: $gap;
         }
     }
 }

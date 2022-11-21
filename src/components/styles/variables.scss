@@ -47,6 +47,14 @@ $margins: (
     large: 2rem,
     x-large: 4rem
 ) !default;
+$gaps: (
+    none: 0,
+    x-small: 0.25rem,
+    small: 0.5rem,
+    medium: 1rem,
+    large: 2rem,
+    x-large: 4rem
+) !default;
 $font-sizes: (
     h1: 2em,
     h2: 1.5em,

@@ -19,7 +19,7 @@ function generateOverrides() {
 `   '` + category.values[value] + `': map-get($` + categoryName + `s, ` + target + `), //` + target + `
 `                       )
                     }
-                    else {
+                    else if (categoryName == 'margin' || categoryName == 'padding') {
                         var negative = false
                         var position = `-` + valueMinusCategory.slice(0, valueMinusCategory.indexOf('-'))
                         var property = categoryName
@@ -28,12 +28,24 @@ function generateOverrides() {
                         }
                         property += position
                         var target = valueMinusCategory.slice(valueMinusCategory.indexOf('-') + 1, valueMinusCategory.length)
-                        if (target[0] === '-') {
+                        if (categoryName == 'margin' && target[0] === '-') {
                             target = target.substring(1)
                             negative = true
                         }
                         return (
 `   '` + category.values[value] + `': (` + property + `: ` + (negative ? `-(` : ``) + `map-get($` + categoryName + `s, ` + target + (negative ? `)` : ``) + `)), //` + valueMinusCategory + `
+`                       )
+                    }
+                    else if (categoryName == 'gap') {
+                        var direction = valueMinusCategory.slice(0, valueMinusCategory.indexOf('-'))
+                        var property = `-` + categoryName
+                        if (position === '-all') {
+                            position = ''
+                        }
+                        property = direction + property
+                        var target = valueMinusCategory.slice(valueMinusCategory.indexOf('-') + 1, valueMinusCategory.length)
+                        return (
+`   '` + category.values[value] + `': (` + property + `: ` + `map-get($` + categoryName + `s, ` + target + `)), //` + valueMinusCategory + `
 `                       )
                     }}).join('') +
 `);
