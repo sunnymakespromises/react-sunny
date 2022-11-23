@@ -319,7 +319,6 @@ var Container = /*#__PURE__*/forwardRef(function (_ref, ref) {
     return _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, styles), getColor()), getPadding()), getMargin()), getGap()), getWidth()), getHeight());
   };
 
-  console.log(getGap());
   return /*#__PURE__*/React.createElement("div", _extends({
     id: id != '' ? id : null,
     className: "".concat(getClasses()).concat(classes !== '' ? ' ' + classes : ''),

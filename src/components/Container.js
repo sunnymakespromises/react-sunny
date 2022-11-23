@@ -93,7 +93,6 @@ const Container = forwardRef(({id = '', classes = '', styles = {}, width = '', h
 	const getStyles = () => {
 		return { ...styles, ...getColor(), ...getPadding(), ...getMargin(), ...getGap(), ...getWidth(), ...getHeight() }
 	}
-    console.log(getGap())
   	return (
 		<div id = {id != '' ? id : null} className = {`${getClasses()}${classes !== '' ? ' ' + classes: ''}`} style = { getStyles() } ref = {ref} {...extras}>
 			{children}
